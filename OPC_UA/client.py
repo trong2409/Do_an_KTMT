@@ -10,7 +10,7 @@ hostname=socket.gethostname()
 IPAddr=socket.gethostbyname(hostname)
 
 # url = "opc.tcp://192.168.56.1:4840"
-url = "opc.tcp://"+IPAddr+":5000" 
+url = "opc.tcp://"+IPAddr+":4840" 
 
 client = Client(url)
 
@@ -21,20 +21,21 @@ print('==========================================')
 count = 200
 result = {"2b":[]}
 
+'''Because printing affect the speed of the program, I'll comment them out.'''
+
+DataNode = client.get_node("ns=2;i=2")
+
 while (count>0):
     req = time.time()
-    print("Request: "+ datetime.datetime.now().strftime("%H:%M:%S.%f"))
-    
-    DataNode = client.get_node("ns=2;i=2")
+    # print("Request: "+ datetime.datetime.now().strftime("%H:%M:%S.%f"))
     Data = DataNode.get_value()
     # print("Temperature: ",Temperature)
-
     res = time.time()
-    print("Respone: "+ datetime.datetime.now().strftime("%H:%M:%S.%f"))
+    # print("Respone: "+ datetime.datetime.now().strftime("%H:%M:%S.%f"))
 
-    print("RTT is: ", res-req)
-    print('==========================================')
-
+    # print("RTT is: ", res-req)
+    # print('==========================================')
+    print(count)
     result['2b'].append(res-req)
     count-=1
     
