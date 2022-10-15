@@ -10,8 +10,8 @@ res = []
 # flag check subscribing
 sub_flag = 0
 # dicts store send and receive time
-receive_dict = {}
-send_dict = {}
+receive_dict = []
+send_dict = []
 
 def subscribed(client, userdata, mid, granted_qos):
     global sub_flag
@@ -28,14 +28,14 @@ def recv_message(client, userdata, message):
     global block_flag
     # data cung la index cua 2 cai dict
     data = message.payload.decode("UTF-8")
-    print("Received: ", data)
+    # print("Received: ", data)
     # get time after receive the response message
     after = time.time()
-    print("after:", after)
-    receive_dict[int(data)] = after
+    # print("after:", after)
+    receive_dict.append(after)
     # update block_flag
     block_flag = 0
-    print("------------------------")
+    # print("------------------------")
 
 def connected(client, usedata, flags, rc):
     if rc == 0:
@@ -61,7 +61,7 @@ client.on_subscribe = subscribed
 client.on_message = recv_message
 
 # size of message
-pack_len = 2**21
+pack_len = 2**17
 # num of sample
 loop_num = 1000
 
@@ -71,10 +71,11 @@ for i in range(0,loop_num):
         pass
     # get time before send message
     before = time.time()
-    print('before:', before)
-    send_dict[i] = before
+    print(i)
+    # print('before:', before)
+    send_dict.append(before)
     # prepare data before send
-    data = "0" * (pack_len - len(str(i))) + str(i)
+    data = "0" * pack_len
     client.publish('v1/devices/me/telemetry0', data)
     # ensure that receiving the response message before send the next message
     block_flag = 1
