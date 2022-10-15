@@ -11,7 +11,7 @@ IPAddr=socket.gethostbyname(hostname)
 
 server= Server()
 # url = "opc.tcp://"+IPAddr+":4840"
-url = "opc.tcp://192.168.123.212:4840"
+url = "opc.tcp://"+IPAddr+":4840"
 server.set_endpoint(url)
 
 name = "OPCUA_SIMUALTION_SERVER"
@@ -32,7 +32,7 @@ Data.set_writable()
 server.start()
 print("Server started at {}".format(url))
 
-file = open('input.txt','r')
+file = open('./input/input1Kb.txt','r')
 text = file.read()
 
 while True:
