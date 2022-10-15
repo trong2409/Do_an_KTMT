@@ -37,8 +37,9 @@ def subscribed(client, userdata, mid, granted_qos):
 def recv_message(client, userdata, message):
     data = message.payload.decode("utf-8")
     client.publish("v1/devices/me/telemetry1", data)
-    print("Received: ", message.payload.decode("UTF-8"))
-    print("Topic: ", message.topic)
+    '''Because printing affect the speed of the program, I'll comment them out.'''
+    # print("Received: ", message.payload.decode("UTF-8"))
+    # print("Topic: ", message.topic)
     # except:
     #     print("problemmm")
 
@@ -67,10 +68,6 @@ client.loop_start()
 client.on_subscribe = subscribed
 client.on_message = recv_message
 
-requestAlldata = {
-    "method": "getAllStat",
-    "param": {}
-}
 
 while True:
     pass
