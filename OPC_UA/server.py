@@ -5,7 +5,7 @@ import time
 
 
 import socket
-hostname=socket.gethostname()   
+hostname=socket.gethostname()
 IPAddr=socket.gethostbyname(hostname)
 
 

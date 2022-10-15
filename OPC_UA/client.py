@@ -24,6 +24,7 @@ result = {"2b":[]}
 '''Because printing affect the speed of the program, I'll comment them out.'''
 
 DataNode = client.get_node("ns=2;i=2")
+a = DataNode.get_value()
 # lendata = False
 while (count>0):
     req = time.time()
