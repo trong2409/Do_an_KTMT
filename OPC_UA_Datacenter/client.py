@@ -8,7 +8,7 @@ hostname=socket.gethostname()
 IPAddr=socket.gethostbyname(hostname)
 
 # url = "opc.tcp://192.168.56.1:4840"
-DataCenter_url = "opc.tcp://192.168.0.115:4840"
+DataCenter_url = "opc.tcp://192.168.193.204:4840"
 
 client = Client(DataCenter_url)
 
@@ -20,9 +20,9 @@ Node = client.get_objects_node()
 
 base = client.get_node("ns=2;i=1")
 
-write_method = client.get_node(f'ns=2;i={2}')
+# write_method = client.get_node(f'ns=2;i={2}')
 
-# read_method = client.get_node(f"ns=2;i={}")
+read_method = client.get_node(f"ns=2;i={2}")
 
 # result_w = base.call_method(write_method, "xyz")
 
@@ -34,15 +34,15 @@ result = list()
 '''Because printing affect the speed of the program, I'll comment them out.'''
 
 
-for i in range(0,9):
+for i in range(0,2):
 
     send_data = (2 ** (1 + i * 2)) * "a"
     while (count>0):
         req = time.time()
         # print("Request: "+ datetime.datetime.now().strftime("%H:%M:%S.%f"))
-        result_w = base.call_method(write_method, send_data)
+        # result_w = base.call_method(write_method, send_data)
 
-        # result_r = base.call_method(read_method)
+        result_r = base.call_method(read_method)
         # print(result_w)
         res = time.time()
         # print("Respone: "+ datetime.datetime.now().strftime("%H:%M:%S.%f"))
