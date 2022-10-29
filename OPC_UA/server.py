@@ -3,11 +3,9 @@ import datetime
 from random import randint
 import time
 
-
 import socket
 hostname=socket.gethostname()
 IPAddr=socket.gethostbyname(hostname)
-
 
 server= Server()
 # url = "opc.tcp://"+IPAddr+":4840"
@@ -19,34 +17,39 @@ addspace = server.register_namespace(name)
 
 node = server.get_objects_node()
 
+Data = list()
+
+file_array = [
+    './input/input_1_2b.txt',
+    "./input/input_2_8b.txt",
+    "./input/input_3_32b.txt",
+    "./input/input_4_128b.txt",
+    "./input/input_5_512b.txt",
+    "./input/input_6_2Kb.txt",
+    "./input/input_7_8Kb.txt",
+    "./input/input_8_32Kb.txt",
+    "./input/input_8_128Kb.txt",
+]
+
 Param = node.add_object(addspace,"Parameters")
 
-Data = Param.add_variable(addspace,"Data",'')
+for i in range(0, 9):
+    file = open(file_array[i], 'r')
+    text = file.read()
+    Data.append(Param.add_variable(addspace,f'data_{i}',text))
+    Data[i].set_writable()
+    file.close()
+
 # Press = Param.add_variable(addspace,"Pressure",0)
 # Time = Param.add_variable(addspace,"Time",0)
 
-Data.set_writable()
+
 # Press.set_writable()
 # Time.set_writable()
-
-file_array = [
-    './input/input1Kb.txt',
-
-]
 
 server.start()
 print("Server started at {}".format(url))
 
-file = open('./input/input1Kb.txt','r')
-text = file.read()
-
 while True:
-    # Pressure = randint(200,999)
-    # TIME = datetime.datetime.now()
-    # print(Temperature)
-    Data.set_value(text)
-    # Press.set_value(Pressure)
-    # Time.set_value(TIME)
-
-    time.sleep(2)
+    pass
 
