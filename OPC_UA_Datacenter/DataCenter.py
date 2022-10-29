@@ -1,13 +1,13 @@
 from opcua import ua, uamethod, Server, Client
 
+
 @uamethod
-def get_server_value(parent):
+def get_server_value(parent, index):
     # DataCenter get data from Server
     global dataNode
     # dataNode = client.get_node("ns=2;i=2")
-    data = dataNode.get_value()
+    data = dataNode[index].get_value()
     return data
-
 
 
 # @uamethod
@@ -21,6 +21,7 @@ def get_server_value(parent):
 #     return data
 #     # return [ua.Variant(0, ua.VariantType.Int64)]
 
+dataNode = list()
 
 if __name__ == "__main__":
     # ============ client =====================
@@ -30,7 +31,11 @@ if __name__ == "__main__":
     print(f'DataCenter connected to {server_url}')
     print('==========================================')
 
-    dataNode = client.get_node("ns=2;i=2")
+    for i in range(0, 9):
+        dataNode.append(client.get_node(f"ns=2;i={i+2}"))
+
+    print(f'All nodes get successfully')
+    print('==========================================')
 
     # ============ server =====================
     server = Server()
@@ -42,9 +47,9 @@ if __name__ == "__main__":
     node = server.get_objects_node()
 
     # create a object for getVal and setVal method
-    method_object = node.add_object(addspace,"MethodObject")
+    method_object = node.add_object(addspace, "MethodObject")
     # add methods to created object
-    getval = method_object.add_method(addspace, "getSerVal", get_server_value, [ua.VariantType.Int64])
+    getval = method_object.add_method(addspace, "getSerVal", get_server_value, [ua.VariantType.Int64], [ua.VariantType.Int64])
     # setval = method_object.add_method(addspace, "setSerVal", get_server_value, [ua.VariantType.String], [ua.VariantType.Int64])
 
     # Start server

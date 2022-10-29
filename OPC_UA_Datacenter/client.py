@@ -34,15 +34,17 @@ result = list()
 '''Because printing affect the speed of the program, I'll comment them out.'''
 
 
-for i in range(0,2):
+for i in range(0,9):
 
-    send_data = (2 ** (1 + i * 2)) * "a"
+    # send_data = (2 ** (1 + i * 2)) * "a"
+
     while (count>0):
         req = time.time()
         # print("Request: "+ datetime.datetime.now().strftime("%H:%M:%S.%f"))
         # result_w = base.call_method(write_method, send_data)
 
-        result_r = base.call_method(read_method)
+        result_r = base.call_method(read_method, ua.Variant(i,ua.VariantType.Int64))
+        print(result_r)
         # print(result_w)
         res = time.time()
         # print("Respone: "+ datetime.datetime.now().strftime("%H:%M:%S.%f"))
