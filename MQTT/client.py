@@ -60,34 +60,41 @@ client.loop_start()
 client.on_subscribe = subscribed
 client.on_message = recv_message
 
-# size of message
-pack_len = 2**17
+
 # num of sample
 loop_num = 1000
 
-for i in range(0,loop_num):
-    # ensure that subscribing before send the first message
-    while sub_flag == 0:
-        pass
-    # get time before send message
-    before = time.time()
-    print(i)
-    # print('before:', before)
-    send_dict.append(before)
-    # prepare data before send
-    data = "0" * pack_len
-    client.publish('v1/devices/me/telemetry0', data)
-    # ensure that receiving the response message before send the next message
-    block_flag = 1
-    while block_flag == 1:
-        pass
-    # dung index va block_flag thi ko can sleep nua
-    # time.sleep(1)
+for x in range(0, 9):
+    # size of message
+    pack_len = 2 ** (1 + x * 2)
 
-# calculate the RRT
-for id in range(loop_num):
-    res.append(receive_dict[id] - send_dict[id])
+    for i in range(0,loop_num):
+        # ensure that subscribing before send the first message
+        while sub_flag == 0:
+            pass
+        # get time before send message
+        before = time.time()
+        print(i)
+        # print('before:', before)
+        send_dict.append(before)
+        # prepare data before send
+        data = "0" * pack_len
+        client.publish('v1/devices/me/telemetry0', data)
+        # ensure that receiving the response message before send the next message
+        block_flag = 1
+        while block_flag == 1:
+            pass
+        # dung index va block_flag thi ko can sleep nua
+        # time.sleep(1)
 
-print("res: ", res)
+    # calculate the RRT
+    for id in range(loop_num):
+        res.append(receive_dict[id] - send_dict[id])
+
+    print("res: ", res)
+    print("=" * 20)
+    res.clear()
+    receive_dict.clear()
+    send_dict.clear()
 
 

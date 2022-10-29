@@ -29,6 +29,11 @@ Data.set_writable()
 # Press.set_writable()
 # Time.set_writable()
 
+file_array = [
+    './input/input1Kb.txt',
+
+]
+
 server.start()
 print("Server started at {}".format(url))
 
