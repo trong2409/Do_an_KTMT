@@ -2,8 +2,10 @@ print("Xin chào Đồ Án Kỹ Thuật Máy Tính")
 import paho.mqtt.client as mqttclient
 import time
 import json
+import socket
 
-BROKER_ADDRESS = "192.168.123.102"
+BROKER_ADDRESS = socket.gethostbyname(socket.gethostname())
+# BROKER_ADDRESS = "192.168.123.102"
 
 # result of RRT
 res = []
@@ -68,13 +70,15 @@ for x in range(0, 9):
     # size of message
     pack_len = 2 ** (1 + x * 2)
 
+    print(pack_len)
+
     for i in range(0,loop_num):
         # ensure that subscribing before send the first message
         while sub_flag == 0:
             pass
         # get time before send message
         before = time.time()
-        print(i)
+        # print(i)
         # print('before:', before)
         send_dict.append(before)
         # prepare data before send
