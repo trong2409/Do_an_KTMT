@@ -9,7 +9,8 @@ IPAddr=socket.gethostbyname(hostname)
 
 server= Server()
 # url = "opc.tcp://"+IPAddr+":4840"
-url = "opc.tcp://192.168.0.101:4840"
+IP = "10.230.219.253"
+url = f"opc.tcp://{IP}:4840"
 server.set_endpoint(url)
 
 name = "OPCUA_SIMUALTION_SERVER"
@@ -19,13 +20,18 @@ node = server.get_objects_node()
 
 Param = node.add_object(addspace,"Parameters")
 
-Data = Param.add_variable(addspace, f'data', "init_data")
+Data = list()
 
-Data.set_writable()
+for i in range(0,9):
+    Data.append(Param.add_variable(addspace, f'data_{i}', "a"*(2 ** (1 * i * 2))))
+    Data[i].set_writable()
 
 server.start()
 print("Server started at {}".format(url))
 
-while True:
-    pass
+try:
+    while True:
+        pass
+finally:
+    server.stop()
 

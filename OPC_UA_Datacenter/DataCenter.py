@@ -1,14 +1,15 @@
 from opcua import ua, uamethod, Server, Client
 
-
 @uamethod
 def get_server_value(parent, index):
     # DataCenter get data from Server
     global dataNode
     # dataNode = client.get_node("ns=2;i=2")
-    data = dataNode[index].get_value()
+    try:
+        data = dataNode[index].get_value()
+    except:
+        data = "99"
     return data
-
 
 # @uamethod
 # def set_server_value(parent, dataIn):
@@ -24,8 +25,8 @@ def get_server_value(parent, index):
 dataNode = list()
 
 if __name__ == "__main__":
-    # ============ client =====================
-    server_url = "opc.tcp://192.168.0.101:4840"
+    # # # ============ client =====================
+    server_url = "opc.tcp://10.230.219.253:4840"
     client = Client(server_url)
     client.connect()
     print(f'DataCenter connected to {server_url}')
@@ -39,7 +40,7 @@ if __name__ == "__main__":
 
     # ============ server =====================
     server = Server()
-    url = "opc.tcp://192.168.0.115:4840"
+    url = "opc.tcp://10.230.219.253:4840"
     server.set_endpoint(url)
 
     name = "OPCUA_SIMUALTION_SERVER"
@@ -49,7 +50,7 @@ if __name__ == "__main__":
     # create a object for getVal and setVal method
     method_object = node.add_object(addspace, "MethodObject")
     # add methods to created object
-    getval = method_object.add_method(addspace, "getSerVal", get_server_value, [ua.VariantType.Int64], [ua.VariantType.Int64])
+    getval = method_object.add_method(addspace, "getSerVal", get_server_value, [ua.VariantType.UInt16], [ua.VariantType.String])
     # setval = method_object.add_method(addspace, "setSerVal", get_server_value, [ua.VariantType.String], [ua.VariantType.Int64])
 
     # Start server
