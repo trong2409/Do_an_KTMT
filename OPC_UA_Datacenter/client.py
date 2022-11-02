@@ -32,19 +32,24 @@ count = 1000
 result = list()
 
 '''Because printing affect the speed of the program, I'll comment them out.'''
-
+print_data = False
 
 for i in range(0,9):
 
     # send_data = (2 ** (1 + i * 2)) * "a"
-
+    print_data = False
     while (count>0):
         req = time.time()
         # print("Request: "+ datetime.datetime.now().strftime("%H:%M:%S.%f"))
         # result_w = base.call_method(write_method, send_data)
-
-        result_r = base.call_method(read_method, ua.Variant(i,ua.VariantType.Int64))
-        print(result_r)
+        try:
+            result_r = base.call_method(read_method, ua.Variant(i,ua.VariantType.UInt16))
+        except:
+            print("timeout")
+        if not print_data:
+            print(result_r)
+            print_data = True
+        # print(result_r)
         # print(result_w)
         res = time.time()
         # print("Respone: "+ datetime.datetime.now().strftime("%H:%M:%S.%f"))
