@@ -11,17 +11,6 @@ def get_server_value(parent, index):
         data = "99"
     return data
 
-# @uamethod
-# def set_server_value(parent, dataIn):
-#     # DataCenter set value to Server
-#     global dataNode
-#
-#     dataNode.set_value(dataIn)
-#     data = dataNode.get_value()
-#
-#     return data
-#     # return [ua.Variant(0, ua.VariantType.Int64)]
-
 dataNode = list()
 
 if __name__ == "__main__":
