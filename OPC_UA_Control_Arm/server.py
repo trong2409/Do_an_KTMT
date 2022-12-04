@@ -1,8 +1,9 @@
 from opcua import  Server
 import serial
-
+import time
 import socket
 hostname=socket.gethostname()
+# IPAddr = "192.168.137.1"
 IPAddr=socket.gethostbyname(hostname)
 url = "opc.tcp://"+IPAddr+":4841"
 
@@ -20,67 +21,46 @@ MIN_F = 80
 MAX_F = 180
 
 # Init serial
-ser = serial.Serial(
-    port='COM8',
-    baudrate=115200,
-    parity='N',
-    stopbits=1,
-    bytesize=8
-)
+# Yolo bit link: https://app.ohstem.vn/#!/share/yolobit/2IFgJjpmNrN8mFni18MfmenU2vG
+try:
+    ser = serial.Serial(
+        port='COM3',
+        baudrate=115200,
+        parity='N',
+        stopbits=1,
+        bytesize=8
+    )
+except:
+    ser = None
+
 
 # Handler when value of Nodes is changed
 class SubHandler(object):
     def __init__(self,ser, preM, preR, preL, preF):
         self.ser = ser
-        self.preM = preM
-        self.preR = preR
-        self.preL = preL
-        self.preF = preF
+        self.cmdList = list()
 
         
     def datachange_notification(self, node, val, data):
         print(node,val)
         nameServo = node.get_browse_name().to_string()[2]
         value = int(val)
-        if nameServo=='M':
-            if value > self.preM and value < MAX_M:
-                self.ser.write(("M:+:"+str(val) + "#").encode())
-                print("M:+:"+str(val) + "#")
-            if value < self.preM and value > MIN_M: 
-                self.ser.write(("M:-:"+str(val) + "#").encode())
-                print("M:-:"+str(val) + "#")
-            self.preM = value
+        self.cmdList.append([nameServo,value])
         
-        if nameServo=='R':
-            if value > self.preR and value < MAX_R:
-                self.ser.write(("R:+:"+str(val) + "#").encode())
-                print("R:+:"+str(val) + "#")
-            if value < self.preR and value > MIN_R: 
-                self.ser.write(("R:-:"+str(val) + "#").encode())
-                print("R:-:"+str(val) + "#")
-
-            self.preR = value
-        
-        if nameServo=='L':
-            if value > self.preL and value < MAX_L:
-                self.ser.write(("L:+:"+str(val) + "#").encode())
-                print("L:+:"+str(val) + "#")
-            if value < self.preL and value > MIN_L: 
-                self.ser.write(("L:-:"+str(val) + "#").encode())
-                print("L:-:"+str(val) + "#")
-            self.preL = value
-
-        if nameServo=='F':
-            if value > self.preF and value < MAX_F:
-                self.ser.write(("F:+:"+str(val) + "#").encode())
-                print("F:+:"+str(val) + "#")
-            if value < self.preF and value > MIN_F: 
-                self.ser.write(("F:-:"+str(val) + "#").encode())
-                print("F:-:"+str(val) + "#")
-            self.preF = value
 
     def event_notification(self, event):
         print("Python: New event", event)  
+        
+        
+def sendUartCommand(ser: serial.Serial, SubHandler: SubHandler):
+    if len(SubHandler.cmdList) > 0:
+        tempItem = SubHandler.cmdList.pop()
+        nameServo = tempItem[0]
+        val = tempItem[1]
+        ser.write((f"{nameServo}:"+str(val) + "#").encode())
+        print((f"{nameServo}:"+str(val) + "#"))
+        
+
 
 #################################################################
 #                      SETUP OPC-UA SERVER                      #
@@ -93,10 +73,10 @@ addspace = server.register_namespace(name)
 node = server.get_objects_node()
 station = node.add_object(addspace,"Station")
 
-MidServo = station.add_variable(addspace,"M",0)
-RightServo = station.add_variable(addspace,"R",0)
-LeftServo = station.add_variable(addspace,"L",0)
-FoldServo = station.add_variable(addspace,"F",0)
+MidServo = station.add_variable(addspace,"M",90)
+RightServo = station.add_variable(addspace,"R",90)
+LeftServo = station.add_variable(addspace,"L",90)
+FoldServo = station.add_variable(addspace,"F",90)
 
 MidServo.set_writable()
 RightServo.set_writable()
@@ -119,3 +99,7 @@ subcribe.subscribe_data_change(MidServo)
 subcribe.subscribe_data_change(RightServo)
 subcribe.subscribe_data_change(LeftServo)
 subcribe.subscribe_data_change(FoldServo)
+
+while True:
+    sendUartCommand(ser, handler)
+    time.sleep(0.01)
