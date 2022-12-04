@@ -5,6 +5,7 @@ import time
 
 import socket
 hostname=socket.gethostname()
+# IPAddr = "192.168.137.1"
 IPAddr=socket.gethostbyname(hostname)
 url = "opc.tcp://"+IPAddr+":4840"
 
@@ -53,10 +54,10 @@ addspace = server.register_namespace(name)
 node = server.get_objects_node()
 station = node.add_object(addspace,"Station")
 
-MidServo = station.add_variable(addspace,"M",0)
-RightServo = station.add_variable(addspace,"R",0)
-LeftServo = station.add_variable(addspace,"L",0)
-FoldServo = station.add_variable(addspace,"F",0)
+MidServo = station.add_variable(addspace,"M",90)
+RightServo = station.add_variable(addspace,"R",90)
+LeftServo = station.add_variable(addspace,"L",90)
+FoldServo = station.add_variable(addspace,"F",90)
 
 MidServo.set_writable()
 RightServo.set_writable()
