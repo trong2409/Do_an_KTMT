@@ -62,6 +62,9 @@ client.loop_start()
 client.on_subscribe = subscribed
 client.on_message = recv_message
 
+# ensure that subscribing before send the first message
+while sub_flag == 0:
+    pass
 
 # num of sample
 loop_num = 1000
@@ -73,9 +76,6 @@ for x in range(0, 9):
     print(pack_len)
 
     for i in range(0,loop_num):
-        # ensure that subscribing before send the first message
-        while sub_flag == 0:
-            pass
         # get time before send message
         before = time.time()
         # print(i)
