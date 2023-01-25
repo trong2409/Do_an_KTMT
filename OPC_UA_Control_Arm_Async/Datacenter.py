@@ -16,15 +16,33 @@ class SubHandler(object):
    """
 
     def __init__(self):
-        # a dictionary contain Datacenter nodes
+        """
+        Mot dictionary gom cac phan tu co dang dict["ns=2;i=x"] = DataCenter Node
+        key la node ID cua server ma Datacenter subscribe toi
+        value la Node trong Datacenter, tuong ung voi node cua Server
+        vi Datacenter co muc dich la "copy va 'anh xa." lai cac node trong Server, nen de
+        thay doi cac Node trong Datacenter theo su thay doi cua node trong Server,
+        ta se su dung dictionary nay, 
+        """
         self.subscriptionDict = dict()
         # a list contain all server nodes that need to subscribe to
         self.subscriptionList = list()
-        # a queue
+        # a queue of command to update Datacenter value node
         self.cmdQueue = list()
 
 
     def datachange_notification(self, node:asyncua.Node, val, data):
+        """
+        Ham nay se duoc callback khi co su thay doi cua node dang duoc subscribe toi, 
+        mang 1 so thong tin nhu.
+        Trong ham nay, khi node "ns=2;i=x" cua server co su thay doi, ta se truy cap vao
+        dict[ns=2;i=x] de lay ra Node tuong ung trong Datacenter. Neu co node tuong ung
+        ta gui nodeID "ns=2;i=x" va gia tri can cap nhat (val) vao cmdQueue
+        :param node: Node co gia tri bi thay doi. Day la mot object asyncua.Node
+        :param val: Gia tri cua node vua thay doi
+        :param data: ?
+        :return: None
+        """
         if self.subscriptionDict[node.nodeid.to_string()] is not None:
             self.cmdQueue.append([node.nodeid.to_string(), val])
             # await self.subscriptionDict[node.nodeid.to_string()].set_value(val)
@@ -55,7 +73,7 @@ async def main():
         :param input_args: client, server_Method_ID
         :return: a wrapper function that call server method.
         """
-        tclient = input_args[0]
+        client = input_args[0]
         methodID = input_args[1]
         methodNode = client.get_node(methodID)
 
@@ -66,7 +84,7 @@ async def main():
             :param parent: parent from opcua
             :param inputArg: list of argument to pass into the method.
             number of argument is specified when adding method to opcua server,
-             not from function definition
+            not from function definition
             :return: result of method called from server
             """
             inputArg = list(inputArg)
@@ -103,6 +121,15 @@ async def main():
 
     async def browseNode(datacenterParentNode: asyncua.Node, nodes : list[asyncua.Node], migrate: bool, subhandler: SubHandler):
         """
+        Ham brosweNode se:
+            broswe cac Node trong Server, trich xuat cac thong tin nhu
+                name: ten node
+                nodeID: ns=x;i=y
+                nodeClass: Variable, Object,...
+                value: gia tri cua Node. mot so Node khong co value nhu Object Node
+            Khi migrate = True, can truyen them tham so subhandler
+            Khi nay, ham se co "copy", tao ra cac node va method giong nhu node ben server
+            dong thoi tu dong subscribe vao cac node ben server de cap nhat khi co su thay doi
         async browseNode(
             datacenterParentNode: specify the node of datacenter which we need to "append" the browsing result to
             nodes: list of node from the server that Datacenter is connected to, and start browsing them
@@ -154,8 +181,7 @@ async def main():
                 if children is not None:
                     # in case of Method, we need the input and output argument info. but these
                     # argument is actually the children of the method node, so we have to
-                    # browse these children and get their info, so that we can make method.
-                    # to do that, we will need to get result return back from browseNode()
+                    # browse these children and return back to create Method.
                     # browseNode function can know if the node it's browsing is an input/output argument
                     # of a method or not, and return these argument.
                     if nodeClass == "Method":
@@ -224,6 +250,8 @@ async def main():
             # print(ID, ID.Name, ID.NamespaceIndex)
             # nodeClass = await testNode.read_node_class()
             # print(nodeClass, nodeClass.name)
+
+            # each client will have 1 sub handler
             handler = SubHandler()
             subscription = await client.create_subscription(10, handler)
             await browseNode(server.nodes.objects, listOfMainNode, True, handler)

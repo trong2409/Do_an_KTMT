@@ -97,6 +97,9 @@ class SubHandler(object):
 #replace server.start()
 async def main():
     async def updateRobot():
+        """
+        function to read Robot Arm angle data and update to opcua object model (opcua server)
+        """
         global midServo, leftServo, rightServo, gripperServo, speed
         while True:
             if midServo != await midServoNode.get_value():
@@ -112,6 +115,12 @@ async def main():
             await asyncio.sleep(0.005)
 
     async def autoRun():
+        """
+        This function will run in a loop which control the arm to
+        move automatically. To do that, use call method [autoServo]
+        to enable the lock.
+        :return: None
+        """
         global SERVO_LOCK_AUTORUN
         while True:
             if SERVO_LOCK_AUTORUN["LEFT_SERVO"] == -1:
