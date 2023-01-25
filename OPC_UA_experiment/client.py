@@ -32,7 +32,7 @@ count = 1000
 result = list()
 
 '''Because printing affect the speed of the program, I'll comment them out.'''
-print_data = False
+# print_data = False
 
 for i in range(0,9):
 
