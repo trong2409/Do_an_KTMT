@@ -7,7 +7,7 @@ import socket
 hostname=socket.gethostname()
 IPAddr=socket.gethostbyname(hostname)
 
-server= Server()
+server = Server()
 # url = "opc.tcp://"+IPAddr+":4840"
 IP = "10.230.219.253"
 url = f"opc.tcp://{IP}:4840"

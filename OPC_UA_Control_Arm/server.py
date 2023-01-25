@@ -1,11 +1,11 @@
-from opcua import  Server
+from opcua import Server
 import serial
 import time
 import socket
 hostname=socket.gethostname()
 # IPAddr = "192.168.137.1"
 IPAddr=socket.gethostbyname(hostname)
-url = "opc.tcp://"+IPAddr+":4841"
+url = "opc.tcp://"+IPAddr+":4840"
 
 # Range of each Servo
 MIN_M = 0
@@ -24,13 +24,14 @@ MAX_F = 180
 # Yolo bit link: https://app.ohstem.vn/#!/share/yolobit/2IFgJjpmNrN8mFni18MfmenU2vG
 try:
     ser = serial.Serial(
-        port='COM3',
+        port='COM5',
         baudrate=115200,
         parity='N',
         stopbits=1,
         bytesize=8
     )
 except:
+    print("Something went wrong")
     ser = None
 
 
@@ -57,7 +58,8 @@ def sendUartCommand(ser: serial.Serial, SubHandler: SubHandler):
         tempItem = SubHandler.cmdList.pop()
         nameServo = tempItem[0]
         val = tempItem[1]
-        ser.write((f"{nameServo}:"+str(val) + "#").encode())
+        if ser is not None:
+            ser.write((f"{nameServo}:"+str(val) + "#").encode())
         print((f"{nameServo}:"+str(val) + "#"))
         
 
