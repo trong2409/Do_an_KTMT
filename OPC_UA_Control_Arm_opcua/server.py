@@ -1,8 +1,17 @@
+#!/usr/bin/env python3
 import logging
-import asyncio
 import socket
+import asyncio
 
-from asyncua import ua, uamethod, Server
+
+
+# import rospy
+# import hiwonder
+# from std_msgs.msg import UInt8, UInt16, Float32, Bool
+# from std_srvs.srv import Empty
+# from opcua.msg import JetMax as JetMaxState
+
+from opcua import ua, uamethod, Server
 
 _logger = logging.getLogger(__name__)
 
@@ -102,16 +111,16 @@ async def main():
         """
         global midServo, leftServo, rightServo, gripperServo, speed
         while True:
-            if midServo != await midServoNode.get_value():
-                await midServoNode.write_value(midServo)
-            if leftServo != await leftServoNode.get_value():
-                await leftServoNode.write_value(leftServo)
-            if rightServo != await rightServoNode.get_value():
-                await rightServoNode.write_value(rightServo)
-            if gripperServo != await gripperServoNode.get_value():
-                await gripperServoNode.write_value(gripperServo)
-            if speed != await speedNode.get_value():
-                speed = await speedNode.get_value()
+            if midServo != midServoNode.get_value():
+                midServoNode.set_value(midServo)
+            if leftServo != leftServoNode.get_value():
+                leftServoNode.set_value(leftServo)
+            if rightServo != rightServoNode.get_value():
+                rightServoNode.set_value(rightServo)
+            if gripperServo != gripperServoNode.get_value():
+                gripperServoNode.set_value(gripperServo)
+            if speed != speedNode.get_value():
+                speed = speedNode.get_value()
             await asyncio.sleep(0.005)
 
     async def autoRun():
@@ -147,7 +156,7 @@ async def main():
 
     server = Server()
 
-    await server.init()
+    # server.init()
 
     # endpoint: address to connect to
     server.set_endpoint(f"opc.tcp://{IPAddr}:4841")
@@ -164,15 +173,15 @@ async def main():
 
     # setup our namespace. An endpoint can have multiple namespace!
     uri = "https://robotarm.opcua.io"
-    idx = await server.register_namespace(uri)
+    idx = server.register_namespace(uri)
 
     # add some nodes
-    myfolder = await server.nodes.objects.add_folder(idx, "Robot Arm")
-    midServoNode = await myfolder.add_variable(idx, "M", 90)
-    leftServoNode = await myfolder.add_variable(idx, "L", 90)
-    rightServoNode = await myfolder.add_variable(idx, "R", 90)
-    gripperServoNode = await myfolder.add_variable(idx, "G", 90)
-    speedNode = await myfolder.add_variable(idx, "S", 5)
+    myfolder = server.nodes.objects.add_folder(idx, "Robot Arm")
+    midServoNode = myfolder.add_variable(idx, "M", 90)
+    leftServoNode = myfolder.add_variable(idx, "L", 90)
+    rightServoNode = myfolder.add_variable(idx, "R", 90)
+    gripperServoNode = myfolder.add_variable(idx, "G", 90)
+    speedNode = myfolder.add_variable(idx, "S", 5)
 
     inargx = ua.Argument()
     inargx.Name = "Servo"
@@ -193,11 +202,11 @@ async def main():
     outarg.ArrayDimensions = []
     outarg.Description = ua.LocalizedText("Acknowledgement")
 
-    method = await myfolder.add_method(idx,
-                                       "moveServo",
-                                       moveServo,
-                                       [inargx, inargy],
-                                       [outarg])
+    method = myfolder.add_method(idx,
+                               "moveServo",
+                               moveServo,
+                               [inargx, inargy],
+                               [outarg])
 
     inargx1 = ua.Argument()
     inargx1.Name = "Servo"
@@ -218,20 +227,25 @@ async def main():
     outarg1.ArrayDimensions = []
     outarg1.Description = ua.LocalizedText("Acknowledgement")
 
-    method1 = await myfolder.add_method(idx,
-                                        "autoServo",
-                                        autoServo,
-                                        [inargx1, inargy1],
-                                        [outarg1])
+    method1 = myfolder.add_method(idx,
+                                "autoServo",
+                                autoServo,
+                                [inargx1, inargy1],
+                                [outarg1])
 
-    await midServoNode.set_writable()
-    await leftServoNode.set_writable()
-    await rightServoNode.set_writable()
-    await gripperServoNode.set_writable()
-    await speedNode.set_writable()
+    midServoNode.set_writable()
+    leftServoNode.set_writable()
+    rightServoNode.set_writable()
+    gripperServoNode.set_writable()
+    speedNode.set_writable()
+    
+    # rospy.init_node("opcua_control", anonymous=True)
+    # jetmax_sub = rospy.Subscriber("/jetmax/status", JetMaxState, 
+    #                               queue_size=1,
+    #                               callback=lambda msg: print(msg))
 
-    async with server:
-        print(f'OPC server running at {await server.get_endpoints()}')
+    with server:
+        print(f'OPC server running at {server.endpoint[0]}://{server.endpoint[1]}')
         # asyncio.gather giup chay 2 ham async 1 cach "song song"
         await asyncio.gather(updateRobot(), autoRun())
 

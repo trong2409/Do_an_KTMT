@@ -1,5 +1,5 @@
-import asyncua
-from asyncua import ua, uamethod, Client, Server
+import opcua
+from opcua import ua, uamethod, Client, Server
 import asyncio
 import socket
 import logging
@@ -31,27 +31,32 @@ class SubHandler(object):
         self.cmdQueue = list()
 
 
-    def datachange_notification(self, node:asyncua.Node, val, data):
+    def datachange_notification(self, node:opcua.Node, val, data):
         """
         Ham nay se duoc callback khi co su thay doi cua node dang duoc subscribe toi, 
         mang 1 so thong tin nhu.
         Trong ham nay, khi node "ns=2;i=x" cua server co su thay doi, ta se truy cap vao
         dict[ns=2;i=x] de lay ra Node tuong ung trong Datacenter. Neu co node tuong ung
         ta gui nodeID "ns=2;i=x" va gia tri can cap nhat (val) vao cmdQueue
-        :param node: Node co gia tri bi thay doi. Day la mot object asyncua.Node
+        :param node: Node co gia tri bi thay doi. Day la mot object opcua.Node
         :param val: Gia tri cua node vua thay doi
         :param data: ?
         :return: None
         """
         if self.subscriptionDict[node.nodeid.to_string()] is not None:
-            self.cmdQueue.append([node.nodeid.to_string(), val])
-            # await self.subscriptionDict[node.nodeid.to_string()].set_value(val)
+            self.cmdQueue.append([self.subscriptionDict[node.nodeid.to_string()], val])
+            # self.subscriptionDict[node.nodeid.to_string()].set_value(val)
         # print(node.nodeid.to_string())
         # print(self.subscriptionDict)
         _logger.warning("Python: New data change event %s %s", node, val)
 
     def event_notification(self, event):
         _logger.warning("Python: New event %s", event)
+
+    async def executeQueueCmd(self):
+        while len(self.cmdQueue) > 0:
+                node, val = self.cmdQueue.pop()
+                node.set_value(val)
 
 
 serverURL = f'opc.tcp://{IPAddr}:4841'
@@ -78,7 +83,7 @@ async def main():
         methodNode = client.get_node(methodID)
 
         @uamethod
-        async def caller(parent, *inputArg):
+        def caller(parent, *inputArg):
             """
             caller is a wrapper function that call server method
             :param parent: parent from opcua
@@ -89,7 +94,8 @@ async def main():
             """
             inputArg = list(inputArg)
             print(client, methodID, methodNode)
-            return await client.nodes.objects.call_method(methodNode, *inputArg)
+            # *inputArg duoc goi la "unpacking list"
+            return client.nodes.objects.call_method(methodNode, *inputArg)
 
         return caller
 
@@ -99,7 +105,6 @@ async def main():
         return args
 
     server = Server()
-    await server.init()
 
     server.set_endpoint(dataCenterURL)
     server.set_server_name("DataCenter Server")
@@ -114,12 +119,12 @@ async def main():
     )
 
     # setup our namespace. An endpoint can have multiple namespace!
-    idx = await server.register_namespace(DCnamespace)
+    idx = server.register_namespace(DCnamespace)
     functionWrapperList = list()
 
     client = Client(serverURL)
 
-    async def browseNode(datacenterParentNode: asyncua.Node, nodes : list[asyncua.Node], migrate: bool, subhandler: SubHandler):
+    def browseNode(datacenterParentNode: opcua.Node, nodes : list[opcua.Node], migrate: bool, subhandler: SubHandler):
         """
         Ham brosweNode se:
             broswe cac Node trong Server, trich xuat cac thong tin nhu
@@ -134,6 +139,7 @@ async def main():
             datacenterParentNode: specify the node of datacenter which we need to "append" the browsing result to
             nodes: list of node from the server that Datacenter is connected to, and start browsing them
             migrate: "copy" the node from the server and create them in Datacenter (True/False)
+            subhandler: an object of subhandler.
         )
         """
         methodArgs = list()
@@ -141,24 +147,24 @@ async def main():
             value = 0
             datacenterNode = None
             try:
-                nodeClass = (await node.read_node_class()).name
-                name = (await node.read_browse_name()).Name
+                nodeClass = (node.get_node_class()).name
+                name = (node.get_browse_name()).Name
                 nodeID = node.nodeid.to_string()
 
                 # check Class of the Node and perform needed action
                 if nodeClass == "Variable":
-                    value = await node.get_value()
+                    value = node.get_value()
                     if migrate:
-                        datacenterNode = await datacenterParentNode.add_variable(idx, name, value) if (datacenterParentNode is not None) else None
+                        datacenterNode = datacenterParentNode.add_variable(idx, name, value) if (datacenterParentNode is not None) else None
                         subhandler.subscriptionDict[nodeID] = datacenterNode
                         subhandler.subscriptionList.append(node)
                 elif nodeClass == "Object":
-                    nodeClassRefs = await node.get_references(40) #reference 40 la reference toi: "HasTypeDefinition",
+                    nodeClassRefs = node.get_references(40) #reference 40 la reference toi: "HasTypeDefinition",
                     # giup minh xem duoc ro rang hon Folder type
                     nodeClass = nodeClassRefs[0].BrowseName.Name
                     if nodeClass == "FolderType":
                         if migrate:
-                            datacenterNode = await datacenterParentNode.add_folder(idx, name) if (datacenterParentNode is not None) else None
+                            datacenterNode = datacenterParentNode.add_folder(idx, name) if (datacenterParentNode is not None) else None
                             subhandler.subscriptionDict[nodeID] = datacenterNode
                             subhandler.subscriptionList.append(node)
                     else:
@@ -177,7 +183,7 @@ async def main():
                     methodArgs.append(value)
 
                 # after getting the info of current node, continue to browse its children (if exist)
-                children = await node.get_children()
+                children = node.get_children()
                 if children is not None:
                     # in case of Method, we need the input and output argument info. but these
                     # argument is actually the children of the method node, so we have to
@@ -185,79 +191,76 @@ async def main():
                     # browseNode function can know if the node it's browsing is an input/output argument
                     # of a method or not, and return these argument.
                     if nodeClass == "Method":
-                        inoutArgs = await browseNode(datacenterNode, children, migrate, subhandler)
+                        inoutArgs = browseNode(datacenterNode, children, migrate, subhandler)
                         inArgs = inoutArgs[0]
                         inArgsFunc = list()
                         for inArg in inArgs:
-                            inArgsFunc.append(ua.Argument(
-                                Name = inArg.Name,
-                                DataType = inArg.DataType,
-                                ValueRank = inArg.ValueRank,
-                                ArrayDimensions= inArg.ArrayDimensions,
-                                Description= inArg.Description
-                            ))
+                            uaArg = ua.Argument()
+                            uaArg.Name = inArg.Name
+                            uaArg.DataType = inArg.DataType
+                            uaArg.ValueRank = inArg.ValueRank
+                            uaArg.ArrayDimensions = inArg.ArrayDimensions
+                            uaArg.Description = inArg.Description
+                            inArgsFunc.append(uaArg)
                         outArgs = inoutArgs[1]
                         outArgsFunc = list()
                         for outArg in outArgs:
-                            outArgsFunc.append(ua.Argument(
-                                Name=outArg.Name,
-                                DataType=outArg.DataType,
-                                ValueRank=outArg.ValueRank,
-                                ArrayDimensions=outArg.ArrayDimensions,
-                                Description=outArg.Description
-                            ))
+                            uaArg = ua.Argument()
+                            uaArg.Name = outArg.Name
+                            uaArg.DataType = outArg.DataType
+                            uaArg.ValueRank = outArg.ValueRank
+                            uaArg.ArrayDimensions = outArg.ArrayDimensions
+                            uaArg.Description = outArg.Description
+                            outArgsFunc.append(uaArg)
                         if migrate:
                             methodFunc = functionWrapper(client, nodeID)
                             functionWrapperList.append(methodFunc)
-                            method = await datacenterParentNode.add_method(idx, name, methodFunc, inArgsFunc, outArgsFunc)
+                            method = datacenterParentNode.add_method(idx, name, methodFunc, inArgsFunc, outArgsFunc)
                             subhandler.subscriptionDict[nodeID] = method
                     else:
-                        await browseNode(datacenterNode, children, migrate, subhandler)
+                        browseNode(datacenterNode, children, migrate, subhandler)
             except Exception as e:
                 print(f'Can\'t read node {node} at {node.nodeid.to_string()}: {e}')
         return methodArgs
 
-    async def executeQueueCmd(handler: SubHandler):
-        while len(handler.cmdQueue) > 0:
-                nodeID, val = handler.cmdQueue.pop()
-                await handler.subscriptionDict[nodeID].set_value(val)
-
     async def serverConnect():
-        async with server:
-            print(await server.get_endpoints())
+        with server:
+            print(f'OPC server running at {server.endpoint[0]}://{server.endpoint[1]}')
             while True:
                 await asyncio.sleep(0.0001)
 
+
+
     async def clientConnet():
         print(f"Connecting to {serverURL} ...")
-        # replace client = Client(serverURL); await client.connect()
-        async with client:
+        # replace client = Client(serverURL); client.connect()
+        with client:
             # Find the namespace index
-            # nsidx = await client.get_namespace_index(namespace)
+            # nsidx = client.get_namespace_index(namespace)
             # print(f"Namespace Index for '{namespace}': {nsidx}")
-            listOfNode = await client.nodes.objects.get_children()
+            listOfNode = client.nodes.objects.get_children()
             # print(listOfNode)
-            listOfMainNode = listOfNode[2:]
+            listOfMainNode = listOfNode[1:]
             # print(folderNode)
-            # childFolderNode = await folderNode.get_children()
+            # childFolderNode = folderNode.get_children()
             # print(childFolderNode)
             # testNode = childFolderNode[0]
             # print(testNode)
             # # A variable Node info
-            # print(await testNode.get_value())
-            # print(await testNode.get_path())
-            # ID = await testNode.read_browse_name()
+            # print(testNode.get_value())
+            # print(testNode.get_path())
+            # ID = testNode.read_browse_name()
             # print(ID, ID.Name, ID.NamespaceIndex)
-            # nodeClass = await testNode.read_node_class()
+            # nodeClass = testNode.read_node_class()
             # print(nodeClass, nodeClass.name)
 
             # each client will have 1 sub handler
             handler = SubHandler()
-            subscription = await client.create_subscription(10, handler)
-            await browseNode(server.nodes.objects, listOfMainNode, True, handler)
-            await subscription.subscribe_data_change(handler.subscriptionList)
+            subscription = client.create_subscription(1, handler)
+            browseNode(server.nodes.objects, listOfMainNode, True, handler)
+            subscription.subscribe_data_change(handler.subscriptionList)
             while True:
-                await executeQueueCmd(handler)
+                await handler.executeQueueCmd()
                 await asyncio.sleep(0.001)
 
     await asyncio.gather(serverConnect(), clientConnet())
