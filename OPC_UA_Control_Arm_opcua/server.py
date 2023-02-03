@@ -6,9 +6,9 @@ import asyncio
 import traceback
 
 import rospy
-#from std_msgs.msg import UInt8, UInt16, Float32, Bool
 #from std_srvs.srv import Empty
-from opc_ros.msg import SetJetMax, JetMax
+from std_msgs.msg import Bool
+from opc_ros.msg import SetServo, JetMax
 
 from opcua import ua, uamethod, Server
 
@@ -40,7 +40,12 @@ suckcup = False
 speed = 5
 
 JetMaxControlList = list()
-
+#  0 -> mid
+#  1 -> left
+#  2 -> right
+#  3 -> rotator
+#  4 -> fold
+#  5 -> sucker
 
 @uamethod
 def moveServo(parent, servo_name: str, angle_decrease: bool):
@@ -184,17 +189,19 @@ async def main():
     async def ros_run():
         global JetMaxControlList
         rospy.init_node("opcua", anonymous=True)
-        jetmax_state = rospy.Subscriber('/jetmax/status',JetMax,callback=updateRobot)
-        # jetmax_pub = rospy.Publisher('/jetmax/relative_command',SetJetMax,queue_size=1)
-        # JetMaxControlList.append(jetmax_state)
-        while not rospy.is_shutdown():
-            try:
-                #jetmax_pub.publish(SetJetMax(x=-10,y=0,z=0,duration=0.5))
-                await asyncio.sleep(0.5)
-            except ros.ROSInterruptException:
-                pass
-            except KeyboardInterrupt:
-                break
+        rospy.Subscriber('/jetmax/status',JetMax,callback=updateRobot)
+
+        # Append servos to list JetMaxControlList
+        for i in range(1,4):
+            jetmax_pub_control = rospy.Publisher('/jetmax/servo{}/command'.format(i),SetServo,queue_size=1)
+            JetMaxControlList.append(jetmax_pub_control)
+            
+        for i in range(1,3):
+            jetmax_pub_end_effector = rospy.Publisher('/jetmax/end_effector/servo{}/command'.format(i),SetServo,queue_size=1)
+            JetMaxControlList.append(jetmax_pub_end_effector)
+        
+        jetmax_pub_sucker = rospy.Publisher('/jetmax/end_effector/sucker/command',Bool,queue_size=1)
+        JetMaxControlList.append(jetmax_pub_sucker)
             
     
 
