@@ -7,7 +7,7 @@ import traceback
 
 import rospy
 #from std_srvs.srv import Empty
-from std_msgs.msg import Bool
+from std_msgs.msg import Bool, UInt16
 from opc_ros.msg import SetServo, JetMax
 
 from opcua import ua, uamethod, Server
@@ -17,13 +17,13 @@ _logger = logging.getLogger(__name__)
 IPAddr = ni.ifaddresses('ap0')[ni.AF_INET][0]['addr']
 
 MIN_MIDSERVO = 0
-MAX_MIDSERVO = 240
+MAX_MIDSERVO = 1000
 
-MIN_LEFTSERVO = -30
-MAX_LEFTSERVO = 210
+MIN_LEFTSERVO = 0
+MAX_LEFTSERVO = 1000
 
-MIN_RIGHTSERVO = -120
-MAX_RIGHTSERVO = 120
+MIN_RIGHTSERVO = 0
+MAX_RIGHTSERVO = 1000
 
 MIN_ROTATOR = 0
 MAX_ROTATOR = 180
@@ -57,46 +57,44 @@ def moveServo(parent, servo_name: str, angle_decrease: bool):
         if angle_decrease and midServo > MIN_MIDSERVO:
             midServoTemp = midServo - speed if (midServo - speed >= MIN_MIDSERVO) else MIN_MIDSERVO
             try:
-                JetMaxControlList[0].publish(SetServo(data=midServoTemp,duration=DURATION))
+                JetMaxControlList[0].publish(SetServo(data=int(midServoTemp),duration=DURATION))
             except Exception as e:
                 traceback.print_exc()
         elif not angle_decrease and midServo < MAX_MIDSERVO:
             midServoTemp = midServo + speed if (midServo + speed <= MAX_MIDSERVO) else MAX_MIDSERVO
-            JetMaxControlList[0].publish(SetServo(data=midServoTemp,duration=DURATION))
+            JetMaxControlList[0].publish(SetServo(data=int(midServoTemp),duration=DURATION))
 
     if servo_name == "left":
         if angle_decrease and leftServo > MIN_LEFTSERVO:
             leftServoTemp = leftServo - speed if (leftServo - speed >= MIN_LEFTSERVO) else MIN_LEFTSERVO
-            JetMaxControlList[1].publish(SetServo(data=leftServoTemp,duration=DURATION))
+            JetMaxControlList[1].publish(SetServo(data=int(leftServoTemp),duration=DURATION))
         elif not angle_decrease and leftServo < MAX_LEFTSERVO:
             leftServoTemp = leftServo + speed if (leftServo + speed <= MAX_LEFTSERVO) else MAX_LEFTSERVO
-            JetMaxControlList[1].publish(SetServo(data=leftServoTemp,duration=DURATION))
+            JetMaxControlList[1].publish(SetServo(data=int(leftServoTemp),duration=DURATION))
 
     if servo_name == "right":
         if angle_decrease and rightServo > MIN_RIGHTSERVO:
             rightServoTemp = rightServo - speed if (rightServo - speed >= MIN_RIGHTSERVO) else MIN_RIGHTSERVO
-            JetMaxControlList[2].publish(SetServo(data=rightServoTemp,duration=DURATION))
+            JetMaxControlList[2].publish(SetServo(data=int(rightServoTemp),duration=DURATION))
         elif not angle_decrease and rightServo < MAX_RIGHTSERVO:
             rightServoTemp = rightServo + speed if (rightServo + speed <= MAX_RIGHTSERVO) else MAX_RIGHTSERVO
-            JetMaxControlList[2].publish(SetServo(data=rightServoTemp,duration=DURATION))
+            JetMaxControlList[2].publish(SetServo(data=int(rightServoTemp),duration=DURATION))
 
     if servo_name == "rotator":
         if angle_decrease and rotatorServo > MIN_ROTATOR:
             rotatorServoTemp = rotatorServo - speed if (rotatorServo - speed >= MIN_ROTATOR) else MIN_ROTATOR
-            JetMaxControlList[3].publish(SetServo(data=rotatorServoTemp,duration=DURATION))
+            JetMaxControlList[3].publish(SetServo(data=int(rotatorServoTemp),duration=DURATION))
         elif not angle_decrease and rotatorServo < MAX_ROTATOR:
             rotatorServoTemp = rotatorServo + speed if (rotatorServo + speed <= MAX_ROTATOR) else MAX_ROTATOR
-            JetMaxControlList[3].publish(SetServo(data=rotatorServoTemp,duration=DURATION))
+            JetMaxControlList[3].publish(SetServo(data=int(rotatorServoTemp),duration=DURATION))
 
     if servo_name == "gripper":
         if angle_decrease and gripperServo > MIN_GRIPPER:
             gripperServoTemp = gripperServo - speed if (gripperServo - speed >= MIN_GRIPPER) else MIN_GRIPPER
-            JetMaxControlList[4].publish(SetServo(data=gripperServoTemp,duration=DURATION))
+            JetMaxControlList[4].publish(SetServo(data=int(gripperServoTemp),duration=DURATION))
         elif not angle_decrease and gripperServo < MAX_GRIPPER:
             gripperServoTemp = gripperServo + speed if (gripperServo + speed <= MAX_GRIPPER) else MAX_GRIPPER
-            JetMaxControlList[4].publish(SetServo(data=gripperServoTemp,duration=DURATION))
-
-
+            JetMaxControlList[4].publish(SetServo(data=int(gripperServoTemp),duration=DURATION))
     return f"{servo_name};{angle_decrease};OK"
 
 @uamethod
@@ -115,6 +113,20 @@ def autoServo(parent, servo_name: str, direction: int):
     if servo_name == "gripper":
         SERVO_LOCK_AUTORUN["GRIPPER_SERVO"] = direction
     return "OK"
+
+@uamethod
+def changeSpeed(parent, spd:int):
+    global speed
+    if spd < 1 or spd > 10:
+        return "NOTOK"
+    speed = spd
+    return "OK"
+    
+@uamethod
+def sucker(parent, suck:bool):
+    JetMaxControlList[5].publish(Bool(data=suck))
+    return "OK"
+    
 
 # -1: decrease angle, 0: stop, 1: increase angle
 SERVO_LOCK_AUTORUN = {
@@ -143,9 +155,9 @@ async def main():
         function to read Robot Arm angle data and update to opcua object model (opcua server)
         """
         global midServo, leftServo, rightServo, rotatorServo, speed, suckcup
-        midServo = data.joint1
-        leftServo = data.joint2
-        rightServo = data.joint3
+        midServo = data.servo1
+        leftServo = data.servo2
+        rightServo = data.servo3
         rotatorServo = data.pwm1
         gripperServo = data.pwm2
         suckcup = data.sucker
@@ -163,7 +175,9 @@ async def main():
             if gripperServo != gripperServoNode.get_value():
                 gripperServoNode.set_value(gripperServo)
             if speed != speedNode.get_value():
-                speed = speedNode.get_value()
+                speedNode.set_value(speed)
+            if suckcup != suckNode.get_value():
+                suckNode.set_value(suckcup)
         except Exception as e:
             traceback.print_exc()
 
@@ -244,13 +258,15 @@ async def main():
 
     # add some nodes
     myfolder = server.nodes.objects.add_folder(idx, "Robot Arm")
-    midServoNode = myfolder.add_variable(idx, "mid", 90, varianttype=ua.VariantType.Double)
-    leftServoNode = myfolder.add_variable(idx, "left", 90, varianttype=ua.VariantType.Double)
-    rightServoNode = myfolder.add_variable(idx, "right", 90, varianttype=ua.VariantType.Double)
+    midServoNode = myfolder.add_variable(idx, "mid", 90, varianttype=ua.VariantType.Int16)
+    leftServoNode = myfolder.add_variable(idx, "left", 90, varianttype=ua.VariantType.Int16)
+    rightServoNode = myfolder.add_variable(idx, "right", 90, varianttype=ua.VariantType.Int16)
     rotatorServoNode = myfolder.add_variable(idx, "rotator", 90, varianttype=ua.VariantType.Int16)
     gripperServoNode = myfolder.add_variable(idx, "gripper", 90, varianttype=ua.VariantType.Int16)
     suckNode = myfolder.add_variable(idx, "suckcup", False, varianttype=ua.VariantType.Boolean)
     speedNode = myfolder.add_variable(idx, "S", 5)
+    
+    methodFolder = myfolder.add_folder(idx, "Method")
 
     inargx = ua.Argument()
     inargx.Name = "Servo"
@@ -271,7 +287,7 @@ async def main():
     outarg.ArrayDimensions = []
     outarg.Description = ua.LocalizedText("Acknowledgement")
 
-    method = myfolder.add_method(idx,
+    method = methodFolder.add_method(idx,
                                "moveServo",
                                moveServo,
                                [inargx, inargy],
@@ -296,10 +312,48 @@ async def main():
     outarg1.ArrayDimensions = []
     outarg1.Description = ua.LocalizedText("Acknowledgement")
 
-    method1 = myfolder.add_method(idx,
+    method1 = methodFolder.add_method(idx,
                                 "autoServo",
                                 autoServo,
                                 [inargx1, inargy1],
+                                [outarg1])
+    
+    inargy1 = ua.Argument()
+    inargy1.Name = "Speed"
+    inargy1.DataType = ua.NodeId(ua.ObjectIds.Int16)
+    inargy1.ValueRank = -1
+    inargy1.ArrayDimensions = []
+    inargy1.Description = ua.LocalizedText("Speed of servo, a value from 1 to 10")
+    outarg1 = ua.Argument()
+    outarg1.Name = "Ack"
+    outarg1.DataType = ua.NodeId(ua.ObjectIds.String)
+    outarg1.ValueRank = -1
+    outarg1.ArrayDimensions = []
+    outarg1.Description = ua.LocalizedText("Acknowledgement")
+
+    method2 = methodFolder.add_method(idx,
+                                "changeSpeed",
+                                changeSpeed,
+                                [inargy1],
+                                [outarg1])
+    
+    inargy1 = ua.Argument()
+    inargy1.Name = "Sucker"
+    inargy1.DataType = ua.NodeId(ua.ObjectIds.Boolean)
+    inargy1.ValueRank = -1
+    inargy1.ArrayDimensions = []
+    inargy1.Description = ua.LocalizedText("Set sucker on or off")
+    outarg1 = ua.Argument()
+    outarg1.Name = "Ack"
+    outarg1.DataType = ua.NodeId(ua.ObjectIds.String)
+    outarg1.ValueRank = -1
+    outarg1.ArrayDimensions = []
+    outarg1.Description = ua.LocalizedText("Acknowledgement")
+
+    method3 = methodFolder.add_method(idx,
+                                "sucker",
+                                sucker,
+                                [inargy1],
                                 [outarg1])
 
     midServoNode.set_writable()
