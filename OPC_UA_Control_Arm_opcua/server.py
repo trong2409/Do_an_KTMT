@@ -31,6 +31,8 @@ MAX_ROTATOR = 180
 MIN_GRIPPER = 0
 MAX_GRIPPER = 180
 
+DURATION = 0.2
+
 midServo = 90
 leftServo = 90
 rightServo = 90
@@ -44,42 +46,57 @@ JetMaxControlList = list()
 #  1 -> left
 #  2 -> right
 #  3 -> rotator
-#  4 -> fold
+#  4 -> gripper
 #  5 -> sucker
 
 @uamethod
 def moveServo(parent, servo_name: str, angle_decrease: bool):
-    global midServo, leftServo, rightServo, rotatorServo, speed
+    global midServo, leftServo, rightServo, rotatorServo, speed, JetMaxControlList
     # print(f'{servo_name}, {angle_decrease}')
     if servo_name == "mid":
         if angle_decrease and midServo > MIN_MIDSERVO:
-            midServotemp = midServo - speed if (midServo - speed >= MIN_MIDSERVO) else MIN_MIDSERVO
-        elif not angle_decrease and midServo < MAX_MIDSERVO:
-            midServo = midServo + speed if (midServo + speed <= MAX_MIDSERVO) else MAX_MIDSERVO
+            midServoTemp = midServo - speed if (midServo - speed >= MIN_MIDSERVO) else MIN_MIDSERVO
             try:
-                jetmax_pub.publish(SetJetMax(x=-10,y=0,z=0,duration=0.1))
+                JetMaxControlList[0].publish(SetServo(data=midServoTemp,duration=DURATION))
             except Exception as e:
                 traceback.print_exc()
+        elif not angle_decrease and midServo < MAX_MIDSERVO:
+            midServoTemp = midServo + speed if (midServo + speed <= MAX_MIDSERVO) else MAX_MIDSERVO
+            JetMaxControlList[0].publish(SetServo(data=midServoTemp,duration=DURATION))
+
     if servo_name == "left":
         if angle_decrease and leftServo > MIN_LEFTSERVO:
-            leftServo = leftServo - speed if (leftServo - speed >= MIN_LEFTSERVO) else MIN_LEFTSERVO
+            leftServoTemp = leftServo - speed if (leftServo - speed >= MIN_LEFTSERVO) else MIN_LEFTSERVO
+            JetMaxControlList[1].publish(SetServo(data=leftServoTemp,duration=DURATION))
         elif not angle_decrease and leftServo < MAX_LEFTSERVO:
-            leftServo = leftServo + speed if (leftServo + speed <= MAX_LEFTSERVO) else MAX_LEFTSERVO
+            leftServoTemp = leftServo + speed if (leftServo + speed <= MAX_LEFTSERVO) else MAX_LEFTSERVO
+            JetMaxControlList[1].publish(SetServo(data=leftServoTemp,duration=DURATION))
+
     if servo_name == "right":
         if angle_decrease and rightServo > MIN_RIGHTSERVO:
-            rightServo = rightServo - speed if (rightServo - speed >= MIN_RIGHTSERVO) else MIN_RIGHTSERVO
+            rightServoTemp = rightServo - speed if (rightServo - speed >= MIN_RIGHTSERVO) else MIN_RIGHTSERVO
+            JetMaxControlList[2].publish(SetServo(data=rightServoTemp,duration=DURATION))
         elif not angle_decrease and rightServo < MAX_RIGHTSERVO:
-            rightServo = rightServo + speed if (rightServo + speed <= MAX_RIGHTSERVO) else MAX_RIGHTSERVO
+            rightServoTemp = rightServo + speed if (rightServo + speed <= MAX_RIGHTSERVO) else MAX_RIGHTSERVO
+            JetMaxControlList[2].publish(SetServo(data=rightServoTemp,duration=DURATION))
+
     if servo_name == "rotator":
         if angle_decrease and rotatorServo > MIN_ROTATOR:
-            rotatorServo = rotatorServo - speed if (rotatorServo - speed >= MIN_ROTATOR) else MIN_ROTATOR
+            rotatorServoTemp = rotatorServo - speed if (rotatorServo - speed >= MIN_ROTATOR) else MIN_ROTATOR
+            JetMaxControlList[3].publish(SetServo(data=rotatorServoTemp,duration=DURATION))
         elif not angle_decrease and rotatorServo < MAX_ROTATOR:
-            rotatorServo = rotatorServo + speed if (rotatorServo + speed <= MAX_ROTATOR) else MAX_ROTATOR
+            rotatorServoTemp = rotatorServo + speed if (rotatorServo + speed <= MAX_ROTATOR) else MAX_ROTATOR
+            JetMaxControlList[3].publish(SetServo(data=rotatorServoTemp,duration=DURATION))
+
     if servo_name == "gripper":
         if angle_decrease and gripperServo > MIN_GRIPPER:
-            gripperServo = gripperServo - speed if (gripperServo - speed >= MIN_GRIPPER) else MIN_GRIPPER
+            gripperServoTemp = gripperServo - speed if (gripperServo - speed >= MIN_GRIPPER) else MIN_GRIPPER
+            JetMaxControlList[4].publish(SetServo(data=gripperServoTemp,duration=DURATION))
         elif not angle_decrease and gripperServo < MAX_GRIPPER:
-            gripperServo = gripperServo + speed if (gripperServo + speed <= MAX_GRIPPER) else MAX_GRIPPER
+            gripperServoTemp = gripperServo + speed if (gripperServo + speed <= MAX_GRIPPER) else MAX_GRIPPER
+            JetMaxControlList[4].publish(SetServo(data=gripperServoTemp,duration=DURATION))
+
+
     return f"{servo_name};{angle_decrease};OK"
 
 @uamethod
