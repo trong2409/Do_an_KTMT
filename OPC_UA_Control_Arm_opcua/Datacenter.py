@@ -9,10 +9,56 @@ _logger = logging.getLogger(__name__)
 hostname = socket.gethostname()
 IPAddr = socket.gethostbyname(hostname)
 
-class SubHandler(object):
+# contain several item with maping: { "datacenterUnity_x" : unity server node }
+UNITY_SERVER_NODES = {}
+# a list of datacenter nodes that datacenter listen to! (listen to its self)
+DATACENTER_SUBSCRIPTION_LIST = []
+# a list that contain multiple wrapper function of this datacenter
+functionWrapperList = list()
+
+class ServerSubHandler(object):
+    """
+      Subscription Handler. To receive events from server for a subscription
+      DO NOT PUT LENGTHY FUNCTION CALL RUN HERE, IT WON'T WORK
+      """
+
+    def __init__(self):
+        self.cmdQueue = list()
+
+    def datachange_notification(self, node: opcua.Node, val, data):
+        """
+        Ham nay se duoc callback khi co su thay doi cua node dang duoc subscribe toi,
+        mang 1 so thong tin nhu.
+        Trong ham nay, khi node "ns=2;i=x" cua server co su thay doi, ta se truy cap vao
+        dict[ns=2;i=x] de lay ra Node tuong ung trong Datacenter. Neu co node tuong ung
+        ta gui nodeID "ns=2;i=x" va gia tri can cap nhat (val) vao cmdQueue
+        :param node: Node co gia tri bi thay doi. Day la mot object opcua.Node
+        :param val: Gia tri cua node vua thay doi
+        :param data: ?
+        :return: None
+        """
+        self.cmdQueue.append([node, val])
+        _logger.warning("Python: New data change event %s %s", node, val)
+
+    def event_notification(self, event):
+        _logger.warning("Python: New event %s", event)
+
+    async def executeQueueCmd(self):
+        while len(self.cmdQueue) > 0:
+            node, val = self.cmdQueue.pop()
+            name = node.get_browse_name().Name
+            print(f'Execute Datacenter cmd: node {name} -> {val}')
+            UNITY_SERVER_NODES[name].set_value(val)
+
+
+class ClientSubHandler(object):
 
     """
    Subscription Handler. To receive events from server for a subscription
+   DO NOT PUT LENGTHY FUNCTION CALL RUN HERE, IT WON'T WORK
+   FOR EXAMPLE, YOU SUB TO A NODE FROM ANOTHER SERVER, AND THEN ASK FOR
+   serverNode.get_browse_node() HERE
+   WILL RAISE TIME_OUT EXCEPTION. I DON'T FUCKING KNOW WHY.
    """
 
     def __init__(self):
@@ -43,8 +89,7 @@ class SubHandler(object):
         :param data: ?
         :return: None
         """
-        if self.subscriptionDict[node.nodeid.to_string()] is not None:
-            self.cmdQueue.append([self.subscriptionDict[node.nodeid.to_string()], val])
+        self.cmdQueue.append([node, val])
             # self.subscriptionDict[node.nodeid.to_string()].set_value(val)
         # print(node.nodeid.to_string())
         # print(self.subscriptionDict)
@@ -56,16 +101,25 @@ class SubHandler(object):
     async def executeQueueCmd(self):
         while len(self.cmdQueue) > 0:
                 node, val = self.cmdQueue.pop()
-                node.set_value(val)
+                name = node.get_browse_name().Name
+                print(f'Execute cmd: node {name} -> {val}')
+                if name == "datacenterUnity":
+                    serverNode = self.subscriptionDict["datacenterUnity"]
+                    serverNode.set_value(val)
+                elif self.subscriptionDict[node.nodeid.to_string()] is not None:
+                    datacenterNode = self.subscriptionDict[node.nodeid.to_string()]
+                    datacenterNode.set_value(val)
 
 
-serverURL = f'opc.tcp://{IPAddr}:4841'
+
+serverURL = f'opc.tcp://172.18.200.5:4841'
 Snamespace = "https://robotarm.opcua.io"
 
 dataCenterURL = f'opc.tcp://{IPAddr}:4840'
 DCnamespace = "https://datacenter.opcua.io"
 
 async def main():
+    global DATACENTER_SUBSCRIPTION_LIST
 
     """
     ref: https://stackoverflow.com/questions/3480184/pass-a-list-to-a-function-to-act-as-multiple-arguments
@@ -99,32 +153,7 @@ async def main():
 
         return caller
 
-    @uamethod
-    def func(parent, *args):
-        print(args)
-        return args
-
-    server = Server()
-
-    server.set_endpoint(dataCenterURL)
-    server.set_server_name("DataCenter Server")
-
-    # set all possible endpoint policies for client to connect through
-    server.set_security_policy(
-        [
-            ua.SecurityPolicyType.NoSecurity,
-            ua.SecurityPolicyType.Basic256Sha256_SignAndEncrypt,
-            ua.SecurityPolicyType.Basic256Sha256_Sign,
-        ]
-    )
-
-    # setup our namespace. An endpoint can have multiple namespace!
-    idx = server.register_namespace(DCnamespace)
-    functionWrapperList = list()
-
-    client = Client(serverURL)
-
-    def browseNode(datacenterParentNode: opcua.Node, nodes : list[opcua.Node], migrate: bool, subhandler: SubHandler):
+    def browseNode(datacenterParentNode: opcua.Node, nodes : list[opcua.Node], migrate: bool, subhandler: ClientSubHandler):
         """
         Ham brosweNode se:
             broswe cac Node trong Server, trich xuat cac thong tin nhu
@@ -142,6 +171,7 @@ async def main():
             subhandler: an object of subhandler.
         )
         """
+        global UNITY_SERVER_NODES, DATACENTER_SUBSCRIPTION_LIST
         methodArgs = list()
         for node in nodes:
             value = 0
@@ -154,10 +184,25 @@ async def main():
                 # check Class of the Node and perform needed action
                 if nodeClass == "Variable":
                     value = node.get_value()
+                    variantType = node.get_data_type_as_variant_type()
                     if migrate:
-                        datacenterNode = datacenterParentNode.add_variable(idx, name, value) if (datacenterParentNode is not None) else None
+                        if name == "unity":
+                            name = f"datacenterUnity_{len(UNITY_SERVER_NODES)}"
+                        datacenterNode = datacenterParentNode.add_variable(idx, name, value, varianttype=variantType) if (datacenterParentNode is not None) else None
                         subhandler.subscriptionDict[nodeID] = datacenterNode
                         subhandler.subscriptionList.append(node)
+                        if name == f"datacenterUnity_{len(UNITY_SERVER_NODES)}":
+                            # trong truong hop datacenter, minh cung muon thay doi gia tri cua node datacenterUnity nay
+                            # va ghi nguoc lai server. de ghi nguoc lai server, minh can luu node cua server [node]
+                            # va subscribe node datacenterUnity nay. (nguoc voi ben tren)
+                            # ta co 1 dict Item: {"datacenterUnity_x" : server Unity node}
+                            UNITY_SERVER_NODES[name] = node
+                            DATACENTER_SUBSCRIPTION_LIST.append(datacenterNode)
+                        accessLevel = node.get_access_level()
+                        try:
+                            datacenterNode.set_writable(ua.AccessLevel.CurrentWrite in accessLevel)
+                        except:
+                            pass
                 elif nodeClass == "Object":
                     nodeClassRefs = node.get_references(40) #reference 40 la reference toi: "HasTypeDefinition",
                     # giup minh xem duoc ro rang hon Folder type
@@ -223,48 +268,79 @@ async def main():
                 print(f'Can\'t read node {node} at {node.nodeid.to_string()}: {e}')
         return methodArgs
 
+    """
+    ================================= SERVER (DATACENTER) SECTION ====================================
+    """
+    server = Server()
+
+    server.set_endpoint(dataCenterURL)
+    server.set_server_name("DataCenter Server")
+
+    # set all possible endpoint policies for client to connect through
+    server.set_security_policy(
+        [
+            ua.SecurityPolicyType.NoSecurity,
+            ua.SecurityPolicyType.Basic256Sha256_SignAndEncrypt,
+            ua.SecurityPolicyType.Basic256Sha256_Sign,
+        ]
+    )
+
+    # setup our namespace. An endpoint can have multiple namespace!
+    idx = server.register_namespace(DCnamespace)
+    server.start()
+    print(f'OPC datacenter running at {server.endpoint[0]}://{server.endpoint[1]}')
+    serverHandler = ServerSubHandler()
+    # subscription chi create duoc sau khi server start.
+    serverSubscription = server.create_subscription(1, serverHandler)
+
+    """
+    ================================= /SERVER (DATACENTER) SECTION ====================================
+    """
+
+    """
+    ================================= CLIENT SECTION ====================================
+    """
+    client = Client(serverURL)
+    client.connect()
+    print(f"Connected to {serverURL} ...")
+
+    # Find the namespace index
+    # nsidx = client.get_namespace_index(namespace)
+    # print(f"Namespace Index for '{namespace}': {nsidx}")
+    listOfNode = client.nodes.objects.get_children()
+    # print(listOfNode)
+    listOfMainNode = listOfNode[1:]
+    # aNode = listOfMainNode[0]
+    # print(aNode, type(aNode), aNode.get_browse_name())
+
+    # each client will have 1 sub handler
+    clientHandler = ClientSubHandler()
+    clientSubscription = client.create_subscription(1, clientHandler)
+    browseNode(server.nodes.objects, listOfMainNode, True, clientHandler)
+    clientSubscription.subscribe_data_change(clientHandler.subscriptionList)
+
+    """
+    ================================= /CLIENT SECTION ====================================
+    """
+
+    # wait until client browse all the nodes from server, and then we will have node to subcribe to :'(
+    print(DATACENTER_SUBSCRIPTION_LIST)
+    serverSubscription.subscribe_data_change(DATACENTER_SUBSCRIPTION_LIST)
+
     async def serverConnect():
-        with server:
-            print(f'OPC server running at {server.endpoint[0]}://{server.endpoint[1]}')
-            while True:
-                await asyncio.sleep(0.0001)
+        while True:
+            await serverHandler.executeQueueCmd()
+            await asyncio.sleep(0.005)
 
+    async def clientConnect():
+        while True:
+            await clientHandler.executeQueueCmd()
+            await asyncio.sleep(0.001)
 
-
-    async def clientConnet():
-        print(f"Connecting to {serverURL} ...")
-        # replace client = Client(serverURL); client.connect()
-        with client:
-            # Find the namespace index
-            # nsidx = client.get_namespace_index(namespace)
-            # print(f"Namespace Index for '{namespace}': {nsidx}")
-            listOfNode = client.nodes.objects.get_children()
-            # print(listOfNode)
-            listOfMainNode = listOfNode[1:]
-            # print(folderNode)
-            # childFolderNode = folderNode.get_children()
-            # print(childFolderNode)
-            # testNode = childFolderNode[0]
-            # print(testNode)
-            # # A variable Node info
-            # print(testNode.get_value())
-            # print(testNode.get_path())
-            # ID = testNode.read_browse_name()
-            # print(ID, ID.Name, ID.NamespaceIndex)
-            # nodeClass = testNode.read_node_class()
-            # print(nodeClass, nodeClass.name)
-
-            # each client will have 1 sub handler
-            handler = SubHandler()
-            subscription = client.create_subscription(1, handler)
-            browseNode(server.nodes.objects, listOfMainNode, True, handler)
-            subscription.subscribe_data_change(handler.subscriptionList)
-            while True:
-                await handler.executeQueueCmd()
-                await asyncio.sleep(0.001)
-
-    await asyncio.gather(serverConnect(), clientConnet())
-
+    await asyncio.gather(serverConnect(), clientConnect())
+    server.stop()
+    client.disconnect()
 
 if __name__ == "__main__":
+    # logging.basicConfig(level=logging.INFO)
     asyncio.run(main())

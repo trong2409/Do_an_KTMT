@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(jetmax_control)
+project(opc_ros)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -62,17 +62,19 @@ add_service_files(
         FILES
         ActionSetList.srv
         ActionSetFileOp.srv
+        SetTarget.srv
+        SetTarget_object.srv
         #   Service1.srv
         #   Service2.srv
 )
 
 ## Generate actions in the 'action' folder
-add_action_files(
-        FILES
-        ActionSetRaw.action
-        #   Action1.action
-        #   Action2.action
-)
+# add_action_files(
+#         FILES
+#         # ActionSetRaw.action
+#         #   Action1.action
+#         #   Action2.action
+# )
 
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
