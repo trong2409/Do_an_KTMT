@@ -5,7 +5,7 @@ import socket
 hostname=socket.gethostname()
 # IPAddr = "192.168.137.1"
 IPAddr=socket.gethostbyname(hostname)
-url = "opc.tcp://"+IPAddr+":4840"
+url = "opc.tcp://"+IPAddr+":4841"
 
 # Range of each Servo
 MIN_M = 0
@@ -73,7 +73,7 @@ name = "OPCUA_SERVER"
 addspace = server.register_namespace(name)
 
 node = server.get_objects_node()
-station = node.add_object(addspace,"Station")
+station = node.add_folder(addspace,"Station")
 
 MidServo = station.add_variable(addspace,"M",90)
 RightServo = station.add_variable(addspace,"R",90)
