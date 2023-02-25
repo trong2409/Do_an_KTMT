@@ -7,7 +7,11 @@ import traceback
 import math
 import threading
 import ast
+import opcua
+import cv2
+import numpy as np
 
+from sensor_msgs.msg import Image
 import rospy
 from std_srvs.srv import Empty, Trigger
 from std_srvs.srv import SetBool, SetBoolResponse, SetBoolRequest
@@ -15,13 +19,15 @@ from std_msgs.msg import Bool, UInt16
 from opc_ros.msg import SetServo, JetMax, SetJetMax
 from opc_ros.srv import SetTarget, SetTargetResponse, SetTargetRequest
 from opc_ros.srv import SetTarget_object, SetTarget_objectResponse, SetTarget_objectRequest
+from opc_ros.srv import ActionSetFileOp, ActionSetFileOpRequest, ActionSetFileOpResponse
+from opc_ros.srv import ActionSetList, ActionSetListRequest, ActionSetListResponse
 
 from opcua import ua, uamethod, Server
 
 _logger = logging.getLogger(__name__)
 
-# IPAddr = ni.ifaddresses('wlan0')[ni.AF_INET][0]['addr']
-IPAddr = ni.ifaddresses('eth0')[ni.AF_INET][0]['addr']
+IPAddr = ni.ifaddresses('wlan0')[ni.AF_INET][0]['addr']
+# IPAddr = ni.ifaddresses('eth0')[ni.AF_INET][0]['addr']
 
 MIN_MIDSERVO = 0
 MAX_MIDSERVO = 1000
@@ -56,6 +62,11 @@ oldData = None
 
 methodDict = {}
 subscriptionList = []
+
+imageQueue = []
+imageTopicDefault = "/usb_cam/image_rect_color"
+imageTopic = ""
+imageSubscription = ""
 
 JetMaxControlList = list()
 #  0 -> mid
@@ -108,6 +119,22 @@ class SubHandler(object):
 
     def event_notification(self, event):
         _logger.warning("Python: New event %s", event)
+        
+    async def runCmdList(self, datacenterRootNode:opcua.Node):
+        while not rospy.is_shutdown():
+            # print(len(handler.cmdList))
+            if len(self.cmdList) > 0:
+                try:
+                    cmd = self.cmdList.pop()
+                    # print(cmd, type(cmd))
+                    methodNode = methodDict[cmd[0]]
+                    args = type_conversion(cmd[1:])
+
+                    datacenterRootNode.call_method(methodNode, *args)
+                except:
+                    traceback.print_exc()
+            await asyncio.sleep(0.001)
+        print("Exit runCmdList")
 
 
 def create_Ua_Argument(Name: str, Datatype: ua.NodeId, Description: str):
@@ -135,7 +162,20 @@ def type_conversion(list_of_string: list) -> list:
             result.append(string)
     return result
 
+def imageConnectTopic(topic):
+        global imageTopic,imageSubscription,imageTopicDefault
+        imageSubscription.unregister()
+        if (topic == imageTopicDefault):
+            imageTopic = topic
+        else:
+            imageTopic = f'/{topic}/image_result'
+        imageSubscription=rospy.Subscriber(imageTopic, Image, imageCallback)
 
+def imageCallback(img):
+        # print(type(img.data))
+        imageQueue.append(img.data)
+        if (len(imageQueue) > 10):
+            imageQueue.clear()
 """
 ================================= uamethod section =================================
 """
@@ -278,13 +318,15 @@ def AIservice(parent, service_name: str, enter: bool):
         palletizing
         ...
     """
-    global AI_SERVICE_NAME
+    global AI_SERVICE_NAME,imageTopicDefault
     if service_name not in AI_SERVICE_NAME:
         return "NOTOK"
     if enter:
         proxy = rospy.ServiceProxy(f'/{service_name}/enter', Trigger)
+        imageConnectTopic(service_name)
     else:
         proxy = rospy.ServiceProxy(f'/{service_name}/exit', Trigger)
+        imageConnectTopic(imageTopicDefault)
     proxy()
     return "OK"
 
@@ -334,7 +376,6 @@ def AIsetTarget(parent, service_name: str, color: str, en: bool):
         traceback.print_exc()
     return "OK"
 
-
 """
 ================================= /uamethod section =================================
 """
@@ -346,8 +387,11 @@ async def main():
     ================================= opcua section =================================
     """
     # server.init()
-    server = Server()
 
+    global imageSubscription
+    imageSubscription=rospy.Subscriber(imageTopicDefault, Image, imageCallback)
+
+    server = Server()
     # endpoint: address to connect to
     server.set_endpoint(f"opc.tcp://{IPAddr}:4841")
     server.set_server_name("Robot Arm Server")
@@ -366,28 +410,32 @@ async def main():
     idx = server.register_namespace(uri)
 
     # add some nodes
-    myfolder = server.nodes.objects.add_folder(idx, "Robot Arm")
+    rootFolder = server.nodes.objects.add_folder(idx, "Robot Arm")
 
-    servo_folder = myfolder.add_folder(idx, "Servo")
+    servo_folder = rootFolder.add_folder(idx, "Servo")
     midServoNode = servo_folder.add_variable(idx, "mid", 90, varianttype=ua.VariantType.Int16)
     leftServoNode = servo_folder.add_variable(idx, "left", 90, varianttype=ua.VariantType.Int16)
     rightServoNode = servo_folder.add_variable(idx, "right", 90, varianttype=ua.VariantType.Int16)
 
-    add_on_folder = myfolder.add_folder(idx, "Add-on")
+    add_on_folder = rootFolder.add_folder(idx, "Add-on")
     rotatorServoNode = add_on_folder.add_variable(idx, "rotator", 90, varianttype=ua.VariantType.Int16)
     gripperServoNode = add_on_folder.add_variable(idx, "gripper", 90, varianttype=ua.VariantType.Int16)
     suckNode = add_on_folder.add_variable(idx, "suckcup", False, varianttype=ua.VariantType.Boolean)
 
-    cordinateFolder = myfolder.add_folder(idx, "Cordinate")
+    cordinateFolder = rootFolder.add_folder(idx, "Cordinate")
     xNode = cordinateFolder.add_variable(idx, "x", 0, varianttype=ua.VariantType.Double)
     yNode = cordinateFolder.add_variable(idx, "y", 0, varianttype=ua.VariantType.Double)
     zNode = cordinateFolder.add_variable(idx, "z", 0, varianttype=ua.VariantType.Double)
 
-    speedNode = myfolder.add_variable(idx, "speed", 5)
-    unityNode = myfolder.add_variable(idx, "unity", "empty", varianttype=ua.VariantType.String)
+    speedNode = rootFolder.add_variable(idx, "speed", 5)
+    unityNode = rootFolder.add_variable(idx, "unity", "empty", varianttype=ua.VariantType.String)
     unityNode.set_writable(True)
+    
+        # Image node
+    imageFolder = rootFolder.add_folder(idx, "Image")
+    imageNode = imageFolder.add_variable(idx, "image", "", datatype=ua.ObjectIds.ImageJPG)
 
-    methodFolder = myfolder.add_folder(idx, "Method")
+    methodFolder = rootFolder.add_folder(idx, "Method")
 
     controlMethod = methodFolder.add_folder(idx, "Control Method")
 
@@ -399,10 +447,10 @@ async def main():
                                 Description="Acknowledgement")
 
     methodDict["moveServo"] = controlMethod.add_method(idx,
-                                                       "moveServo",
-                                                       moveServo,
-                                                       [inargx, inargy],
-                                                       [outarg])
+                                                    "moveServo",
+                                                    moveServo,
+                                                    [inargx, inargy],
+                                                    [outarg])
 
     inargx = create_Ua_Argument(Name="Servo", Datatype=ua.NodeId(ua.ObjectIds.String),
                                 Description="Servo name: mid, left, right, rotator, gripper")
@@ -410,19 +458,19 @@ async def main():
                                 Description="Direction of servo, -1 to decrease, 0 to stop and 1 to increase")
 
     methodDict["autoServo"] = controlMethod.add_method(idx,
-                                                       "autoServo",
-                                                       autoServo,
-                                                       [inargx, inargy],
-                                                       [outarg])
+                                                    "autoServo",
+                                                    autoServo,
+                                                    [inargx, inargy],
+                                                    [outarg])
 
     inargx = create_Ua_Argument(Name="Speed", Datatype=ua.NodeId(ua.ObjectIds.Int16),
                                 Description="Speed of servo, a value from 1 to 10")
 
     methodDict["changeSpeed"] = controlMethod.add_method(idx,
-                                                         "changeSpeed",
-                                                         changeSpeed,
-                                                         [inargx],
-                                                         [outarg])
+                                                        "changeSpeed",
+                                                        changeSpeed,
+                                                        [inargx],
+                                                        [outarg])
 
     inargx = create_Ua_Argument(Name="Sucker", Datatype=ua.NodeId(ua.ObjectIds.Boolean),
                                 Description="Set sucker on or off")
@@ -439,10 +487,10 @@ async def main():
                                 Description="Increase the cordinate of x, y, or z direction")
 
     methodDict["moveCordinate"] = controlMethod.add_method(idx,
-                                                           "moveCordinate",
-                                                           moveCordinate,
-                                                           [inargx, inargy],
-                                                           [outarg])
+                                                        "moveCordinate",
+                                                        moveCordinate,
+                                                        [inargx, inargy],
+                                                        [outarg])
 
     inargx = create_Ua_Argument(Name="Cordinate", Datatype=ua.NodeId(ua.ObjectIds.String),
                                 Description="Cordinate name: x, y, z")
@@ -450,10 +498,10 @@ async def main():
                                 Description="Direction of cordinate move, -1 to decrease, 0 to stop and 1 to increase")
 
     methodDict["autoCordinate"] = controlMethod.add_method(idx,
-                                                           "autoCordinate",
-                                                           autoCordinate,
-                                                           [inargx, inargy],
-                                                           [outarg])
+                                                        "autoCordinate",
+                                                        autoCordinate,
+                                                        [inargx, inargy],
+                                                        [outarg])
 
     inargx = create_Ua_Argument(Name="X", Datatype=ua.NodeId(ua.ObjectIds.Float),
                                 Description="X axis value")
@@ -463,10 +511,10 @@ async def main():
                                 Description="Z axis value")
 
     methodDict["setCordinate"] = controlMethod.add_method(idx,
-                                                          "setCordinate",
-                                                          setCordinate,
-                                                          [inargx, inargy, inargz],
-                                                          [outarg])
+                                                        "setCordinate",
+                                                        setCordinate,
+                                                        [inargx, inargy, inargz],
+                                                        [outarg])
 
     methodDict["goHome"] = controlMethod.add_method(idx,
                                                     "goHome",
@@ -482,10 +530,10 @@ async def main():
     AIMethod = methodFolder.add_folder(idx, "AI Method")
 
     methodDict["AIservice"] = AIMethod.add_method(idx,
-                                                  "AIservice",
-                                                  AIservice,
-                                                  [inargx, inargy],
-                                                  [outarg])
+                                                "AIservice",
+                                                AIservice,
+                                                [inargx, inargy],
+                                                [outarg])
 
     inargx = create_Ua_Argument(Name="AI Service Name", Datatype=ua.NodeId(ua.ObjectIds.String),
                                 Description="AI service name available: palletizing,\ncolor_sorting\nobject_tracking\nwaste_classification\n ...")
@@ -493,10 +541,10 @@ async def main():
                                 Description="Start or Stop service. Service must be Enter before use")
 
     methodDict["AIserviceRun"] = AIMethod.add_method(idx,
-                                                     "AIserviceRun",
-                                                     AIserviceRun,
-                                                     [inargx, inargy],
-                                                     [outarg])
+                                                    "AIserviceRun",
+                                                    AIserviceRun,
+                                                    [inargx, inargy],
+                                                    [outarg])
 
     inargx = create_Ua_Argument(Name="AI Service Name", Datatype=ua.NodeId(ua.ObjectIds.String),
                                 Description="AI service name available: \ncolor_sorting\nobject_tracking\n ...")
@@ -512,6 +560,7 @@ async def main():
                                                     AIsetTarget,
                                                     [inargx, inargy, inargz],
                                                     [outarg])
+
 
     async def autoRun():
         """
@@ -563,22 +612,20 @@ async def main():
             except Exception:
                 traceback.print_exc()
         print("Exit autoRun")
-
-    async def runCmdList(handler: SubHandler):
+        
+    async def updateVideo():
         while not rospy.is_shutdown():
-            # print(len(handler.cmdList))
-            if len(handler.cmdList) > 0:
-                try:
-                    cmd = handler.cmdList.pop()
-                    # print(cmd, type(cmd))
-                    methodNode = methodDict[cmd[0]]
-                    args = type_conversion(cmd[1:])
+            if (len(imageQueue) > 0):
+                data = imageQueue.pop()
+                imageData = np.ndarray(shape=(480, 640, 3), dtype=np.uint8, buffer=data)
+                encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 10, int(cv2.IMWRITE_JPEG_OPTIMIZE),1]
+                result, encimg = cv2.imencode('.jpg', imageData, encode_param)
+                # np_img = np.array(encimg)
+                print(encimg.shape)
+                encimg = encimg.tobytes()
+                imageNode.set_value(encimg)
+            await asyncio.sleep(0.05)
 
-                    myfolder.call_method(methodNode, *args)
-                except:
-                    traceback.print_exc()
-            await asyncio.sleep(0.001)
-        print("Exit runCmdList")
 
     async def serverStart():
         print("serveropc", threading.current_thread().getName())
@@ -591,7 +638,7 @@ async def main():
             print(subscriptionList)
             subscription.subscribe_data_change(subscriptionList)
             # asyncio.gather giup chay 2 ham async 1 cach "song song"
-            await asyncio.gather(autoRun(), runCmdList(handler))
+            await asyncio.gather(autoRun(), handler.runCmdList(rootFolder), updateVideo())
         print("Exit server")
 
     """
@@ -640,10 +687,10 @@ async def main():
             oldData = data
 
     async def ros_run():
-        print("rosrun", threading.current_thread().getName())
+        print("rosrun", threading.current_thread().name)
         global JetMaxControlList
         # create ONLY 1 NODE (anonymous = False) with the name opcua. If the same
-        # node already exist, old node will be replace by the new node!
+        # node already exist, old node will be replaced by the new node!
         rospy.init_node("opcua", anonymous=False, log_level=rospy.DEBUG)
         rospy.Subscriber('/jetmax/status', JetMax, callback=updateRobot)
 
@@ -663,6 +710,8 @@ async def main():
         jetmax_relative_pos_cmd = rospy.Publisher('/jetmax/relative_command', SetJetMax, queue_size=1)
 
         JetMaxControlList.extend([jetmax_pub_sucker, jetmax_pos_cmd, jetmax_relative_pos_cmd])
+        
+        # Sub to get Image
         while not rospy.is_shutdown():
             # rospy is shutdown when ctrl - C is pressed!
             await asyncio.sleep(1)
@@ -671,7 +720,6 @@ async def main():
     """
     ================================= /ros section =================================
     """
-
     await asyncio.gather(serverStart(), ros_run())
 
 
