@@ -15,7 +15,7 @@ dataNode = list()
 
 if __name__ == "__main__":
     # # # ============ client =====================
-    server_url = "opc.tcp://10.230.219.253:4840"
+    server_url = "opc.tcp://192.168.197.212:4840"
     client = Client(server_url)
     client.connect()
     print(f'DataCenter connected to {server_url}')
@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # ============ server =====================
     server = Server()
-    url = "opc.tcp://10.230.219.253:4840"
+    url = "opc.tcp://192.168.197.102:4840"
     server.set_endpoint(url)
 
     name = "OPCUA_SIMUALTION_SERVER"

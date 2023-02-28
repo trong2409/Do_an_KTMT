@@ -27,14 +27,6 @@ class ServerSubHandler(object):
 
     def datachange_notification(self, node: opcua.Node, val, data):
         """
-        Ham nay se duoc callback khi co su thay doi cua node dang duoc subscribe toi,
-        mang 1 so thong tin nhu.
-        Trong ham nay, khi node "ns=2;i=x" cua server co su thay doi, ta se truy cap vao
-        dict[ns=2;i=x] de lay ra Node tuong ung trong Datacenter. Neu co node tuong ung
-        ta gui nodeID "ns=2;i=x" va gia tri can cap nhat (val) vao cmdQueue
-        :param node: Node co gia tri bi thay doi. Day la mot object opcua.Node
-        :param val: Gia tri cua node vua thay doi
-        :param data: ?
         :return: None
         """
         self.cmdQueue.append([node, val])
@@ -55,7 +47,7 @@ class ClientSubHandler(object):
 
     """
    Subscription Handler. To receive events from server for a subscription
-   DO NOT PUT LENGTHY FUNCTION CALL RUN HERE, IT WON'T WORK
+   DO NOT PUT LENGTHY FUNCTION CALL RUN HERE, IT WON'T WORK.
    FOR EXAMPLE, YOU SUB TO A NODE FROM ANOTHER SERVER, AND THEN ASK FOR
    serverNode.get_browse_node() HERE
    WILL RAISE TIME_OUT EXCEPTION. I DON'T FUCKING KNOW WHY.
@@ -100,15 +92,12 @@ class ClientSubHandler(object):
 
     async def executeQueueCmd(self):
         while len(self.cmdQueue) > 0:
-                node, val = self.cmdQueue.pop()
-                name = node.get_browse_name().Name
-                print(f'Execute cmd: node {name} -> {val}')
-                if name == "datacenterUnity":
-                    serverNode = self.subscriptionDict["datacenterUnity"]
-                    serverNode.set_value(val)
-                elif self.subscriptionDict[node.nodeid.to_string()] is not None:
-                    datacenterNode = self.subscriptionDict[node.nodeid.to_string()]
-                    datacenterNode.set_value(val)
+            node, val = self.cmdQueue.pop()
+            name = node.get_browse_name().Name
+            print(f'Execute cmd: node {name} -> {val}')
+            if self.subscriptionDict[node.nodeid.to_string()] is not None:
+                datacenterNode = self.subscriptionDict[node.nodeid.to_string()]
+                datacenterNode.set_value(val)
 
 
 
@@ -330,7 +319,7 @@ async def main():
     async def serverConnect():
         while True:
             await serverHandler.executeQueueCmd()
-            await asyncio.sleep(0.005)
+            await asyncio.sleep(0.001)
 
     async def clientConnect():
         while True:

@@ -8,7 +8,7 @@ hostname=socket.gethostname()
 IPAddr=socket.gethostbyname(hostname)
 
 # url = "opc.tcp://192.168.56.1:4840"
-DataCenter_url = "opc.tcp://192.168.193.204:4840"
+DataCenter_url = "opc.tcp://192.168.197.204:4840"
 
 client = Client(DataCenter_url)
 
