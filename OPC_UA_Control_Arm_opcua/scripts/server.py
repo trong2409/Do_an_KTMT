@@ -119,6 +119,22 @@ class SubHandler(object):
 
     def event_notification(self, event):
         _logger.warning("Python: New event %s", event)
+        
+    async def runCmdList(self, datacenterRootNode:opcua.Node):
+        while not rospy.is_shutdown():
+            # print(len(handler.cmdList))
+            if len(self.cmdList) > 0:
+                try:
+                    cmd = self.cmdList.pop()
+                    # print(cmd, type(cmd))
+                    methodNode = methodDict[cmd[0]]
+                    args = type_conversion(cmd[1:])
+
+                    datacenterRootNode.call_method(methodNode, *args)
+                except:
+                    traceback.print_exc()
+            await asyncio.sleep(0.001)
+        print("Exit runCmdList")
 
     async def runCmdList(self, datacenterRootNode: opcua.Node):
         while not rospy.is_shutdown():
@@ -162,24 +178,20 @@ def type_conversion(list_of_string: list) -> list:
             result.append(string)
     return result
 
-
 def imageConnectTopic(topic):
-    global imageTopic, imageSubscription, imageTopicDefault
-    imageSubscription.unregister()
-    if (topic == imageTopicDefault):
-        imageTopic = topic
-    else:
-        imageTopic = f'/{topic}/image_result'
-    imageSubscription = rospy.Subscriber(imageTopic, Image, imageCallback)
-
+        global imageTopic,imageSubscription,imageTopicDefault
+        imageSubscription.unregister()
+        if (topic == imageTopicDefault):
+            imageTopic = topic
+        else:
+            imageTopic = f'/{topic}/image_result'
+        imageSubscription=rospy.Subscriber(imageTopic, Image, imageCallback)
 
 def imageCallback(img):
-    # print(type(img.data))
-    imageQueue.append(img.data)
-    if (len(imageQueue) > 10):
-        imageQueue.clear()
-
-
+        # print(type(img.data))
+        imageQueue.append(img.data)
+        if (len(imageQueue) > 10):
+            imageQueue.clear()
 """
 ================================= uamethod section =================================
 """
@@ -322,7 +334,7 @@ def AIservice(parent, service_name: str, enter: bool):
         palletizing
         ...
     """
-    global AI_SERVICE_NAME, imageTopicDefault
+    global AI_SERVICE_NAME,imageTopicDefault
     if service_name not in AI_SERVICE_NAME:
         return "NOTOK"
     if enter:
@@ -380,7 +392,6 @@ def AIsetTarget(parent, service_name: str, color: str, en: bool):
         traceback.print_exc()
     return "OK"
 
-
 """
 ================================= /uamethod section =================================
 """
@@ -435,8 +446,8 @@ async def main():
     speedNode = rootFolder.add_variable(idx, "speed", 5)
     unityNode = rootFolder.add_variable(idx, "unity", "empty", varianttype=ua.VariantType.String)
     unityNode.set_writable(True)
-
-    # Image node
+    
+        # Image node
     imageFolder = rootFolder.add_folder(idx, "Image")
     imageNode = imageFolder.add_variable(idx, "image", "", datatype=ua.ObjectIds.ImageJPG)
 
@@ -452,10 +463,10 @@ async def main():
                                 Description="Acknowledgement")
 
     methodDict["moveServo"] = controlMethod.add_method(idx,
-                                                       "moveServo",
-                                                       moveServo,
-                                                       [inargx, inargy],
-                                                       [outarg])
+                                                    "moveServo",
+                                                    moveServo,
+                                                    [inargx, inargy],
+                                                    [outarg])
 
     inargx = create_Ua_Argument(Name="Servo", Datatype=ua.NodeId(ua.ObjectIds.String),
                                 Description="Servo name: mid, left, right, rotator, gripper")
@@ -463,19 +474,19 @@ async def main():
                                 Description="Direction of servo, -1 to decrease, 0 to stop and 1 to increase")
 
     methodDict["autoServo"] = controlMethod.add_method(idx,
-                                                       "autoServo",
-                                                       autoServo,
-                                                       [inargx, inargy],
-                                                       [outarg])
+                                                    "autoServo",
+                                                    autoServo,
+                                                    [inargx, inargy],
+                                                    [outarg])
 
     inargx = create_Ua_Argument(Name="Speed", Datatype=ua.NodeId(ua.ObjectIds.Int16),
                                 Description="Speed of servo, a value from 1 to 10")
 
     methodDict["changeSpeed"] = controlMethod.add_method(idx,
-                                                         "changeSpeed",
-                                                         changeSpeed,
-                                                         [inargx],
-                                                         [outarg])
+                                                        "changeSpeed",
+                                                        changeSpeed,
+                                                        [inargx],
+                                                        [outarg])
 
     inargx = create_Ua_Argument(Name="Sucker", Datatype=ua.NodeId(ua.ObjectIds.Boolean),
                                 Description="Set sucker on or off")
@@ -492,10 +503,10 @@ async def main():
                                 Description="Increase the cordinate of x, y, or z direction")
 
     methodDict["moveCordinate"] = controlMethod.add_method(idx,
-                                                           "moveCordinate",
-                                                           moveCordinate,
-                                                           [inargx, inargy],
-                                                           [outarg])
+                                                        "moveCordinate",
+                                                        moveCordinate,
+                                                        [inargx, inargy],
+                                                        [outarg])
 
     inargx = create_Ua_Argument(Name="Cordinate", Datatype=ua.NodeId(ua.ObjectIds.String),
                                 Description="Cordinate name: x, y, z")
@@ -503,10 +514,10 @@ async def main():
                                 Description="Direction of cordinate move, -1 to decrease, 0 to stop and 1 to increase")
 
     methodDict["autoCordinate"] = controlMethod.add_method(idx,
-                                                           "autoCordinate",
-                                                           autoCordinate,
-                                                           [inargx, inargy],
-                                                           [outarg])
+                                                        "autoCordinate",
+                                                        autoCordinate,
+                                                        [inargx, inargy],
+                                                        [outarg])
 
     inargx = create_Ua_Argument(Name="X", Datatype=ua.NodeId(ua.ObjectIds.Float),
                                 Description="X axis value")
@@ -516,10 +527,10 @@ async def main():
                                 Description="Z axis value")
 
     methodDict["setCordinate"] = controlMethod.add_method(idx,
-                                                          "setCordinate",
-                                                          setCordinate,
-                                                          [inargx, inargy, inargz],
-                                                          [outarg])
+                                                        "setCordinate",
+                                                        setCordinate,
+                                                        [inargx, inargy, inargz],
+                                                        [outarg])
 
     methodDict["goHome"] = controlMethod.add_method(idx,
                                                     "goHome",
@@ -535,10 +546,10 @@ async def main():
     AIMethod = methodFolder.add_folder(idx, "AI Method")
 
     methodDict["AIservice"] = AIMethod.add_method(idx,
-                                                  "AIservice",
-                                                  AIservice,
-                                                  [inargx, inargy],
-                                                  [outarg])
+                                                "AIservice",
+                                                AIservice,
+                                                [inargx, inargy],
+                                                [outarg])
 
     inargx = create_Ua_Argument(Name="AI Service Name", Datatype=ua.NodeId(ua.ObjectIds.String),
                                 Description="AI service name available: palletizing,\ncolor_sorting\nobject_tracking\nwaste_classification\n ...")
@@ -546,10 +557,10 @@ async def main():
                                 Description="Start or Stop service. Service must be Enter before use")
 
     methodDict["AIserviceRun"] = AIMethod.add_method(idx,
-                                                     "AIserviceRun",
-                                                     AIserviceRun,
-                                                     [inargx, inargy],
-                                                     [outarg])
+                                                    "AIserviceRun",
+                                                    AIserviceRun,
+                                                    [inargx, inargy],
+                                                    [outarg])
 
     inargx = create_Ua_Argument(Name="AI Service Name", Datatype=ua.NodeId(ua.ObjectIds.String),
                                 Description="AI service name available: \ncolor_sorting\nobject_tracking\n ...")
@@ -565,6 +576,7 @@ async def main():
                                                     AIsetTarget,
                                                     [inargx, inargy, inargz],
                                                     [outarg])
+
 
     async def autoRun():
         """
@@ -616,7 +628,7 @@ async def main():
             except Exception:
                 traceback.print_exc()
         print("Exit autoRun")
-
+        
     async def updateVideo():
         while not rospy.is_shutdown():
             if (len(imageQueue) > 0):
@@ -713,7 +725,6 @@ async def main():
         jetmax_relative_pos_cmd = rospy.Publisher('/jetmax/relative_command', SetJetMax, queue_size=1)
 
         JetMaxControlList.extend([jetmax_pub_sucker, jetmax_pos_cmd, jetmax_relative_pos_cmd])
-
         # Sub to get Image
         while not rospy.is_shutdown():
             # rospy is shutdown when ctrl - C is pressed!
