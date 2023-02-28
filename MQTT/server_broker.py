@@ -11,7 +11,7 @@ def subscribed(client, userdata, mid, granted_qos):
     print("Subscribed...")
 
 def recv_message(client, userdata, message):
-    ack = "o"*42
+    ack = "o"*64
     client.publish("v1/devices/me/telemetry1", ack)
     '''Because printing affect the speed of the program, I'll comment them out.'''
     # print("Received: ", message.payload.decode("UTF-8"))
