@@ -8,8 +8,10 @@ import math
 import threading
 import ast
 import opcua
+import actionlib
 import cv2
 import numpy as np
+import os
 
 from sensor_msgs.msg import Image
 import rospy
@@ -21,6 +23,8 @@ from opc_ros.srv import SetTarget, SetTargetResponse, SetTargetRequest
 from opc_ros.srv import SetTarget_object, SetTarget_objectResponse, SetTarget_objectRequest
 from opc_ros.srv import ActionSetFileOp, ActionSetFileOpRequest, ActionSetFileOpResponse
 from opc_ros.srv import ActionSetList, ActionSetListRequest, ActionSetListResponse
+from opc_ros.msg import ActionSetRawAction, ActionSetRawFeedback, ActionSetRawActionGoal, ActionSetRawResult, ActionSetRawGoal
+from actionlib_msgs.msg import GoalID
 
 from opcua import ua, uamethod, Server
 
@@ -59,6 +63,8 @@ y = 0
 z = 0
 
 oldData = None
+
+actionlibClient = None
 
 methodDict = {}
 subscriptionList = []
@@ -121,22 +127,6 @@ class SubHandler(object):
         _logger.warning("Python: New event %s", event)
         
     async def runCmdList(self, datacenterRootNode:opcua.Node):
-        while not rospy.is_shutdown():
-            # print(len(handler.cmdList))
-            if len(self.cmdList) > 0:
-                try:
-                    cmd = self.cmdList.pop()
-                    # print(cmd, type(cmd))
-                    methodNode = methodDict[cmd[0]]
-                    args = type_conversion(cmd[1:])
-
-                    datacenterRootNode.call_method(methodNode, *args)
-                except:
-                    traceback.print_exc()
-            await asyncio.sleep(0.001)
-        print("Exit runCmdList")
-
-    async def runCmdList(self, datacenterRootNode: opcua.Node):
         while not rospy.is_shutdown():
             # print(len(handler.cmdList))
             if len(self.cmdList) > 0:
@@ -224,7 +214,7 @@ def moveServo(parent, servo_name: str, angle_increase: bool):
         if not angle_increase and rightServo > MIN_RIGHTSERVO:
             rightServoTemp = rightServo - speed if (rightServo - speed >= MIN_RIGHTSERVO) else MIN_RIGHTSERVO
             JetMaxControlList[2].publish(SetServo(data=int(rightServoTemp), duration=DURATION))
-        elif not angle_increase and rightServo < MAX_RIGHTSERVO:
+        elif angle_increase and rightServo < MAX_RIGHTSERVO:
             rightServoTemp = rightServo + speed if (rightServo + speed <= MAX_RIGHTSERVO) else MAX_RIGHTSERVO
             JetMaxControlList[2].publish(SetServo(data=int(rightServoTemp), duration=DURATION))
 
@@ -392,6 +382,44 @@ def AIsetTarget(parent, service_name: str, color: str, en: bool):
         traceback.print_exc()
     return "OK"
 
+@uamethod
+def getActionSetList(parent):
+    proxy = rospy.ServiceProxy("/jetmax/actionset/get_actionset_list", ActionSetList)
+    result = proxy()
+    # result is type ActionSetListResponse(string[] action_sets). we have to access the
+    # response by result.action_sets.
+    print(type(result.action_sets))
+    return result.action_sets
+
+@uamethod
+def runActionSet(parent, actionset_name:str, repeat_:int):
+    global actionlibClient
+    try:
+        f = open(os.path.join("/home/hiwonder/ActionSets", f'{actionset_name}.json'), "r")
+    except FileNotFoundError:
+        return "Action Set does not exist"
+    if repeat_ < 0:
+        return "Repeat number can not less than 0"
+    fdata = f.read()
+    f.close()
+    
+    actionlibClient.send_goal(
+    ActionSetRawGoal(
+        data=  fdata,
+        repeat = repeat_
+    )
+    )
+    actionlibClient.wait_for_result()
+    result = (actionlibClient.get_result())
+    # result is ActionSetRawRespone ActionSetRawResult(bool result).
+    # we access result by result.result 
+    print(type(result.result))
+    if result.result == True:
+        return "OK"
+    else:
+        return "NOTOK"
+    
+
 """
 ================================= /uamethod section =================================
 """
@@ -405,7 +433,7 @@ async def main():
     # server.init()
 
     global imageSubscription
-    imageSubscription = rospy.Subscriber(imageTopicDefault, Image, imageCallback)
+    imageSubscription=rospy.Subscriber(imageTopicDefault, Image, imageCallback)
 
     server = Server()
     # endpoint: address to connect to
@@ -576,6 +604,26 @@ async def main():
                                                     AIsetTarget,
                                                     [inargx, inargy, inargz],
                                                     [outarg])
+    
+    ActionSetMethod = methodFolder.add_folder(idx, "ActionSetMethod")
+    
+    methodDict["getActionSetList"] = ActionSetMethod.add_method(idx, 
+                                           "getActionSetList",
+                                           getActionSetList,
+                                           [],
+                                           [outarg])
+    
+    inargx = create_Ua_Argument(Name="Action set name", Datatype=ua.NodeId(ua.ObjectIds.String),
+                                Description="Run a actionset which name exist from getActionSetList")
+    inargy = create_Ua_Argument(Name="Repeat", Datatype=ua.NodeId(ua.ObjectIds.Int16),
+                                Description="How many time the action will be repeated")
+    
+    methodDict["runActionSet"] = ActionSetMethod.add_method(idx,
+                                                            "runActionSet",
+                                                            runActionSet,
+                                                            [inargx, inargy],
+                                                            [outarg])
+    
 
 
     async def autoRun():
@@ -634,13 +682,14 @@ async def main():
             if (len(imageQueue) > 0):
                 data = imageQueue.pop()
                 imageData = np.ndarray(shape=(480, 640, 3), dtype=np.uint8, buffer=data)
-                encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 10]
-                result, encimg = cv2.imencode('.jpg', imageData, encode_param)
+                encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 25]
+                result, encimg = cv2.imencode('.jpg', cv2.cvtColor(imageData, cv2.COLOR_RGB2BGR), encode_param)
                 # np_img = np.array(encimg)
                 print(encimg.shape)
                 encimg = encimg.tobytes()
                 imageNode.set_value(encimg)
             await asyncio.sleep(0.05)
+
 
     async def serverStart():
         print("serveropc", threading.current_thread().getName())
@@ -702,6 +751,7 @@ async def main():
             oldData = data
 
     async def ros_run():
+        global actionlibClient
         print("rosrun", threading.current_thread().name)
         global JetMaxControlList
         # create ONLY 1 NODE (anonymous = False) with the name opcua. If the same
@@ -725,6 +775,11 @@ async def main():
         jetmax_relative_pos_cmd = rospy.Publisher('/jetmax/relative_command', SetJetMax, queue_size=1)
 
         JetMaxControlList.extend([jetmax_pub_sucker, jetmax_pos_cmd, jetmax_relative_pos_cmd])
+        actionlibClient = actionlib.SimpleActionClient("/jetmax/actionset_online", ActionSetRawAction)
+        # wait until the action server has started up and started listening for goals
+        actionlibClient.wait_for_server()
+        
+        
         # Sub to get Image
         while not rospy.is_shutdown():
             # rospy is shutdown when ctrl - C is pressed!
