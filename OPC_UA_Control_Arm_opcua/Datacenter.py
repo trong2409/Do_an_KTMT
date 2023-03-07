@@ -6,13 +6,11 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
-hostname = socket.gethostname()
-IPAddr = socket.gethostbyname(hostname)
+ServerIPAddr = "192.168.50.121"
 
-# contain several item with maping: { "datacenterUnity_x" : unity server node }
-UNITY_SERVER_NODES = {}
-# a list of datacenter nodes that datacenter listen to! (listen to its self)
-DATACENTER_SUBSCRIPTION_LIST = []
+hostname = socket.gethostname()
+DataCenterIPAddr = socket.gethostbyname(hostname)
+
 # a list that contain multiple wrapper function of this datacenter
 functionWrapperList = list()
 
@@ -39,8 +37,7 @@ class ServerSubHandler(object):
         while len(self.cmdQueue) > 0:
             node, val = self.cmdQueue.pop()
             name = node.get_browse_name().Name
-            print(f'Execute Datacenter cmd: node {name} -> {val}')
-            UNITY_SERVER_NODES[name].set_value(val)
+            # print(f'Execute Datacenter cmd: node {name} -> {val}')
 
 
 class ClientSubHandler(object):
@@ -94,21 +91,20 @@ class ClientSubHandler(object):
         while len(self.cmdQueue) > 0:
             node, val = self.cmdQueue.pop()
             name = node.get_browse_name().Name
-            print(f'Execute cmd: node {name} -> {val}')
+            # print(f'Execute cmd: node {name} -> {val}')
             if self.subscriptionDict[node.nodeid.to_string()] is not None:
                 datacenterNode = self.subscriptionDict[node.nodeid.to_string()]
                 datacenterNode.set_value(val)
 
 
 
-serverURL = f'opc.tcp://172.18.200.5:4841'
+serverURL = f'opc.tcp://{ServerIPAddr}:4841'
 Snamespace = "https://robotarm.opcua.io"
 
-dataCenterURL = f'opc.tcp://{IPAddr}:4840'
+dataCenterURL = f'opc.tcp://{DataCenterIPAddr}:4840'
 DCnamespace = "https://datacenter.opcua.io"
 
 async def main():
-    global DATACENTER_SUBSCRIPTION_LIST
 
     """
     ref: https://stackoverflow.com/questions/3480184/pass-a-list-to-a-function-to-act-as-multiple-arguments
@@ -160,7 +156,6 @@ async def main():
             subhandler: an object of subhandler.
         )
         """
-        global UNITY_SERVER_NODES, DATACENTER_SUBSCRIPTION_LIST
         methodArgs = list()
         for node in nodes:
             value = 0
@@ -173,20 +168,13 @@ async def main():
                 # check Class of the Node and perform needed action
                 if nodeClass == "Variable":
                     value = node.get_value()
-                    variantType = node.get_data_type_as_variant_type()
+                    datatype = node.get_data_type().Identifier
+
                     if migrate:
-                        if name == "unity":
-                            name = f"datacenterUnity_{len(UNITY_SERVER_NODES)}"
-                        datacenterNode = datacenterParentNode.add_variable(idx, name, value, varianttype=variantType) if (datacenterParentNode is not None) else None
+
+                        datacenterNode = datacenterParentNode.add_variable(idx, name, value, datatype=datatype) if (datacenterParentNode is not None) else None
                         subhandler.subscriptionDict[nodeID] = datacenterNode
                         subhandler.subscriptionList.append(node)
-                        if name == f"datacenterUnity_{len(UNITY_SERVER_NODES)}":
-                            # trong truong hop datacenter, minh cung muon thay doi gia tri cua node datacenterUnity nay
-                            # va ghi nguoc lai server. de ghi nguoc lai server, minh can luu node cua server [node]
-                            # va subscribe node datacenterUnity nay. (nguoc voi ben tren)
-                            # ta co 1 dict Item: {"datacenterUnity_x" : server Unity node}
-                            UNITY_SERVER_NODES[name] = node
-                            DATACENTER_SUBSCRIPTION_LIST.append(datacenterNode)
                         accessLevel = node.get_access_level()
                         try:
                             datacenterNode.set_writable(ua.AccessLevel.CurrentWrite in accessLevel)
@@ -226,18 +214,19 @@ async def main():
                     # of a method or not, and return these argument.
                     if nodeClass == "Method":
                         inoutArgs = browseNode(datacenterNode, children, migrate, subhandler)
-                        inArgs = inoutArgs[0]
                         inArgsFunc = list()
-                        for inArg in inArgs:
-                            uaArg = ua.Argument()
-                            uaArg.Name = inArg.Name
-                            uaArg.DataType = inArg.DataType
-                            uaArg.ValueRank = inArg.ValueRank
-                            uaArg.ArrayDimensions = inArg.ArrayDimensions
-                            uaArg.Description = inArg.Description
-                            inArgsFunc.append(uaArg)
-                        outArgs = inoutArgs[1]
                         outArgsFunc = list()
+                        if len(inoutArgs) > 1:
+                            inArgs = inoutArgs.pop(0)
+                            for inArg in inArgs:
+                                uaArg = ua.Argument()
+                                uaArg.Name = inArg.Name
+                                uaArg.DataType = inArg.DataType
+                                uaArg.ValueRank = inArg.ValueRank
+                                uaArg.ArrayDimensions = inArg.ArrayDimensions
+                                uaArg.Description = inArg.Description
+                                inArgsFunc.append(uaArg)
+                        outArgs = inoutArgs.pop(0)
                         for outArg in outArgs:
                             uaArg = ua.Argument()
                             uaArg.Name = outArg.Name
@@ -278,9 +267,6 @@ async def main():
     idx = server.register_namespace(DCnamespace)
     server.start()
     print(f'OPC datacenter running at {server.endpoint[0]}://{server.endpoint[1]}')
-    serverHandler = ServerSubHandler()
-    # subscription chi create duoc sau khi server start.
-    serverSubscription = server.create_subscription(1, serverHandler)
 
     """
     ================================= /SERVER (DATACENTER) SECTION ====================================
@@ -312,13 +298,8 @@ async def main():
     ================================= /CLIENT SECTION ====================================
     """
 
-    # wait until client browse all the nodes from server, and then we will have node to subcribe to :'(
-    print(DATACENTER_SUBSCRIPTION_LIST)
-    serverSubscription.subscribe_data_change(DATACENTER_SUBSCRIPTION_LIST)
-
     async def serverConnect():
         while True:
-            await serverHandler.executeQueueCmd()
             await asyncio.sleep(0.001)
 
     async def clientConnect():
