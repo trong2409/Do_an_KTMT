@@ -480,8 +480,6 @@ async def main():
     zNode = cordinateFolder.add_variable(idx, "z", 0, varianttype=ua.VariantType.Double)
 
     speedNode = rootFolder.add_variable(idx, "speed", 5)
-    unityNode = rootFolder.add_variable(idx, "unity", "empty", varianttype=ua.VariantType.String)
-    unityNode.set_writable(True)
 
     # Image node
     imageFolder = rootFolder.add_folder(idx, "Image")
@@ -704,13 +702,13 @@ async def main():
         with server:
             print(f'OPC server running at {server.endpoint[0]}://{server.endpoint[1]}')
             # subscrition chi chay duoc sau khi Server.start()
-            handler = SubHandler()
-            subscription = server.create_subscription(1, handler)
-            subscriptionList.extend([unityNode])
-            print(subscriptionList)
-            subscription.subscribe_data_change(subscriptionList)
+            # handler = SubHandler()
+            # subscription = server.create_subscription(1, handler)
+            # subscriptionList.extend([unityNode])
+            # print(subscriptionList)
+            # subscription.subscribe_data_change(subscriptionList)
             # asyncio.gather giup chay 2 ham async 1 cach "song song"
-            await asyncio.gather(autoRun(), handler.runCmdList(rootFolder), updateVideo())
+            await asyncio.gather(autoRun(), updateVideo())
         print("Exit server")
 
     """
