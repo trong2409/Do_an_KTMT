@@ -13,12 +13,13 @@ from PIL import Image as PILImage
 from io import BytesIO
 import numpy as np
 import os
+import buzzer
 
 from sensor_msgs.msg import Image
 import rospy
 from std_srvs.srv import Empty, Trigger
 from std_srvs.srv import SetBool, SetBoolResponse, SetBoolRequest
-from std_msgs.msg import Bool, UInt16
+from std_msgs.msg import Bool, UInt16, String
 from opc_ros.msg import SetServo, JetMax, SetJetMax
 from opc_ros.srv import SetTarget, SetTargetResponse, SetTargetRequest
 from opc_ros.srv import SetTarget_object, SetTarget_objectResponse, SetTarget_objectRequest
@@ -427,6 +428,25 @@ def runActionSet(parent, actionset_name: str, repeat_: int):
     else:
         return "NOTOK"
 
+@uamethod
+def waste_class(parent, waste_class: str):
+    pub = rospy.Publisher('/waste_classification/set_waste_class',String,queue_size=1)
+    pub.publish(String(data=waste_class))
+    return "OK"
+@uamethod
+def set_suck_waste(parent,  enter: int):
+    pub = rospy.Publisher('/waste_classification/set_suck',UInt16,queue_size=1)
+    pub.publish(UInt16(data=enter))
+    return "OK"
+
+@uamethod
+def change_mode_control(parent,  enter: int):
+    for i in range(0,enter):
+        buzzer.on()
+        rospy.sleep(0.1)
+        buzzer.off()
+        rospy.sleep(0.5)
+    return "OK"
 
 """
 ================================= /uamethod section =================================
@@ -571,6 +591,16 @@ async def main():
                                                     goHome,
                                                     [],
                                                     [outarg])
+# ----------------------------------------------CHANGE MODE CONTROL------------------------------------------------------------------#
+    inargx = create_Ua_Argument(Name="Enter service", Datatype=ua.NodeId(ua.ObjectIds.UInt16),
+                                Description="State available: 1 2")
+    
+    methodDict["changeModeControl"] = controlMethod.add_method(idx,
+                                                    "changeModeControl",
+                                                    change_mode_control,
+                                                    [inargx],
+                                                    [outarg])
+# -----------------------------------------------------------------------------------------------------------------------------------#
 
     inargx = create_Ua_Argument(Name="AI Service Name", Datatype=ua.NodeId(ua.ObjectIds.String),
                                 Description="AI service name available: palletizing,\ncolor_sorting\nobject_tracking\nwaste_classification\n ...")
@@ -629,6 +659,30 @@ async def main():
                                                             runActionSet,
                                                             [inargx, inargy],
                                                             [outarg])
+# ----------------------------------------WASTE CLASSIFICATION CUSTOM ---------------------------------------------------------------#
+
+    inargx = create_Ua_Argument(Name="Waste_Class", Datatype=ua.NodeId(ua.ObjectIds.String),
+                                Description="Waste_Classes available: food_waste,\nhazardous_waste\nrecyclable_waste\nresidual_waste\n")
+    inargy = create_Ua_Argument(Name="Enter service", Datatype=ua.NodeId(ua.ObjectIds.UInt16),
+                                Description="State available: 1(idel) 2(suck) 3(hold) 4(release)")
+    
+    wc_custom = methodFolder.add_folder(idx, "Waste_classification_custom")
+
+    methodDict["Waste_Classes"] = wc_custom.add_method(idx,
+                                                "Waste_Class",
+                                                waste_class,
+                                                [inargx],
+                                                [outarg])
+    
+    methodDict["suck_waste"] = wc_custom.add_method(idx,
+                                                "suck_waste",
+                                                set_suck_waste,
+                                                [inargy],
+                                                [outarg])
+# -----------------------------------------------------------------------------------------------------------------------------------#
+
+
+
 
     async def autoRun():
         """
