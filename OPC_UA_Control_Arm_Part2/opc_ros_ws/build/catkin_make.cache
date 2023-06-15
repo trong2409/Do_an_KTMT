@@ -1,0 +1,2 @@
+jetmax_gazebo/jetmax_control:jetmax_gazebo/jetmax_description:opc_ros
+-DCATKIN_DEVEL_PREFIX=/home/kuzu/opc_ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kuzu/opc_ros_ws/install -G Unix Makefiles

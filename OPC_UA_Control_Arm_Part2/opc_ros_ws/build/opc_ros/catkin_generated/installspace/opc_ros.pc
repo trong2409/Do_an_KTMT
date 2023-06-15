@@ -1,0 +1,8 @@
+prefix=/home/kuzu/opc_ros_ws/install
+
+Name: opc_ros
+Description: Description of opc_ros
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs message_runtime actionlib_msgs

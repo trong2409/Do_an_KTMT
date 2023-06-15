@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/kuzu/opc_ros_ws/install/setup.sh
