@@ -1,0 +1,8 @@
+prefix=/home/kuzu/opc_ros_ws/install
+
+Name: jetmax_description
+Description: Description of jetmax_description
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

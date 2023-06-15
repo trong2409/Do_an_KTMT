@@ -1,0 +1,31 @@
+2023-06-08 11:38:13,771 - Using selector: EpollSelector
+2023-06-08 11:38:13,774 - tm._add: /usb_cam/image_raw, sensor_msgs/Image, sub
+2023-06-08 11:38:13,775 - No user manager specified. Using default permissive manager instead.
+2023-06-08 11:38:13,775 - Created internal session Internal
+2023-06-08 11:38:13,787 - add_node: while adding node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=11715, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:13,788 - add_node: while adding node NumericNodeId(Identifier=15958, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:13,788 - add_node: while adding node NumericNodeId(Identifier=15959, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:13,788 - add_node: while adding node NumericNodeId(Identifier=15960, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:13,788 - add_node: while adding node NumericNodeId(Identifier=15961, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:13,788 - add_node: while adding node NumericNodeId(Identifier=15962, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:13,788 - add_node: while adding node NumericNodeId(Identifier=15963, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:13,788 - add_node: while adding node NumericNodeId(Identifier=15964, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:13,788 - add_node: while adding node NumericNodeId(Identifier=16134, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:13,788 - add_node: while adding node NumericNodeId(Identifier=16135, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:13,788 - add_node: while adding node NumericNodeId(Identifier=16136, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>), requested parent node NumericNodeId(Identifier=15957, NamespaceIndex=0, NodeIdType=<NodeIdType.Numeric: 2>) does not exists
+2023-06-08 11:38:15,135 - create_method Node(NodeId(Identifier=25, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,136 - create_method Node(NodeId(Identifier=25, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,137 - create_method Node(NodeId(Identifier=25, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,139 - create_method Node(NodeId(Identifier=25, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,139 - create_method Node(NodeId(Identifier=25, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,140 - create_method Node(NodeId(Identifier=25, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,140 - create_method Node(NodeId(Identifier=25, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,141 - create_method Node(NodeId(Identifier=25, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,142 - create_method Node(NodeId(Identifier=25, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,142 - create_method Node(NodeId(Identifier=52, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,143 - create_method Node(NodeId(Identifier=52, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,144 - create_method Node(NodeId(Identifier=52, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,144 - create_method Node(NodeId(Identifier=62, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,146 - create_method Node(NodeId(Identifier=62, NamespaceIndex=2, NodeIdType=<NodeIdType.FourByte: 1>))
+2023-06-08 11:38:15,146 - Endpoints other than open requested but private key and certificate are not set.
+2023-06-08 11:38:15,146 - starting internal server

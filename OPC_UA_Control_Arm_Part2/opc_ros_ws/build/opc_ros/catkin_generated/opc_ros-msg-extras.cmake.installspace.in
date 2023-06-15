@@ -1,0 +1,2 @@
+set(opc_ros_MESSAGE_FILES "msg/Mecanum.msg;msg/JetMax.msg;msg/SetServo.msg;msg/SetJoint.msg;msg/SetJetMax.msg;msg/ActionSetRawAction.msg;msg/ActionSetRawActionGoal.msg;msg/ActionSetRawActionResult.msg;msg/ActionSetRawActionFeedback.msg;msg/ActionSetRawGoal.msg;msg/ActionSetRawResult.msg;msg/ActionSetRawFeedback.msg")
+set(opc_ros_SERVICE_FILES "srv/ActionSetList.srv;srv/ActionSetFileOp.srv;srv/SetTarget.srv;srv/SetTarget_object.srv")
