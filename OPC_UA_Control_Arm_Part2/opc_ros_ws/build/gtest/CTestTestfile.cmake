@@ -1,7 +1,3 @@
-# CMake generated Testfile for 
-# Source directory: /usr/src/googletest
-# Build directory: /home/kuzu/opc_ros_ws/build/gtest
-# 
-# This file includes the relevant testing commands required for 
-# testing this directory and lists subdirectories to be tested as well.
-subdirs("googlemock")
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e4f90a600bdec455913e8e8bbf92ef2b5e32f42ed76afa4f9736de3adbf6b5d
+size 287

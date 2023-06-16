@@ -1,5 +1,3 @@
-
-# Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/actionlib_generate_messages_py.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+version https://git-lfs.github.com/spec/v1
+oid sha256:0043348e38979999d65334516e510fcf3111eb26e9fb3cf2ceeb0ab906afef06
+size 174

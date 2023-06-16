@@ -1,8 +1,3 @@
-file(REMOVE_RECURSE
-  "CMakeFiles/_opc_ros_generate_messages_check_deps_ActionSetRawActionGoal"
-)
-
-# Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/_opc_ros_generate_messages_check_deps_ActionSetRawActionGoal.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+version https://git-lfs.github.com/spec/v1
+oid sha256:76d3c952fa5bffc487a13908ee6fba61bce4e05d938be78399fdbd63cb0bdfc6
+size 302

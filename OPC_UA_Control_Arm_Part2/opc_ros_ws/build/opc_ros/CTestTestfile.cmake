@@ -1,6 +1,3 @@
-# CMake generated Testfile for 
-# Source directory: /home/kuzu/opc_ros_ws/src/opc_ros
-# Build directory: /home/kuzu/opc_ros_ws/build/opc_ros
-# 
-# This file includes the relevant testing commands required for 
-# testing this directory and lists subdirectories to be tested as well.
+version https://git-lfs.github.com/spec/v1
+oid sha256:4523613fbc017717441b0d3cdf1aae164751b43451eae4cb3c45bd3b98e20f78
+size 281

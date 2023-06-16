@@ -1,8 +1,3 @@
-prefix=/home/kuzu/opc_ros_ws/install
-
-Name: jetmax_control
-Description: Description of jetmax_control
-Version: 1.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: geometry_msgs rospy std_msgs std_srvs message_runtime
+version https://git-lfs.github.com/spec/v1
+oid sha256:3bc17fac48d3dff68f40ac942cba0417d9089dc3c96372000cafc6c4d8a7bd2c
+size 232

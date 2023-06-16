@@ -1,4 +1,3 @@
-# generated from genmsg/cmake/pkg-msg-paths.cmake.installspace.in
-
-_prepend_path("${opc_ros_DIR}/.." "msg;msg" opc_ros_MSG_INCLUDE_DIRS UNIQUE)
-set(opc_ros_MSG_DEPENDENCIES std_msgs;actionlib_msgs)
+version https://git-lfs.github.com/spec/v1
+oid sha256:07be2c6e9a48985784eb5176bb205fe18d0c5bc8ff950a4d644091a32f6fc0a6
+size 198

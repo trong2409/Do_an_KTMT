@@ -1,10 +1,3 @@
-file(REMOVE_RECURSE
-  "CMakeFiles/jetmax_control_generate_messages_nodejs"
-  "/home/kuzu/opc_ros_ws/devel/share/gennodejs/ros/jetmax_control/srv/FK.js"
-  "/home/kuzu/opc_ros_ws/devel/share/gennodejs/ros/jetmax_control/srv/IK.js"
-)
-
-# Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/jetmax_control_generate_messages_nodejs.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+version https://git-lfs.github.com/spec/v1
+oid sha256:75cc39aaf3bb92ed45e271abc319b8602cdd9f0536bead2022cc8810d0e0747f
+size 414

@@ -1,15 +1,3 @@
-
-(cl:in-package :asdf)
-
-(defsystem "opc_ros-srv"
-  :depends-on (:roslisp-msg-protocol :roslisp-utils )
-  :components ((:file "_package")
-    (:file "ActionSetFileOp" :depends-on ("_package_ActionSetFileOp"))
-    (:file "_package_ActionSetFileOp" :depends-on ("_package"))
-    (:file "ActionSetList" :depends-on ("_package_ActionSetList"))
-    (:file "_package_ActionSetList" :depends-on ("_package"))
-    (:file "SetTarget" :depends-on ("_package_SetTarget"))
-    (:file "_package_SetTarget" :depends-on ("_package"))
-    (:file "SetTarget_object" :depends-on ("_package_SetTarget_object"))
-    (:file "_package_SetTarget_object" :depends-on ("_package"))
-  ))
+version https://git-lfs.github.com/spec/v1
+oid sha256:adf34740ed5bc0947c50a61d7ae7be8df583342bba90a1b16766b6e18e10e8f1
+size 660

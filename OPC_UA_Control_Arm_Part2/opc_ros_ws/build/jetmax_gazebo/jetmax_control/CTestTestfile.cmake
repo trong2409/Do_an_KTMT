@@ -1,6 +1,3 @@
-# CMake generated Testfile for 
-# Source directory: /home/kuzu/opc_ros_ws/src/jetmax_gazebo/jetmax_control
-# Build directory: /home/kuzu/opc_ros_ws/build/jetmax_gazebo/jetmax_control
-# 
-# This file includes the relevant testing commands required for 
-# testing this directory and lists subdirectories to be tested as well.
+version https://git-lfs.github.com/spec/v1
+oid sha256:c6831e51fb0a8e9f88c041fd5a1fdd1241efcd2bbbd1c4a68e531144f04f83b9
+size 323

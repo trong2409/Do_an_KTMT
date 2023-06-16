@@ -1,12 +1,3 @@
-float32 x
-float32 y
-float32 z
-float32 joint1
-float32 joint2
-float32 joint3
-float32 servo1
-float32 servo2
-float32 servo3
-float32 pwm1
-float32 pwm2
-bool    sucker
+version https://git-lfs.github.com/spec/v1
+oid sha256:3a37a874715e143a50436569be7d1a5ce3891edb0740bb0dd063e7ab29762958
+size 161

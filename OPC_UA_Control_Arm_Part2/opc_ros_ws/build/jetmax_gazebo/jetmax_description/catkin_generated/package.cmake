@@ -1,16 +1,3 @@
-set(_CATKIN_CURRENT_PACKAGE "jetmax_description")
-set(jetmax_description_VERSION "1.0.0")
-set(jetmax_description_MAINTAINER " <lyplucas@foxmail.com>")
-set(jetmax_description_PACKAGE_FORMAT "2")
-set(jetmax_description_BUILD_DEPENDS "geometry_msgs" "rviz" "rospy" "std_msgs" "tf" "urdf" "xacro")
-set(jetmax_description_BUILD_EXPORT_DEPENDS "geometry_msgs" "rviz" "rospy" "std_msgs" "tf" "urdf" "xacro")
-set(jetmax_description_BUILDTOOL_DEPENDS "catkin")
-set(jetmax_description_BUILDTOOL_EXPORT_DEPENDS )
-set(jetmax_description_EXEC_DEPENDS "geometry_msgs" "rviz" "rospy" "std_msgs" "tf" "urdf" "xacro")
-set(jetmax_description_RUN_DEPENDS "geometry_msgs" "rviz" "rospy" "std_msgs" "tf" "urdf" "xacro")
-set(jetmax_description_TEST_DEPENDS )
-set(jetmax_description_DOC_DEPENDS )
-set(jetmax_description_URL_WEBSITE "")
-set(jetmax_description_URL_BUGTRACKER "")
-set(jetmax_description_URL_REPOSITORY "")
-set(jetmax_description_DEPRECATED "")
+version https://git-lfs.github.com/spec/v1
+oid sha256:c7983040ff2f133d59dd3ec7ae737ab8f0772e239b4d6504e35a3fc0e2812b18
+size 934

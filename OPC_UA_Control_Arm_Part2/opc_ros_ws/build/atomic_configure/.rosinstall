@@ -1,2 +1,3 @@
-- setup-file:
-    local-name: /home/kuzu/opc_ros_ws/devel/setup.sh
+version https://git-lfs.github.com/spec/v1
+oid sha256:3fe201d1dee991bce1a1c5669360fcc04d517f294f659aa9e220466f8924c81c
+size 67

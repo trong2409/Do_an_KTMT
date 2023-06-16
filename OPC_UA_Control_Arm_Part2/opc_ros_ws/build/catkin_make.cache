@@ -1,2 +1,3 @@
-jetmax_gazebo/jetmax_control:jetmax_gazebo/jetmax_description:opc_ros
--DCATKIN_DEVEL_PREFIX=/home/kuzu/opc_ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kuzu/opc_ros_ws/install -G Unix Makefiles
+version https://git-lfs.github.com/spec/v1
+oid sha256:671d9c77d787dd90b9433d52b7335213eae9220bec3142e7195c8e77c907cf45
+size 190

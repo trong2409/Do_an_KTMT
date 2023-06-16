@@ -1,4 +1,3 @@
-# generated from genmsg/cmake/pkg-msg-paths.cmake.installspace.in
-
-_prepend_path("${jetmax_control_DIR}/.." "" jetmax_control_MSG_INCLUDE_DIRS UNIQUE)
-set(jetmax_control_MSG_DEPENDENCIES geometry_msgs;std_msgs)
+version https://git-lfs.github.com/spec/v1
+oid sha256:83ecf34c9b4b7c5683752b3d5c18c9c3cc510e3eff08c5d560e51f7a270503f5
+size 211

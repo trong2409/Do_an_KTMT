@@ -1,5 +1,3 @@
-string color_name
-bool is_enable
----
-bool success
-string message
+version https://git-lfs.github.com/spec/v1
+oid sha256:18cf7e161c32325ebe03b3741bf7819d8b339d0e4be25b792e9273acc548a435
+size 64

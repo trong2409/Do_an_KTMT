@@ -1,15 +1,3 @@
-set(CMAKE_HOST_SYSTEM "Linux-5.15.83.1-microsoft-standard-WSL2")
-set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "5.15.83.1-microsoft-standard-WSL2")
-set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
-
-
-
-set(CMAKE_SYSTEM "Linux-5.15.83.1-microsoft-standard-WSL2")
-set(CMAKE_SYSTEM_NAME "Linux")
-set(CMAKE_SYSTEM_VERSION "5.15.83.1-microsoft-standard-WSL2")
-set(CMAKE_SYSTEM_PROCESSOR "x86_64")
-
-set(CMAKE_CROSSCOMPILING "FALSE")
-
-set(CMAKE_SYSTEM_LOADED 1)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2eeecc96f0a7a6c08aa55ed60314249a46e5380c563510d7b956586926f3dfcc
+size 466

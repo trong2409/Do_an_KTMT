@@ -1,2 +1,3 @@
-set(opc_ros_MESSAGE_FILES "/home/kuzu/opc_ros_ws/src/opc_ros/msg/Mecanum.msg;/home/kuzu/opc_ros_ws/src/opc_ros/msg/JetMax.msg;/home/kuzu/opc_ros_ws/src/opc_ros/msg/SetServo.msg;/home/kuzu/opc_ros_ws/src/opc_ros/msg/SetJoint.msg;/home/kuzu/opc_ros_ws/src/opc_ros/msg/SetJetMax.msg;/home/kuzu/opc_ros_ws/devel/share/opc_ros/msg/ActionSetRawAction.msg;/home/kuzu/opc_ros_ws/devel/share/opc_ros/msg/ActionSetRawActionGoal.msg;/home/kuzu/opc_ros_ws/devel/share/opc_ros/msg/ActionSetRawActionResult.msg;/home/kuzu/opc_ros_ws/devel/share/opc_ros/msg/ActionSetRawActionFeedback.msg;/home/kuzu/opc_ros_ws/devel/share/opc_ros/msg/ActionSetRawGoal.msg;/home/kuzu/opc_ros_ws/devel/share/opc_ros/msg/ActionSetRawResult.msg;/home/kuzu/opc_ros_ws/devel/share/opc_ros/msg/ActionSetRawFeedback.msg")
-set(opc_ros_SERVICE_FILES "/home/kuzu/opc_ros_ws/src/opc_ros/srv/ActionSetList.srv;/home/kuzu/opc_ros_ws/src/opc_ros/srv/ActionSetFileOp.srv;/home/kuzu/opc_ros_ws/src/opc_ros/srv/SetTarget.srv;/home/kuzu/opc_ros_ws/src/opc_ros/srv/SetTarget_object.srv")
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecee9805972bc8e79262f6a3fd50f6487b648afa5f2cab8bf21f8ec7a8a3239e
+size 1037

@@ -1,10 +1,3 @@
-file(REMOVE_RECURSE
-  "CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
-  "libgtest_main.pdb"
-  "libgtest_main.so"
-)
-
-# Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/gtest_main.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+version https://git-lfs.github.com/spec/v1
+oid sha256:d07dfb1cca62cbbfec3a24a915646f66d33756c82042ce4d1ffef9f4d232da31
+size 272

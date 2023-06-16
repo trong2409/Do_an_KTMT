@@ -1,5 +1,3 @@
-
-# Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4716d2edd845a97710af49e9d92ff7619b371b0cb6eb51daf7d02eef0d24c6a
+size 179

@@ -1,5 +1,3 @@
-
-# Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/std_srvs_generate_messages_nodejs.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+version https://git-lfs.github.com/spec/v1
+oid sha256:14210763369272b6ee04126adeb5c5b09c88008c79f90fd67544cca397f5afb7
+size 177

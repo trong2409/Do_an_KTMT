@@ -1,16 +1,3 @@
-set(_CATKIN_CURRENT_PACKAGE "opc_ros")
-set(opc_ros_VERSION "0.0.0")
-set(opc_ros_MAINTAINER "lucas <lucas@todo.todo>")
-set(opc_ros_PACKAGE_FORMAT "2")
-set(opc_ros_BUILD_DEPENDS "actionlib_msgs" "rospy" "std_msgs")
-set(opc_ros_BUILD_EXPORT_DEPENDS "rospy" "std_msgs" "actionlib_msgs")
-set(opc_ros_BUILDTOOL_DEPENDS "catkin" "message_generation")
-set(opc_ros_BUILDTOOL_EXPORT_DEPENDS )
-set(opc_ros_EXEC_DEPENDS "rospy" "std_msgs" "message_runtime")
-set(opc_ros_RUN_DEPENDS "rospy" "std_msgs" "message_runtime" "actionlib_msgs")
-set(opc_ros_TEST_DEPENDS )
-set(opc_ros_DOC_DEPENDS )
-set(opc_ros_URL_WEBSITE "")
-set(opc_ros_URL_BUGTRACKER "")
-set(opc_ros_URL_REPOSITORY "")
-set(opc_ros_DEPRECATED "")
+version https://git-lfs.github.com/spec/v1
+oid sha256:f94ce21fb12d4bf40524c63b6710e0e9829afa52bdce7c88374fea3373cd3ba3
+size 694

@@ -1,5 +1,3 @@
-
-# Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/jetmax_control_geneus.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+version https://git-lfs.github.com/spec/v1
+oid sha256:e66842e9031c6d9d517aa660b5303e52fe42c90bf1275a78d3e518723305da9e
+size 165

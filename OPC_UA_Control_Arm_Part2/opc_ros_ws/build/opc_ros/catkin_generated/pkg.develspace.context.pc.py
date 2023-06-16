@@ -1,8 +1,3 @@
-# generated from catkin/cmake/template/pkg.context.pc.in
-CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/kuzu/opc_ros_ws/devel/include".split(';') if "/home/kuzu/opc_ros_ws/devel/include" != "" else []
-PROJECT_CATKIN_DEPENDS = "rospy;std_msgs;message_runtime;actionlib_msgs".replace(';', ' ')
-PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
-PROJECT_NAME = "opc_ros"
-PROJECT_SPACE_DIR = "/home/kuzu/opc_ros_ws/devel"
-PROJECT_VERSION = "0.0.0"
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e73ea02431315e4fb6676c59a9075b76b8f1d1a1a4ba001d0cf54438fc1a216
+size 483

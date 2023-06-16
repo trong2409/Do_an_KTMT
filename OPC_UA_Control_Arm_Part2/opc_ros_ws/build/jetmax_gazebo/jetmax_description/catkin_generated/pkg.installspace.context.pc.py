@@ -1,8 +1,3 @@
-# generated from catkin/cmake/template/pkg.context.pc.in
-CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
-PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
-PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
-PROJECT_NAME = "jetmax_description"
-PROJECT_SPACE_DIR = "/home/kuzu/opc_ros_ws/install"
-PROJECT_VERSION = "1.0.0"
+version https://git-lfs.github.com/spec/v1
+oid sha256:944176e297f902b2b8ab854d8a5c72975a64d459b5efe0ba04855a71a1091f13
+size 381

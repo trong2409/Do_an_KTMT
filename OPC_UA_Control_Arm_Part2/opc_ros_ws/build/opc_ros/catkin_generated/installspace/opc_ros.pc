@@ -1,8 +1,3 @@
-prefix=/home/kuzu/opc_ros_ws/install
-
-Name: opc_ros
-Description: Description of opc_ros
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: rospy std_msgs message_runtime actionlib_msgs
+version https://git-lfs.github.com/spec/v1
+oid sha256:096a06e11592ebce2bcfa59b0c4f049371e83f9abbd6528f7c7bf84370d2df8c
+size 210

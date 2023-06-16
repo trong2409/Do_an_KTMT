@@ -1,5 +1,3 @@
-
-# Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/jetmax_description_xacro_generated_to_devel_space_.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+version https://git-lfs.github.com/spec/v1
+oid sha256:eaf0d90343791ebb96cab1440d3d6f066f362586df9c93d26826bdbefae10ab4
+size 194

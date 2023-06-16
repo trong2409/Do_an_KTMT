@@ -1,8 +1,3 @@
-prefix=/home/kuzu/opc_ros_ws/devel
-
-Name: opc_ros
-Description: Description of opc_ros
-Version: 0.0.0
-Cflags: -I/home/kuzu/opc_ros_ws/devel/include
-Libs: -L${prefix}/lib 
-Requires: rospy std_msgs message_runtime actionlib_msgs
+version https://git-lfs.github.com/spec/v1
+oid sha256:d35fa409734f4da1b78dbcc602d114946a0ba15267a40af006508e6f0d5b7ea4
+size 226

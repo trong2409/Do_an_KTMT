@@ -1,4 +1,3 @@
-# generated from genmsg/cmake/pkg-msg-paths.cmake.develspace.in
-
-set(jetmax_control_MSG_INCLUDE_DIRS "")
-set(jetmax_control_MSG_DEPENDENCIES geometry_msgs;std_msgs)
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0d8a34d364b463c315b21a8993fb595fad1f869cca7431865e43723c7e3da19
+size 165

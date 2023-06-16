@@ -1,7 +1,3 @@
-string data
-uint32 repeat
----
-bool result
----
-uint32 index
-uint32 count
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d5b05650d46c729cde18c6f3fc5fa0a8aa09b13c10de959cbdf42d2be174dbe
+size 71

@@ -1,2 +1,3 @@
-set(opc_ros_MESSAGE_FILES "msg/Mecanum.msg;msg/JetMax.msg;msg/SetServo.msg;msg/SetJoint.msg;msg/SetJetMax.msg;msg/ActionSetRawAction.msg;msg/ActionSetRawActionGoal.msg;msg/ActionSetRawActionResult.msg;msg/ActionSetRawActionFeedback.msg;msg/ActionSetRawGoal.msg;msg/ActionSetRawResult.msg;msg/ActionSetRawFeedback.msg")
-set(opc_ros_SERVICE_FILES "srv/ActionSetList.srv;srv/ActionSetFileOp.srv;srv/SetTarget.srv;srv/SetTarget_object.srv")
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a087e03b3c5a9baa8bdb89d472b49c5086ffac1db69019df1738451a46a7ac8
+size 437

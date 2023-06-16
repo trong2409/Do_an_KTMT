@@ -1,14 +1,3 @@
-
-"use strict";
-
-let SetTarget_object = require('./SetTarget_object.js')
-let ActionSetFileOp = require('./ActionSetFileOp.js')
-let SetTarget = require('./SetTarget.js')
-let ActionSetList = require('./ActionSetList.js')
-
-module.exports = {
-  SetTarget_object: SetTarget_object,
-  ActionSetFileOp: ActionSetFileOp,
-  SetTarget: SetTarget,
-  ActionSetList: ActionSetList,
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc81450433dc121a21a445e4a2961563ed22adafecf10cdc144a158c254a8b25
+size 371
