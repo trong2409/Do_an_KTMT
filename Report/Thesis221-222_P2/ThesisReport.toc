@@ -1,0 +1,101 @@
+\contentsline {chapter}{\numberline {1}GIỚI THIỆU TỔNG QUAN}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Tổng quan về Công nghiệp 4.0}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Các công nghệ Công nghiệp 4.0}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Nhà máy thông minh - Smart factory}{11}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Định nghĩa và lợi ích của Smart Factory}{11}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Kiến trúc của Smart Factory}{13}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Thách thức của lớp kết nối}{14}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Giới thiệu về Đồ Án}{16}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Bố cục của đồ án}{17}{section.1.5}%
+\contentsline {chapter}{\numberline {2}CƠ SỞ LÝ THUYẾT}{18}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Digital Twin}{18}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Khái niệm về Digital Twin}{19}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Những nhầm lẫn về Digital Twin}{19}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Ứng dụng của Digital Twin}{20}{subsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.3.1}Digital Twin trong thành phố thông minh}{21}{subsubsection.2.1.3.1}%
+\contentsline {subsubsection}{\numberline {2.1.3.2}Digital Twin trong sản xuất}{21}{subsubsection.2.1.3.2}%
+\contentsline {subsubsection}{\numberline {2.1.3.3}Digital twin trong chăm sóc sức khỏe}{22}{subsubsection.2.1.3.3}%
+\contentsline {section}{\numberline {2.2}Tổng quan về các giao thức M2M}{23}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Giới thiệu về M2M}{23}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Nguyên lý hoạt động của M2M}{23}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Ứng dụng của M2M}{24}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Giao thức MQTT}{25}{subsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.4.1}Nguyên lý hoạt động của MQTT}{25}{subsubsection.2.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.2.4.2}Ưu và Nhược điểm của MQTT}{28}{subsubsection.2.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.2.4.3}Ứng dụng của MQTT}{29}{subsubsection.2.2.4.3}%
+\contentsline {subsection}{\numberline {2.2.5}Giao thức OPC-UA}{30}{subsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.5.1}Nguyên lý hoạt động của OPC UA}{30}{subsubsection.2.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.2.5.2}Ưu và nhược điểm của OPC UA}{33}{subsubsection.2.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.2.5.3}Ứng dụng của OPC UA}{35}{subsubsection.2.2.5.3}%
+\contentsline {section}{\numberline {2.3}Thực nghiệm so sánh MQTT và OPCUA}{36}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Phương pháp thực nghiệm}{36}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}MQTT}{36}{subsubsection.2.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.2}OPC-UA}{37}{subsubsection.2.3.1.2}%
+\contentsline {subsection}{\numberline {2.3.2}Kết quả thực nghiệm và đánh giá}{38}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}Thực nghiệm MQTT}{39}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3.2.2}Thực nghiệm OPC-UA}{41}{subsubsection.2.3.2.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.3}So sánh kết quả thực nghiệm}{42}{subsubsection.2.3.2.3}%
+\contentsline {section}{\numberline {2.4}Các nghiên cứu liên quan}{45}{section.2.4}%
+\contentsline {chapter}{\numberline {3}THIẾT KẾ VÀ HIỆN THỰC HỆ THỐNG}{48}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tổng quan hệ thống}{48}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Kiến trúc hệ thống}{48}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Giới thiệu thiết bị và công nghệ}{49}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Oculus Quest 2}{50}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}Rasberry Pi}{50}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}Jetson Nano và Jetmax Arm}{51}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}ROS - Robot Operating System}{53}{subsubsection.3.1.2.4}%
+\contentsline {subsubsection}{\numberline {3.1.2.5}OpenCV}{54}{subsubsection.3.1.2.5}%
+\contentsline {subsubsection}{\numberline {3.1.2.6}YOLOv5}{55}{subsubsection.3.1.2.6}%
+\contentsline {subsubsection}{\numberline {3.1.2.7}Unity3D}{56}{subsubsection.3.1.2.7}%
+\contentsline {section}{\numberline {3.2}Module Control}{57}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Yêu cầu hệ thống}{58}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Yêu cầu phi chức năng}{58}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}Yêu cầu chức năng}{58}{subsubsection.3.2.1.2}%
+\contentsline {subsection}{\numberline {3.2.2}Sơ đồ use case}{59}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Hiện thực module Control}{59}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}Sơ đồ khối của module Control}{60}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}Chi tiết các tính năng trong Module Control}{63}{subsubsection.3.2.3.2}%
+\contentsline {section}{\numberline {3.3}Tính năng AI: Phân loại rác thải bán tự động}{72}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Yêu cầu hệ thống}{73}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}Yêu cầu phi chức năng}{73}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}Yêu cầu chức năng}{73}{subsubsection.3.3.1.2}%
+\contentsline {subsection}{\numberline {3.3.2}Sơ đồ use case diagram}{74}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Hiện thực chức năng phân loại rác bán tự động}{74}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}Xác định vị trí của vật thể so với cánh tay}{76}{subsubsection.3.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}Sequence diagram của chức năng}{77}{subsubsection.3.3.3.2}%
+\contentsline {section}{\numberline {3.4}Module Datacenter}{79}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Yêu cầu hệ thống}{80}{subsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.1}Yêu cầu phi chức năng}{80}{subsubsection.3.4.1.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.2}Yêu cầu chức năng}{81}{subsubsection.3.4.1.2}%
+\contentsline {subsection}{\numberline {3.4.2}Sơ đồ use case và máy trạng thái của chức năng}{81}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Hiện thực module Datacenter}{82}{subsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.3.1}Sơ đồ khối của module Datacenter}{82}{subsubsection.3.4.3.1}%
+\contentsline {subsubsection}{\numberline {3.4.3.2}Chi tiết một số chức năng}{83}{subsubsection.3.4.3.2}%
+\contentsline {subsubsection}{\numberline {3.4.3.3}Các thông tin hiện thực khác}{85}{subsubsection.3.4.3.3}%
+\contentsline {section}{\numberline {3.5}Ứng dụng thực tế ảo (VR Application)}{85}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Yêu cầu hệ thống}{87}{subsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.1}Yêu cầu phi chức năng}{87}{subsubsection.3.5.1.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.2}Yêu cầu chức năng}{87}{subsubsection.3.5.1.2}%
+\contentsline {subsection}{\numberline {3.5.2}Sơ đồ use case}{88}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Hiện thực module VR application}{89}{subsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.3.1}Chi tiết một số chức năng}{92}{subsubsection.3.5.3.1}%
+\contentsline {subsubsection}{\numberline {3.5.3.2}Các thông tin hiện thực khác}{105}{subsubsection.3.5.3.2}%
+\contentsline {chapter}{\numberline {4}ĐÁNH GIÁ KẾT QUẢ}{114}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Kết quả đạt được}{114}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Control}{114}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}DataCenter}{116}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}VR Application}{117}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Kiểm tra đánh giá hệ thống}{122}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Đánh giá hoạt động hệ thống}{122}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Đánh giá Module Control}{123}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Đánh giá Module Datacenter}{124}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}Đánh giá ứng dụng VR}{126}{subsubsection.4.2.1.3}%
+\contentsline {subsubsection}{\numberline {4.2.1.4}Đánh giá thời gian trễ trọn vòng (RTT)}{128}{subsubsection.4.2.1.4}%
+\contentsline {subsection}{\numberline {4.2.2}Đánh giá độ chính xác của chức năng phân loại rác}{129}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Khả năng nhận diện}{130}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Khả năng hút-thả rác hiệu quả}{132}{subsubsection.4.2.2.2}%
+\contentsline {chapter}{\numberline {5}TỔNG KẾT VÀ HƯỚNG PHÁT TRIỂN}{134}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Tổng kết}{134}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Hướng phát triển tương lai}{135}{section.5.2}%
+\contentsline {chapter}{\textbf {Tài liệu tham khảo}}{137}{chapter*.95}%
+\contentsfinish 

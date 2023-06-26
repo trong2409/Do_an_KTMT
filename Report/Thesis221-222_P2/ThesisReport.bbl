@@ -1,0 +1,1271 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{abdelsattaropcgateway}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=1fedcebc0aae52bbbc9de7d36400e1d3}{%
+           family={Abdelsattar},
+           familyi={A\bibinitperiod},
+           given={Ahmad},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2489d2075133537b256d12ddafd0d7ee}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Edward\bibnamedelima J},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=d2b857705ba18ac5df0ed9a020fe466f}{%
+           family={Marzouk},
+           familyi={M\bibinitperiod},
+           given={Amr},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{2947ef4190fcb8994ea7c22ca0ce1bb2}
+      \strng{fullhash}{2947ef4190fcb8994ea7c22ca0ce1bb2}
+      \strng{bibnamehash}{2947ef4190fcb8994ea7c22ca0ce1bb2}
+      \strng{authorbibnamehash}{2947ef4190fcb8994ea7c22ca0ce1bb2}
+      \strng{authornamehash}{2947ef4190fcb8994ea7c22ca0ce1bb2}
+      \strng{authorfullhash}{2947ef4190fcb8994ea7c22ca0ce1bb2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)}
+      \field{title}{An OPC UA Client/Gateway-Based Digital Twin Architecture of a SCADA System with Embedded System Connections}
+      \field{year}{2022}
+      \field{pages}{798\bibrangedash 803}
+      \range{pages}{6}
+    \endentry
+    \entry{iotp}{book}{}
+      \name{author}{7}{}{%
+        {{hash=3ffedf3e8c12bce03993d2a2bef8ea4b}{%
+           family={Ân},
+           familyi={Â\bibinitperiod},
+           given={Nguyễn\bibnamedelima Thiên},
+           giveni={N\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=f68fab1171f42532031515068fd7c2e8}{%
+           family={Danh},
+           familyi={D\bibinitperiod},
+           given={Phạm\bibnamedelima Thanh},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=695b1aa55ca292d789d08c2996589b5e}{%
+           family={Hùng},
+           familyi={H\bibinitperiod},
+           given={Huỳnh\bibnamedelima Nhữ},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=cb9538d456e96dfabdc1edd8460bd732}{%
+           family={Quang},
+           familyi={Q\bibinitperiod},
+           given={Trần\bibnamedelima Nhựt},
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=f9bfbf52dec62ad07964c2a23f8e093a}{%
+           family={Hạnh},
+           familyi={H\bibinitperiod},
+           given={Nguyễn\bibnamedelima Văn},
+           giveni={N\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=a05336829d3ebfbe997450f9a4d56d9a}{%
+           family={Nhân},
+           familyi={N\bibinitperiod},
+           given={Lê\bibnamedelima Trọng},
+           giveni={L\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=9a4da53393200c2b498b712a7cac35cc}{%
+           family={Nam},
+           familyi={N\bibinitperiod},
+           given={Lê\bibnamedelima Phương},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a19808afbe5807c19f678382b0cd542}
+      \strng{fullhash}{2c98bb312f2d3091dd14f41fda154709}
+      \strng{bibnamehash}{4a19808afbe5807c19f678382b0cd542}
+      \strng{authorbibnamehash}{4a19808afbe5807c19f678382b0cd542}
+      \strng{authornamehash}{4a19808afbe5807c19f678382b0cd542}
+      \strng{authorfullhash}{2c98bb312f2d3091dd14f41fda154709}
+      \field{sortinit}{Â}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Phát triển IoT Gateway bằng Python}
+    \endentry
+    \entry{mqtttechw}{online}{}
+      \name{author}{1}{}{%
+        {{hash=05e300c06a2791487ad1eae80a26b81e}{%
+           family={Bernstein},
+           familyi={B\bibinitperiod},
+           given={Corinne},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{05e300c06a2791487ad1eae80a26b81e}
+      \strng{fullhash}{05e300c06a2791487ad1eae80a26b81e}
+      \strng{bibnamehash}{05e300c06a2791487ad1eae80a26b81e}
+      \strng{authorbibnamehash}{05e300c06a2791487ad1eae80a26b81e}
+      \strng{authornamehash}{05e300c06a2791487ad1eae80a26b81e}
+      \strng{authorfullhash}{05e300c06a2791487ad1eae80a26b81e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MQTT (MQ Telemetry Transport)}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.techtarget.com/iotagenda/definition/MQTT-MQ-Telemetry-Transport
+      \endverb
+      \verb{url}
+      \verb https://www.techtarget.com/iotagenda/definition/MQTT-MQ-Telemetry-Transport
+      \endverb
+      \keyw{MQTT}
+    \endentry
+    \entry{chen}{article}{}
+      \name{author}{6}{}{%
+        {{hash=9a17c8f86bf460b4ff3c9ca89300dfcf}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Baotong},
+           giveni={B\bibinitperiod}}}%
+        {{hash=75916034f60ced983937f039403ca17f}{%
+           family={Wan},
+           familyi={W\bibinitperiod},
+           given={Jiafu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4c0680f90ff1fc49345832d1f5ca90a8}{%
+           family={Shu},
+           familyi={S\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=24bece773e8873ff8f03d9a3eced56df}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0eb093a96301501f6c16d2c9b487b56f}{%
+           family={Mukherjee},
+           familyi={M\bibinitperiod},
+           given={Mithun},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c5bf5eac8c80780f565784a9bd75b2ab}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Boxing},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{4015a1ccc30939578970a3fb36cfae43}
+      \strng{fullhash}{62472577fc413c51ea0b6474609db895}
+      \strng{bibnamehash}{62472577fc413c51ea0b6474609db895}
+      \strng{authorbibnamehash}{62472577fc413c51ea0b6474609db895}
+      \strng{authornamehash}{4015a1ccc30939578970a3fb36cfae43}
+      \strng{authorfullhash}{62472577fc413c51ea0b6474609db895}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Smart Factory of Industry 4.0: Key Technologies, Application Case, and Challenges}
+      \field{volume}{6}
+      \field{year}{2018}
+      \field{pages}{6505\bibrangedash 6519}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2017.2783682
+      \endverb
+    \endentry
+    \entry{chen2017integrated}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f51bdf65e0ac7136f771aed754288fdd}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yubao},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f51bdf65e0ac7136f771aed754288fdd}
+      \strng{fullhash}{f51bdf65e0ac7136f771aed754288fdd}
+      \strng{bibnamehash}{f51bdf65e0ac7136f771aed754288fdd}
+      \strng{authorbibnamehash}{f51bdf65e0ac7136f771aed754288fdd}
+      \strng{authornamehash}{f51bdf65e0ac7136f771aed754288fdd}
+      \strng{authorfullhash}{f51bdf65e0ac7136f771aed754288fdd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Engineering}
+      \field{number}{5}
+      \field{title}{Integrated and intelligent manufacturing: perspectives and enablers}
+      \field{volume}{3}
+      \field{year}{2017}
+      \field{pages}{588\bibrangedash 595}
+      \range{pages}{8}
+    \endentry
+    \entry{diya2018developing}{inproceedings}{}
+      \name{author}{9}{}{%
+        {{hash=1bbf8535917532590af70f4be89bb358}{%
+           family={Diya},
+           familyi={D\bibinitperiod},
+           given={Sadia\bibnamedelima Zahin},
+           giveni={S\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=22eafa81907135eace10a4b34b7b0057}{%
+           family={Proma},
+           familyi={P\bibinitperiod},
+           given={Rifat\bibnamedelima Ara},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=cb02af89078dd8acd41a46d43ac5ce82}{%
+           family={Islam},
+           familyi={I\bibinitperiod},
+           given={Muhammad\bibnamedelima Nazrul},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=80af9b9c1b87f001afc9f8b21a2e3fc6}{%
+           family={Anannya},
+           familyi={A\bibinitperiod},
+           given={Tasmiah\bibnamedelima Tamzid},
+           giveni={T\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=df932189b89fcf74c5b411775706d308}{%
+           family={Al\bibnamedelima Mamun},
+           familyi={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Abdullah},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2c8235a118fb2e92b9a6ff354638e5dd}{%
+           family={Arefeen},
+           familyi={A\bibinitperiod},
+           given={Rizvi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=3e71d25202217bc73ce672be3ac765fc}{%
+           family={Al\bibnamedelima Mamun},
+           familyi={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Saifullah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=af1944ed8168c7eb5f2cb85f2c51a991}{%
+           family={Rahman},
+           familyi={R\bibinitperiod},
+           given={Ihtiaz\bibnamedelima Ishmam},
+           giveni={I\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=abc461046536eeff5d7b69542f05284c}{%
+           family={Rabbi},
+           familyi={R\bibinitperiod},
+           given={Md\bibnamedelima Fazle},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a6d526e313974342600e8517cdb64bb9}
+      \strng{fullhash}{785768dbd1e6a1cbdd68d5f3cbcf9d7f}
+      \strng{bibnamehash}{a6d526e313974342600e8517cdb64bb9}
+      \strng{authorbibnamehash}{a6d526e313974342600e8517cdb64bb9}
+      \strng{authornamehash}{a6d526e313974342600e8517cdb64bb9}
+      \strng{authorfullhash}{785768dbd1e6a1cbdd68d5f3cbcf9d7f}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 International Conference on Innovation in Engineering and Technology (ICIET)}
+      \field{title}{Developing an intelligent waste sorting system with robotic arm: A step towards green environment}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+    \endentry
+    \entry{fernbach2014opc}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=c0604709534fd0e7f41c3757837b051f}{%
+           family={Fernbach},
+           familyi={F\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ec376376ba1721784343a26c2f102e7d}{%
+           family={Kastner},
+           familyi={K\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=fc25fb28095c462e39f1efdc920b8b91}{%
+           family={Mätzler},
+           familyi={M\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b93cab7e82778646ff2f084cf5871350}{%
+           family={Wollschlaeger},
+           familyi={W\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{661ec5570304d18593b2c695dbc96cd6}
+      \strng{fullhash}{8386c3133768d6b17827f2e409fb73d0}
+      \strng{bibnamehash}{8386c3133768d6b17827f2e409fb73d0}
+      \strng{authorbibnamehash}{8386c3133768d6b17827f2e409fb73d0}
+      \strng{authornamehash}{661ec5570304d18593b2c695dbc96cd6}
+      \strng{authorfullhash}{8386c3133768d6b17827f2e409fb73d0}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2014 IEEE Emerging Technology and Factory Automation (ETFA)}
+      \field{title}{An OPC UA information model for cross-domain vertical integration in automation systems}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+    \endentry
+    \entry{fuller_dt_tech_challenge_research}{article}{}
+      \name{author}{4}{}{%
+        {{hash=d65423e45ebd3704c01fd78f83cc5328}{%
+           family={Fuller},
+           familyi={F\bibinitperiod},
+           given={Aidan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1da679988f7d3d7bacd8878bb45304c4}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Zhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cedbb4de65db49936aef60c36415bdd5}{%
+           family={Day},
+           familyi={D\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4b91d2a65fed72aa3aac930f7ac66fb5}{%
+           family={Barlow},
+           familyi={B\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{925a57e1f0b7faba45ddf3d0713ccac6}
+      \strng{fullhash}{eae98d31a490b68745284e728cf5c8bb}
+      \strng{bibnamehash}{eae98d31a490b68745284e728cf5c8bb}
+      \strng{authorbibnamehash}{eae98d31a490b68745284e728cf5c8bb}
+      \strng{authornamehash}{925a57e1f0b7faba45ddf3d0713ccac6}
+      \strng{authorfullhash}{eae98d31a490b68745284e728cf5c8bb}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE access}
+      \field{title}{Digital twin: Enabling technologies, challenges and open research}
+      \field{volume}{8}
+      \field{year}{2020}
+      \field{pages}{108952\bibrangedash 108971}
+      \range{pages}{20}
+    \endentry
+    \entry{glaessgen2012digital}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=96cbbef3be6c3f3505df75a945aa78bf}{%
+           family={Glaessgen},
+           familyi={G\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+        {{hash=f1f59d3b65d6e84d16497f917beaabba}{%
+           family={Stargel},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{489332e7fb86fd50248751295ec06e1e}
+      \strng{fullhash}{489332e7fb86fd50248751295ec06e1e}
+      \strng{bibnamehash}{489332e7fb86fd50248751295ec06e1e}
+      \strng{authorbibnamehash}{489332e7fb86fd50248751295ec06e1e}
+      \strng{authornamehash}{489332e7fb86fd50248751295ec06e1e}
+      \strng{authorfullhash}{489332e7fb86fd50248751295ec06e1e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{53rd AIAA/ASME/ASCE/AHS/ASC structures, structural dynamics and materials conference 20th AIAA/ASME/AHS adaptive structures conference 14th AIAA}
+      \field{title}{The digital twin paradigm for future NASA and US Air Force vehicles}
+      \field{year}{2012}
+      \field{pages}{1818}
+      \range{pages}{1}
+    \endentry
+    \entry{5levw}{online}{}
+      \name{author}{1}{}{%
+        {{hash=df467a5a1f3ec0cac624ff0a2724bd37}{%
+           family={Gregor},
+           familyi={G\bibinitperiod},
+           given={Marek},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{df467a5a1f3ec0cac624ff0a2724bd37}
+      \strng{fullhash}{df467a5a1f3ec0cac624ff0a2724bd37}
+      \strng{bibnamehash}{df467a5a1f3ec0cac624ff0a2724bd37}
+      \strng{authorbibnamehash}{df467a5a1f3ec0cac624ff0a2724bd37}
+      \strng{authornamehash}{df467a5a1f3ec0cac624ff0a2724bd37}
+      \strng{authorfullhash}{df467a5a1f3ec0cac624ff0a2724bd37}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OPC UA server and client in the D2000}
+      \verb{urlraw}
+      \verb https://d2000.ipesoft.com/blog/opc-ua-server-in-d2000-v12-part-1-presentation-of-opc-ua/
+      \endverb
+      \verb{url}
+      \verb https://d2000.ipesoft.com/blog/opc-ua-server-in-d2000-v12-part-1-presentation-of-opc-ua/
+      \endverb
+      \keyw{deployment options}
+    \endentry
+    \entry{gundupalli2016automated}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=7a220969c90647514f062b9d531d0677}{%
+           family={Gundupalli\bibnamedelima Paulraj},
+           familyi={G\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Sathish},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3d2b30a90ef2f3ad7cc75f16f8242462}{%
+           family={Hait},
+           familyi={H\bibinitperiod},
+           given={Subrata},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e7753b2568c930c80fa070c9235145dd}{%
+           family={Thakur},
+           familyi={T\bibinitperiod},
+           given={Atul},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {American Society of Mechanical Engineers}%
+      }
+      \strng{namehash}{d9bd950f717fca5e4e3574177bfb23b3}
+      \strng{fullhash}{d9bd950f717fca5e4e3574177bfb23b3}
+      \strng{bibnamehash}{d9bd950f717fca5e4e3574177bfb23b3}
+      \strng{authorbibnamehash}{d9bd950f717fca5e4e3574177bfb23b3}
+      \strng{authornamehash}{d9bd950f717fca5e4e3574177bfb23b3}
+      \strng{authorfullhash}{d9bd950f717fca5e4e3574177bfb23b3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International design engineering technical conferences and computers and information in engineering conference}
+      \field{title}{Automated municipal solid waste sorting for recycling using a mobile manipulator}
+      \field{volume}{50152}
+      \field{year}{2016}
+      \field{pages}{V05AT07A045}
+      \range{pages}{-1}
+    \endentry
+    \entry{haghshenaspredictivewindstore}{article}{}
+      \name{author}{4}{}{%
+        {{hash=259aeda7c94a8220b23c8e8764d2fdc7}{%
+           family={Haghshenas},
+           familyi={H\bibinitperiod},
+           given={Amirashkan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0260eed1d12b48f4ccb4e9b0f8b44948}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={Agus},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8f2da3d91cf4045bed3210b5bf3c32fd}{%
+           family={Osen},
+           familyi={O\bibinitperiod},
+           given={Ottar},
+           giveni={O\bibinitperiod}}}%
+        {{hash=9bf35a8294485a64d5f610a65cf26940}{%
+           family={Mikalsen},
+           familyi={M\bibinitperiod},
+           given={Egil\bibnamedelima Tennfjord},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SpringerOpen}%
+      }
+      \strng{namehash}{1221c804073f81352c801f627f405c3d}
+      \strng{fullhash}{1b7f74864c60c479053703ce2204bec9}
+      \strng{bibnamehash}{1b7f74864c60c479053703ce2204bec9}
+      \strng{authorbibnamehash}{1b7f74864c60c479053703ce2204bec9}
+      \strng{authornamehash}{1221c804073f81352c801f627f405c3d}
+      \strng{authorfullhash}{1b7f74864c60c479053703ce2204bec9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Energy Informatics}
+      \field{number}{1}
+      \field{title}{Predictive digital twin for offshore wind farms}
+      \field{volume}{6}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+    \endentry
+    \entry{haskamp2018implementing}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=8e16a4f98073f7b14b4b10759a7ab5ff}{%
+           family={Haskamp},
+           familyi={H\bibinitperiod},
+           given={Hermann},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1ce2bb4f73a4d369f507f43ee5df24a1}{%
+           family={Orth},
+           familyi={O\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0138fb13882bb1322b1fdd1d1533722c}{%
+           family={Wermann},
+           familyi={W\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ba5476ea5ecff2c2a5ca553ce1d9751e}{%
+           family={Colombo},
+           familyi={C\bibinitperiod},
+           given={Armando\bibnamedelima Walter},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{2027041e73876d8231665a2d9e47625d}
+      \strng{fullhash}{235a288790693d03fb3cd3dfdc93db42}
+      \strng{bibnamehash}{235a288790693d03fb3cd3dfdc93db42}
+      \strng{authorbibnamehash}{235a288790693d03fb3cd3dfdc93db42}
+      \strng{authornamehash}{2027041e73876d8231665a2d9e47625d}
+      \strng{authorfullhash}{235a288790693d03fb3cd3dfdc93db42}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE Industrial Cyber-Physical Systems (ICPS)}
+      \field{title}{Implementing an OPC UA interface for legacy PLC-based automation systems using the Azure cloud: An ICPS-architecture with a retrofitted RFID system}
+      \field{year}{2018}
+      \field{pages}{115\bibrangedash 121}
+      \range{pages}{7}
+    \endentry
+    \entry{ibw}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fac484355d5c3153f61501504db25609}{%
+           family={Hoppe},
+           familyi={H\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fac484355d5c3153f61501504db25609}
+      \strng{fullhash}{fac484355d5c3153f61501504db25609}
+      \strng{bibnamehash}{fac484355d5c3153f61501504db25609}
+      \strng{authorbibnamehash}{fac484355d5c3153f61501504db25609}
+      \strng{authornamehash}{fac484355d5c3153f61501504db25609}
+      \strng{authorfullhash}{fac484355d5c3153f61501504db25609}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{IoT basics: What is OPC UA?}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.etmm-online.com/iot-basics-what-is-opc-ua-a-9be2f057ce7843b17843b2870298b591/
+      \endverb
+      \verb{url}
+      \verb https://www.etmm-online.com/iot-basics-what-is-opc-ua-a-9be2f057ce7843b17843b2870298b591/
+      \endverb
+      \keyw{OPC}
+    \endentry
+    \entry{metric}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0e468644a9d2dbcc4352f772d8c2b2f5}{%
+           family={Khanh},
+           familyi={K\bibinitperiod},
+           given={Pham\bibnamedelima Dinh},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e468644a9d2dbcc4352f772d8c2b2f5}
+      \strng{fullhash}{0e468644a9d2dbcc4352f772d8c2b2f5}
+      \strng{bibnamehash}{0e468644a9d2dbcc4352f772d8c2b2f5}
+      \strng{authorbibnamehash}{0e468644a9d2dbcc4352f772d8c2b2f5}
+      \strng{authornamehash}{0e468644a9d2dbcc4352f772d8c2b2f5}
+      \strng{authorfullhash}{0e468644a9d2dbcc4352f772d8c2b2f5}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bộ dữ liệu}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://phamdinhkhanh.github.io/deepai-book/ch_ml/modelMetric.html
+      \endverb
+      \verb{url}
+      \verb https://phamdinhkhanh.github.io/deepai-book/ch_ml/modelMetric.html
+      \endverb
+      \keyw{recall,precision,f1}
+    \endentry
+    \entry{wsnweb}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ee7e0446f8e53d7aeb749709d0ed34b1}{%
+           family={Kuldharan},
+           familyi={K\bibinitperiod},
+           given={Mangesh},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee7e0446f8e53d7aeb749709d0ed34b1}
+      \strng{fullhash}{ee7e0446f8e53d7aeb749709d0ed34b1}
+      \strng{bibnamehash}{ee7e0446f8e53d7aeb749709d0ed34b1}
+      \strng{authorbibnamehash}{ee7e0446f8e53d7aeb749709d0ed34b1}
+      \strng{authornamehash}{ee7e0446f8e53d7aeb749709d0ed34b1}
+      \strng{authorfullhash}{ee7e0446f8e53d7aeb749709d0ed34b1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How This Industrial Wireless Sensor Network Market Is Important For Industrial Sectors!}
+      \verb{urlraw}
+      \verb https://www.linkedin.com/pulse/how-industrial-wireless-sensor-network-market-sectors-kuldharan/
+      \endverb
+      \verb{url}
+      \verb https://www.linkedin.com/pulse/how-industrial-wireless-sensor-network-market-sectors-kuldharan/
+      \endverb
+      \keyw{industrial wireless sensor network}
+    \endentry
+    \entry{kumar2020application}{article}{}
+      \name{author}{3}{}{%
+        {{hash=74ecbe766cff57c44859e6024fb62150}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Ravinder},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e7a56984337bd715f0e96419a27daf92}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Rajesh\bibnamedelima Kr},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=b1ee876bcd3ada1ea3ac84c9bd8c7366}{%
+           family={Dwivedi},
+           familyi={D\bibinitperiod},
+           given={Yogesh\bibnamedelima Kr},
+           giveni={Y\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{ab8756057eb61a2db35f95bcaa2c3c92}
+      \strng{fullhash}{ab8756057eb61a2db35f95bcaa2c3c92}
+      \strng{bibnamehash}{ab8756057eb61a2db35f95bcaa2c3c92}
+      \strng{authorbibnamehash}{ab8756057eb61a2db35f95bcaa2c3c92}
+      \strng{authornamehash}{ab8756057eb61a2db35f95bcaa2c3c92}
+      \strng{authorfullhash}{ab8756057eb61a2db35f95bcaa2c3c92}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of cleaner production}
+      \field{title}{Application of industry 4.0 technologies in SMEs for ethical and sustainable operations: Analysis of challenges}
+      \field{volume}{275}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{124063}
+      \range{pages}{1}
+    \endentry
+    \entry{lohtander2018micro}{article}{}
+      \name{author}{5}{}{%
+        {{hash=da340ac6a3ff70842c2d1f878cc94122}{%
+           family={Lohtander},
+           familyi={L\bibinitperiod},
+           given={Mika},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9a5329b11b07e37a35d45f4d763738c4}{%
+           family={Ahonen},
+           familyi={A\bibinitperiod},
+           given={Niko},
+           giveni={N\bibinitperiod}}}%
+        {{hash=04fe3dec8759446678cab64d262906d6}{%
+           family={Lanz},
+           familyi={L\bibinitperiod},
+           given={Minna},
+           giveni={M\bibinitperiod}}}%
+        {{hash=425305257ed33f3d52af9f3edaf204cc}{%
+           family={Ratava},
+           familyi={R\bibinitperiod},
+           given={Juho},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3ae0ff931a657e3e93a4aaa829efa94c}{%
+           family={Kaakkunen},
+           familyi={K\bibinitperiod},
+           given={Jarno},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{b4a777262ac826516fa99de55dc02234}
+      \strng{fullhash}{b6d92f9f26946ef8359cd582f387be32}
+      \strng{bibnamehash}{b6d92f9f26946ef8359cd582f387be32}
+      \strng{authorbibnamehash}{b6d92f9f26946ef8359cd582f387be32}
+      \strng{authornamehash}{b4a777262ac826516fa99de55dc02234}
+      \strng{authorfullhash}{b6d92f9f26946ef8359cd582f387be32}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Procedia manufacturing}
+      \field{title}{Micro manufacturing unit and the corresponding 3D-model for the digital twin}
+      \field{volume}{25}
+      \field{year}{2018}
+      \field{pages}{55\bibrangedash 61}
+      \range{pages}{7}
+    \endentry
+    \entry{madni2019leveraging}{article}{}
+      \name{author}{3}{}{%
+        {{hash=44e699469f46bc83a973c746cfbba1ec}{%
+           family={Madni},
+           familyi={M\bibinitperiod},
+           given={Azad\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=0791014c66fe0895adc1bd636680f673}{%
+           family={Madni},
+           familyi={M\bibinitperiod},
+           given={Carla\bibnamedelima C},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=fcfab013c98e6e5b9266439e149612df}{%
+           family={Lucero},
+           familyi={L\bibinitperiod},
+           given={Scott\bibnamedelima D},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{8010e7dfe7e97f01e810d891c021357d}
+      \strng{fullhash}{8010e7dfe7e97f01e810d891c021357d}
+      \strng{bibnamehash}{8010e7dfe7e97f01e810d891c021357d}
+      \strng{authorbibnamehash}{8010e7dfe7e97f01e810d891c021357d}
+      \strng{authornamehash}{8010e7dfe7e97f01e810d891c021357d}
+      \strng{authorfullhash}{8010e7dfe7e97f01e810d891c021357d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Systems}
+      \field{number}{1}
+      \field{title}{Leveraging digital twin technology in model-based systems engineering}
+      \field{volume}{7}
+      \field{year}{2019}
+      \field{pages}{7}
+      \range{pages}{1}
+    \endentry
+    \entry{netfww}{online}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={Microsoft},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is .NET Framework?}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet-framework
+      \endverb
+      \verb{url}
+      \verb https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet-framework
+      \endverb
+      \keyw{net framework}
+    \endentry
+    \entry{opcuaMqttmizuya}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=5ca16c49bb44208fa03569057319af22}{%
+           family={Mizuya},
+           familyi={M\bibinitperiod},
+           given={Toru},
+           giveni={T\bibinitperiod}}}%
+        {{hash=cb94792ac30f13fac61e7bf0c196ef7d}{%
+           family={Okuda},
+           familyi={O\bibinitperiod},
+           given={Makoto},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a2a112ec9f967a46bfc856d66c1cbc16}{%
+           family={Nagao},
+           familyi={N\bibinitperiod},
+           given={Tatsuaki},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{47b6b34edb918ab75cdcffe6ca9255bd}
+      \strng{fullhash}{47b6b34edb918ab75cdcffe6ca9255bd}
+      \strng{bibnamehash}{47b6b34edb918ab75cdcffe6ca9255bd}
+      \strng{authorbibnamehash}{47b6b34edb918ab75cdcffe6ca9255bd}
+      \strng{authornamehash}{47b6b34edb918ab75cdcffe6ca9255bd}
+      \strng{authorfullhash}{47b6b34edb918ab75cdcffe6ca9255bd}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 56th Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE)}
+      \field{title}{A case study of data acquisition from field devices using OPC UA and MQTT}
+      \field{year}{2017}
+      \field{pages}{611\bibrangedash 614}
+      \range{pages}{4}
+    \endentry
+    \entry{elevator}{article}{}
+      \name{author}{3}{}{%
+        {{hash=eff04e9e8e8e2c7a559388de6b6cc443}{%
+           family={Ouadoudi},
+           familyi={O\bibinitperiod},
+           given={Marouane},
+           giveni={M\bibinitperiod}}}%
+        {{hash=eccc719539b6059e7ea3b9b61c25ee87}{%
+           family={Schwarz},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima H},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=e968671e7992c14c587831f092d6b344}{%
+           family={Borcsok},
+           familyi={B\bibinitperiod},
+           given={Josef},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {WSEAS}%
+      }
+      \strng{namehash}{8a35a08b63feecca0bac75a61b0e89fa}
+      \strng{fullhash}{8a35a08b63feecca0bac75a61b0e89fa}
+      \strng{bibnamehash}{8a35a08b63feecca0bac75a61b0e89fa}
+      \strng{authorbibnamehash}{8a35a08b63feecca0bac75a61b0e89fa}
+      \strng{authornamehash}{8a35a08b63feecca0bac75a61b0e89fa}
+      \strng{authorfullhash}{8a35a08b63feecca0bac75a61b0e89fa}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WSEAS Transactions on Systems and Control}
+      \field{title}{Development of a digital twin for an elevator system}
+      \field{volume}{17}
+      \field{year}{2022}
+      \field{pages}{214\bibrangedash 221}
+      \range{pages}{8}
+    \endentry
+    \entry{paemqttw}{online}{}
+      \name{author}{1}{}{%
+        {{hash=abe711cbae3c80bd66db651077bce122}{%
+           family={PAESSLER},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{abe711cbae3c80bd66db651077bce122}
+      \strng{fullhash}{abe711cbae3c80bd66db651077bce122}
+      \strng{bibnamehash}{abe711cbae3c80bd66db651077bce122}
+      \strng{authorbibnamehash}{abe711cbae3c80bd66db651077bce122}
+      \strng{authornamehash}{abe711cbae3c80bd66db651077bce122}
+      \strng{authorfullhash}{abe711cbae3c80bd66db651077bce122}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MQTT}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.paessler.com/it-explained/mqtt
+      \endverb
+      \verb{url}
+      \verb https://www.paessler.com/it-explained/mqtt
+      \endverb
+      \keyw{MQTT}
+    \endentry
+    \entry{tddmopcw}{online}{}
+      \name{author}{1}{}{%
+        {{hash=abe711cbae3c80bd66db651077bce122}{%
+           family={PAESSLER},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{abe711cbae3c80bd66db651077bce122}
+      \strng{fullhash}{abe711cbae3c80bd66db651077bce122}
+      \strng{bibnamehash}{abe711cbae3c80bd66db651077bce122}
+      \strng{authorbibnamehash}{abe711cbae3c80bd66db651077bce122}
+      \strng{authornamehash}{abe711cbae3c80bd66db651077bce122}
+      \strng{authorfullhash}{abe711cbae3c80bd66db651077bce122}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The advantages of device monitoring using OPC UA with PRTG}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.paessler.com/opc-ua-monitoring#opc-ua-definition
+      \endverb
+      \verb{url}
+      \verb https://www.paessler.com/opc-ua-monitoring#opc-ua-definition
+      \endverb
+      \keyw{OPC}
+    \endentry
+    \entry{8755050}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=65445ceda419c40462e7821a6f46b29d}{%
+           family={Profanter},
+           familyi={P\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=26b4f77a3383950fe2f9d642673722ec}{%
+           family={Tekat},
+           familyi={T\bibinitperiod},
+           given={Ayhun},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1d4e306ef4b1439f0b53bae0f3326276}{%
+           family={Dorofeev},
+           familyi={D\bibinitperiod},
+           given={Kirill},
+           giveni={K\bibinitperiod}}}%
+        {{hash=280fbf566bbf6234a73b998e99366f8c}{%
+           family={Rickert},
+           familyi={R\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c45d8c33e4ef56b7d84b362173fe9d96}{%
+           family={Knoll},
+           familyi={K\bibinitperiod},
+           given={Alois},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ea75355e87aeee5edb01ca34d23208c}
+      \strng{fullhash}{9ddf2d52ef084301bf66bdde32906a2c}
+      \strng{bibnamehash}{9ddf2d52ef084301bf66bdde32906a2c}
+      \strng{authorbibnamehash}{9ddf2d52ef084301bf66bdde32906a2c}
+      \strng{authornamehash}{8ea75355e87aeee5edb01ca34d23208c}
+      \strng{authorfullhash}{9ddf2d52ef084301bf66bdde32906a2c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 IEEE International Conference on Industrial Technology (ICIT)}
+      \field{title}{OPC UA versus ROS, DDS, and MQTT: Performance Evaluation of Industry 4.0 Protocols}
+      \field{year}{2019}
+      \true{nocite}
+      \field{pages}{955\bibrangedash 962}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ICIT.2019.8755050
+      \endverb
+    \endentry
+    \entry{opcrw}{online}{}
+      \name{author}{1}{}{%
+        {{hash=da7c28899177f06dc2e940f1295cce91}{%
+           family={Router},
+           familyi={R\bibinitperiod},
+           given={OPC},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{da7c28899177f06dc2e940f1295cce91}
+      \strng{fullhash}{da7c28899177f06dc2e940f1295cce91}
+      \strng{bibnamehash}{da7c28899177f06dc2e940f1295cce91}
+      \strng{authorbibnamehash}{da7c28899177f06dc2e940f1295cce91}
+      \strng{authornamehash}{da7c28899177f06dc2e940f1295cce91}
+      \strng{authorfullhash}{da7c28899177f06dc2e940f1295cce91}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is OPC UA? A practical introduction}
+      \verb{urlraw}
+      \verb https://www.opc-router.com/what-is-opc-ua/
+      \endverb
+      \verb{url}
+      \verb https://www.opc-router.com/what-is-opc-ua/
+      \endverb
+      \keyw{OPC}
+    \endentry
+    \entry{sapweb}{online}{}
+      \name{author}{1}{}{%
+        {{hash=999bc6b18351bbe817d26f559ba408ae}{%
+           family={SAP},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{fullhash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{bibnamehash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{authorbibnamehash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{authornamehash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{authorfullhash}{999bc6b18351bbe817d26f559ba408ae}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a smart factory? | SAP Insights}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.sap.com/insights/what-is-a-smart-factory.html
+      \endverb
+      \verb{url}
+      \verb https://www.sap.com/insights/what-is-a-smart-factory.html
+      \endverb
+      \keyw{smart factory,benefits,definition}
+    \endentry
+    \entry{m2mw}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7945727217684adf857fc8cac8a6b0cb}{%
+           family={Shea},
+           familyi={S\bibinitperiod},
+           given={Sharon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7945727217684adf857fc8cac8a6b0cb}
+      \strng{fullhash}{7945727217684adf857fc8cac8a6b0cb}
+      \strng{bibnamehash}{7945727217684adf857fc8cac8a6b0cb}
+      \strng{authorbibnamehash}{7945727217684adf857fc8cac8a6b0cb}
+      \strng{authornamehash}{7945727217684adf857fc8cac8a6b0cb}
+      \strng{authorfullhash}{7945727217684adf857fc8cac8a6b0cb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{machine-to-machine (M2M)}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.techtarget.com/iotagenda/definition/machine-to-machine-M2M
+      \endverb
+      \verb{url}
+      \verb https://www.techtarget.com/iotagenda/definition/machine-to-machine-M2M
+      \endverb
+      \keyw{M2M}
+    \endentry
+    \entry{8428342}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=caedd056e124499b246c1bfcad848c48}{%
+           family={Silveira\bibnamedelima Rocha},
+           familyi={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Murilo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=75d9d3933d36bd6bba0cbc5274caa91b}{%
+           family={Serpa\bibnamedelima Sestito},
+           familyi={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Guilherme},
+           giveni={G\bibinitperiod}}}%
+        {{hash=05c0a8f0f155f0866f82e96920b4b374}{%
+           family={Luis\bibnamedelima Dias},
+           familyi={L\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Andre},
+           giveni={A\bibinitperiod}}}%
+        {{hash=90d9b290902eea2b26654a531379a41a}{%
+           family={Celso\bibnamedelima Turcato},
+           familyi={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Afonso},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a806ff0240b0e365a7afc7bc0a647317}{%
+           family={Brandão},
+           familyi={B\bibinitperiod},
+           given={Dennis},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f8d831e1b881873ac3c01b22f2afc64b}
+      \strng{fullhash}{ce977c4e455bc6cdea297f7aaa5b1707}
+      \strng{bibnamehash}{ce977c4e455bc6cdea297f7aaa5b1707}
+      \strng{authorbibnamehash}{ce977c4e455bc6cdea297f7aaa5b1707}
+      \strng{authornamehash}{f8d831e1b881873ac3c01b22f2afc64b}
+      \strng{authorfullhash}{ce977c4e455bc6cdea297f7aaa5b1707}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 Workshop on Metrology for Industry 4.0 and IoT}
+      \field{title}{Performance Comparison Between OPC UA and MQTT for Data Exchange}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{175\bibrangedash 179}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/METROI4.2018.8428342
+      \endverb
+    \endentry
+    \entry{singh_origin_to_future}{article}{}
+      \name{author}{6}{}{%
+        {{hash=fcdac3d1c0370d50d9ade1c68adf53e7}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Maulshree},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2a2654bd8a8aa9268e7a21e308e0d1b4}{%
+           family={Fuenmayor},
+           familyi={F\bibinitperiod},
+           given={Evert},
+           giveni={E\bibinitperiod}}}%
+        {{hash=39158c5e32c7f78d65eadb569d42ea6e}{%
+           family={Hinchy},
+           familyi={H\bibinitperiod},
+           given={Eoin\bibnamedelima P},
+           giveni={E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d32e628881ed4370c656517178858e6a}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Yuansong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4406e8ec11aada3ea6ae39cb12fc3df8}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={Niall},
+           giveni={N\bibinitperiod}}}%
+        {{hash=489135b3b667ea33671a7d61fd19dbd1}{%
+           family={Devine},
+           familyi={D\bibinitperiod},
+           given={Declan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{fb495e5d3529a7d8aa69975a4fe45d27}
+      \strng{fullhash}{290c739aa6d08b99f9bef2ba87e63df8}
+      \strng{bibnamehash}{290c739aa6d08b99f9bef2ba87e63df8}
+      \strng{authorbibnamehash}{290c739aa6d08b99f9bef2ba87e63df8}
+      \strng{authornamehash}{fb495e5d3529a7d8aa69975a4fe45d27}
+      \strng{authorfullhash}{290c739aa6d08b99f9bef2ba87e63df8}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied System Innovation}
+      \field{number}{2}
+      \field{title}{Digital twin: Origin to future}
+      \field{volume}{4}
+      \field{year}{2021}
+      \field{pages}{36}
+      \range{pages}{1}
+    \endentry
+    \entry{mqttw}{online}{}
+      \name{author}{1}{}{%
+        {{hash=568227df5610673622754d7a33005021}{%
+           family={TUTORIALS},
+           familyi={T\bibinitperiod},
+           given={RANDOM\bibnamedelima NERD},
+           giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{568227df5610673622754d7a33005021}
+      \strng{fullhash}{568227df5610673622754d7a33005021}
+      \strng{bibnamehash}{568227df5610673622754d7a33005021}
+      \strng{authorbibnamehash}{568227df5610673622754d7a33005021}
+      \strng{authornamehash}{568227df5610673622754d7a33005021}
+      \strng{authorfullhash}{568227df5610673622754d7a33005021}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MQTT (MQ Telemetry Transport)}
+      \verb{urlraw}
+      \verb https://randomnerdtutorials.com/what-is-mqtt-and-how-it-works/
+      \endverb
+      \verb{url}
+      \verb https://randomnerdtutorials.com/what-is-mqtt-and-how-it-works/
+      \endverb
+      \keyw{MQTT}
+    \endentry
+    \entry{twiweb}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fe3f59b29b6cf2a79f6130e80a09da26}{%
+           family={TWI},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe3f59b29b6cf2a79f6130e80a09da26}
+      \strng{fullhash}{fe3f59b29b6cf2a79f6130e80a09da26}
+      \strng{bibnamehash}{fe3f59b29b6cf2a79f6130e80a09da26}
+      \strng{authorbibnamehash}{fe3f59b29b6cf2a79f6130e80a09da26}
+      \strng{authornamehash}{fe3f59b29b6cf2a79f6130e80a09da26}
+      \strng{authorfullhash}{fe3f59b29b6cf2a79f6130e80a09da26}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a smart factory? (A Complete Guide) - TWI}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.twi-global.com/technical-knowledge/faqs/what-is-a-smart-factory
+      \endverb
+      \verb{url}
+      \verb https://www.twi-global.com/technical-knowledge/faqs/what-is-a-smart-factory
+      \endverb
+      \keyw{smart factory,benefits,definition}
+    \endentry
+    \entry{williams2016design}{article}{}
+      \name{author}{2}{}{%
+        {{hash=154d1242d04acf987ce401cb680a3bc9}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Emmanuel\bibnamedelima Atta},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8bea0709ce0b20580d4fd4bd4982e992}{%
+           family={Bentil},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{17f4465e3175648930ed5f03479fc7d7}
+      \strng{fullhash}{17f4465e3175648930ed5f03479fc7d7}
+      \strng{bibnamehash}{17f4465e3175648930ed5f03479fc7d7}
+      \strng{authorbibnamehash}{17f4465e3175648930ed5f03479fc7d7}
+      \strng{authornamehash}{17f4465e3175648930ed5f03479fc7d7}
+      \strng{authorfullhash}{17f4465e3175648930ed5f03479fc7d7}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Journal of Engineering Research (AJER)}
+      \field{number}{7}
+      \field{title}{Design and implementation of a microcontroller-based automatic waste management sorting unit for a recycling plant}
+      \field{volume}{5}
+      \field{year}{2016}
+      \field{pages}{248\bibrangedash 252}
+      \range{pages}{5}
+    \endentry
+    \entry{zheng2019application}{article}{}
+      \name{author}{3}{}{%
+        {{hash=61a21d8aba7853cbf9f3f099c48b174f}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=21c61ad4ba652136307b6e8989535644}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Sen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0297e867ea73e910cf66198ffc8a76f4}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Huanchong},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b99407439dbda5f8fab48424e3a1f074}
+      \strng{fullhash}{b99407439dbda5f8fab48424e3a1f074}
+      \strng{bibnamehash}{b99407439dbda5f8fab48424e3a1f074}
+      \strng{authorbibnamehash}{b99407439dbda5f8fab48424e3a1f074}
+      \strng{authornamehash}{b99407439dbda5f8fab48424e3a1f074}
+      \strng{authorfullhash}{b99407439dbda5f8fab48424e3a1f074}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Ambient Intelligence and Humanized Computing}
+      \field{title}{An application framework of digital twin and its case study}
+      \field{volume}{10}
+      \field{year}{2019}
+      \field{pages}{1141\bibrangedash 1153}
+      \range{pages}{13}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,29 @@
+\chapter{TỔNG KẾT VÀ HƯỚNG PHÁT TRIỂN}
+\section{Tổng kết}
+Tổng kết lại quá trình phát triển và hiện thực hệ thống, nhóm đã đạt được một số kết quả tiêu biểu như sau:
+\begin{itemize}
+    \item Về kiến trúc: Nhóm đã hiện thực thành công hệ thống dựa trên mô hình kiến trúc mà nhóm đã đề xuất trước đây ở giai đoạn đề cương, với ba thành phần chính là module Control, module Datacenter và VR app. 
+    \item Về chức năng điều khiển cánh tay robot Jetmax: Nhóm đã hoàn thiện
+    các chức năng điều khiển cơ bản của cánh tay robot Jetmax và quan sát trạng thái của cánh tay thông qua OPCUA, cho phép người dùng có thể điều khiển cánh tay bằng các thao tác đơn giản trên ứng dụng VR. 
+    \item Về chức năng AI của cánh tay Jetmax: Nhóm đã xây dựng một mô hình AI giúp nhận diện và phân loại rác dựa trên 2 thư viện khá phổ biến là OpenCV và YOLOv5. Từ đó giới thiệu tới người đọc ý tưởng về một chức năng phân loại có mới có sự kết hợp giữa thủ công và tự động, giúp cải thiện và nâng cao năng suất trong các môi trường công việc đặc thù.
+    \item Về module trung gian Datacenter: Nhóm hiện thực thành công module Datacenter với khả năng làm trung tâm chuyển tiếp dữ liệu, chạy trên mạch nhúng Raspberry Pi gọn nhẹ. Datacenter tạo điều kiện cho khả năng mở rộng của đồ án sau này, với khả năng mở rộng, điều khiển nhiều thiết bị hơn.
+    \item Về VR app chạy trên thiết bị thực tế ảo Oculus Quest2: Nhóm hiện thực thành công một mô hình 3d của cánh tay Jetmax, đây là một bản sao hoạt động đồng bộ với cánh tay Jetmax được phát triển trên Unity3D, giúp mang lại một trải nghiệm mới mẻ cho người dùng và cũng phần nào minh chứng được khả năng làm chủ những công nghệ mới của thế hệ sinh viên Viêt Nam ngày nay.  
+\end{itemize}
+
+Tuy nhiên, do hạn chế về mặt thiết bị, thời gian và nguồn lực nên hệ thống của nhóm dù hoạt động tốt những vẫn còn tồn tại một số điểm hạn chế như sau:
+\begin{itemize}
+    \item Cánh tay chưa được tích hợp cảm biến chạm nên chưa thể nhận biết được đã hút vật thể thành công hay chưa, vì thế mà chưa thể hiện thực tính năng thống kêvà phân tích cho mô hình AI.
+    \item Chưa có database lưu trữ nên dữ liệu về trạng thái của cánh tay chỉ được lưu trữ dưới dạng các biến sau đó gửi thẳng lên các node trên Server mà chưa được lưu trữ lại, phục vụ cho nhưng tính năng như thu thập, phân tích và dự đoán sau này.
+    \item Hạn chế về thiết bị nên nhóm chưa thể hiện rõ ràng vai trò đồng bộ dữ liệu của module Datacenter.
+    \item AI chỉ mới ở dạng mô phỏng mô hình nên chỉ dừng lại ở mức nhận diện những tắm thẻ được gán nhãn trước đó.
+    \item Mô hình 3D trong trong VR app con tương đối đơn giản, chưa có nhiều khả năng về mặt mô phỏng.
+\end{itemize}
+\section{Hướng phát triển tương lai}
+Để cải thiện hệ thống trong tương lai, nhóm sẽ cân nhắc các giải pháp như sau:
+\begin{itemize}
+    \item Tích hợp cảm biến chạm vào cánh tay để cải thiện khả năng nhận biết trạng thái hút vật thể của cánh tay. Điều này sẽ giúp cho hệ thống có thể thực hiện tính năng thống kê kết quả cho mô hình AI một cách chính xác hơn.
+    \item  Xây dựng một cơ sở dữ liệu lưu trữ để lưu trữ các dữ liệu về trạng thái của cánh tay và dữ liệu thu thập được từ các sensor khác. Điều này sẽ giúp cho nhóm có thể dễ dàng thu thập, phân tích và dự đoán các thông tin quan trọng trong tương lai.
+    \item Mở rộng thiết bị và nguồn lực để có thể hiện thực tính năng đồng bộ dữ liệu giữa nhiều thiết bị của module Datacenter. Điều này sẽ giúp cho nhóm có thể thu thập và phân tích dữ liệu một cách hiệu quả hơn.
+    \item Phát triển AI để không chỉ dừng lại ở mức nhận diện tắm thẻ được gán nhãn trước đó, mà có thể xây dựng các mô hình dự đoán và phân tích trên dữ liệu thực tế.
+    \item Tăng tính tương đồng và phức tạp của mô hình 3D trong VR app để đảm bảo tính chân thực và mô phỏng được các hoạt động và hành vi của cánh tay.
+\end{itemize}

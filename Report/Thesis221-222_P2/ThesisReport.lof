@@ -1,0 +1,97 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Các cuộc cách mạng khoa học công nghệ của nhân loại\relax }}{3}{figure.caption.4}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Kiến trúc chung cho các ứng dụng thời đại 4.0 \blx@tocontentsinit {0}\cite {iotp}\relax }}{4}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Các công nghệ của Công nghiệp 4.0\relax }}{6}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Lợi ích của các công nghệ Công nghiệp 4.0\relax }}{10}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Mạng cảm biến không dây công nghiệp, từ \blx@tocontentsinit {0}\cite {wsnweb}\relax }}{15}{figure.caption.8}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Một số khái niệm nhầm lẫn của Digital Twin\relax }}{20}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Kiến thúc chung của MQTT sử dụng MQTT Broker\relax }}{25}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ba mức Chất lượng Dịch vụ (QoS)\relax }}{26}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Cấu trúc của topic \blx@tocontentsinit {0}\cite {mqttw}\relax }}{27}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Năm level trong tổ chức công nghiệp \blx@tocontentsinit {0}\cite {5levw}\relax }}{31}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces OPC UA server \blx@tocontentsinit {0}\cite {opcrw}\relax }}{32}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces OPC UA client \blx@tocontentsinit {0}\cite {opcrw}\relax }}{33}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Mô hình hệ thống đo đạc RTT sử dụng MQTT\relax }}{36}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Mô hình hệ thống đo đạc RTT sử dụng OPC-UA\relax }}{37}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Biểu đồ RTT của MQTT trong điều kiện mạng bình thường và quá tải\relax }}{40}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Biểu đồ RTT của OPCUA trong điều kiện mạng bình thường và quá tải\relax }}{42}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Biểu đồ RTT trung bình của OPC-UA và MQTT trong điều kiện mạng bình thường\relax }}{43}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Biểu đồ RTT trung bình của OPC-UA và MQTT trong điều kiện mạng tải cao\relax }}{43}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Biểu đồ Boxplot của OPC-UA và MQTT trong điều kiện mạng bình thường\relax }}{44}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Biểu đồ Boxplot của OPC-UA và MQTT trong điều kiện mạng tải cao\relax }}{44}{figure.caption.23}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Kiến trúc hệ thống\relax }}{49}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Hình ảnh Oculus Quest 2\relax }}{50}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Hình ảnh của Rasberry Pi\relax }}{51}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Hình ảnh của Jetson Nano\relax }}{52}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Hình ảnh của Jetmax\relax }}{53}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Thông số kỹ thuật của Jetmax\relax }}{53}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Robot Operating System\relax }}{54}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces OpenCV\relax }}{55}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Unity3D\relax }}{57}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Sơ đồ use case diagram của Module Control\relax }}{59}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Sơ khối của Server\relax }}{60}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Cấu trúc thư mục của Server OPC\relax }}{61}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Sơ đồ khối của Jetmax Control\relax }}{62}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Sequence diagram của điều khiển theo servo\relax }}{64}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Sequence diagram của điều khiển theo tọa độ\relax }}{64}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Sequence diagram của thay đổi tốc độ xoay\relax }}{65}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Sequence diagram của về vị trí ban đầu\relax }}{65}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Sequence diagram của bật tắt sucker\relax }}{66}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Sequence diagram của đưa cánh tay tới tọa độ\relax }}{66}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Sequence diagram của kích hoạt AI xếp gỗ\relax }}{67}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Sequence diagram của kích hoạt AI theo dõi màu\relax }}{68}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Sequence diagram của kích hoạt AI phân loại rác\relax }}{70}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Sequence diagram của cập nhật trang thái cánh tay\relax }}{71}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Use case diagram của phân loại rác bán tự động\relax }}{74}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Sơ đồ máy trạng thái của chức năng\relax }}{75}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Mô tả bài toán\relax }}{76}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Sau khi xoay cánh tay theo gốc alpha\relax }}{77}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Sequence diagram của chức năng\relax }}{78}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Sơ đồ use case của Datacenter\relax }}{81}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Sơ đồ khối của Datacenter\relax }}{82}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Sequence diagram của chức năng browse\relax }}{84}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Sơ đồ use case của VR app\relax }}{89}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Sơ đồ khối của VR app\relax }}{89}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces Chú thích chức năng điều khiển sử dụng tay cầm Oculus Quest 2\relax }}{92}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Sequence diagram của chức năng kết nối / ngắt kết nối\relax }}{93}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Flowchart của hàm OPCConnect()\relax }}{95}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Flowchart của hàm Browse()\relax }}{97}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.38}{\ignorespaces Flowchart của hàm OPCDisconnect()\relax }}{99}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.39}{\ignorespaces Sequence diagram của chức năng thu thập thông tin từ OPC server\relax }}{100}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.40}{\ignorespaces Sequence diagram của chức năng điều khiển cánh tay theo servo / tọa độ\relax }}{101}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.41}{\ignorespaces Sequence diagram của chức năng thay đổi cách điều khiển\relax }}{102}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.42}{\ignorespaces Sequence diagram của chức năng bật / tắt đầu hút\relax }}{102}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.43}{\ignorespaces Sequence diagram của chức năng đưa cánh tay về vị trí ban đầu\relax }}{103}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.44}{\ignorespaces Sequence diagram của chức năng thay đổi tốc độ xoay cánh tay\relax }}{103}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.45}{\ignorespaces Sequence diagram của chức năng kích hoạt tính năng AI\relax }}{104}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.46}{\ignorespaces Sequence diagram của chức năng kích hoạt tính năng AI\relax }}{104}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.47}{\ignorespaces Vị trí đặt jetmax\_gazebo trong cây thư mục\relax }}{105}{figure.caption.70}%
+\contentsline {figure}{\numberline {3.48}{\ignorespaces Mô hình 3D của cánh tay trong Gazebo\relax }}{106}{figure.caption.71}%
+\contentsline {figure}{\numberline {3.49}{\ignorespaces Mô hình 3D của cánh tay trong Unity 3D\relax }}{107}{figure.caption.72}%
+\contentsline {figure}{\numberline {3.50}{\ignorespaces Chọn URP Global Setting\relax }}{109}{figure.caption.73}%
+\contentsline {figure}{\numberline {3.51}{\ignorespaces Thực hiện chuyển đổi các Asset của project sang URP\relax }}{110}{figure.caption.74}%
+\contentsline {figure}{\numberline {3.52}{\ignorespaces Kết quả sau khi chạy trình chuyển đổi.\relax }}{110}{figure.caption.75}%
+\contentsline {figure}{\numberline {3.53}{\ignorespaces Các tùy chỉnh cho chất lượng đồ họa URP ở Quality Medium\relax }}{111}{figure.caption.76}%
+\contentsline {figure}{\numberline {3.54}{\ignorespaces Các tùy chỉnh cho Lighting: Sử dụng Baked Lights\relax }}{112}{figure.caption.77}%
+\contentsline {figure}{\numberline {3.55}{\ignorespaces Tùy chỉnh trong tab inspector của Oculus\relax }}{113}{figure.caption.78}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Cấu trúc thư mục của server opc\relax }}{115}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Hình ảnh gói tin trên Wireshark\relax }}{115}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Nhận diện rác và hiển thị lable\relax }}{116}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Nhận diện thùng rác qua màu sắc\relax }}{116}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Cấu trúc thư mục của Datacenter giống hệt với module Control\relax }}{117}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Giao diện ứng dụng khi vừa khởi động\relax }}{118}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Giao diện ứng dụng kết nối thành công\relax }}{119}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Bảng menu điều khiển\relax }}{119}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Giao diện AI phân loại rác bán tự động\relax }}{120}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Giao diện AI xếp chồng khối gỗ\relax }}{121}{figure.caption.88}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Giao diện AI theo dõi khối màu\relax }}{121}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Biểu đồ mức sử dụng CPU của OPC UA trên module control\relax }}{124}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Biểu đồ mức sử dụng CPU của module Datacenter\relax }}{125}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Biểu đồ mức sử dụng CPU, GPU và fps trung bình\relax }}{127}{figure.caption.92}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Biểu đồ Box-plot RTT trong thí nghiệm đã lược bỏ một số outliner\relax }}{128}{figure.caption.93}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Kết quả đo khả năng hút-thả rác\relax }}{133}{figure.caption.94}%
+\addvspace {10\p@ }
+\contentsfinish 
