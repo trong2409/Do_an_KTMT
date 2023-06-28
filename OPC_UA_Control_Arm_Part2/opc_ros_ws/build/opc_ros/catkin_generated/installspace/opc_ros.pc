@@ -1,4 +1,4 @@
-prefix=/home/kuzu/opc_ros_ws/install
+prefix=/home/hiwonder/opc_ros_ws/install
 
 Name: opc_ros
 Description: Description of opc_ros

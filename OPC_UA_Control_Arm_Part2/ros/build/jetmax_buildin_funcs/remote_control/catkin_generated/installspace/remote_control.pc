@@ -1,0 +1,8 @@
+prefix=/home/hiwonder/ros/install
+
+Name: remote_control
+Description: Description of remote_control
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

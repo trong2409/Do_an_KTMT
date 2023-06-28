@@ -143,10 +143,10 @@
   "b043027b67620a7221fbfd7733360ab7")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<SetTarget_object-response>)))
   "Returns full string definition for message of type '<SetTarget_object-response>"
-  (cl:format cl:nil "bool success~%string message~%~%~%"))
+  (cl:format cl:nil "bool success~%string message~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'SetTarget_object-response)))
   "Returns full string definition for message of type 'SetTarget_object-response"
-  (cl:format cl:nil "bool success~%string message~%~%~%"))
+  (cl:format cl:nil "bool success~%string message~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <SetTarget_object-response>))
   (cl:+ 0
      1

@@ -1,0 +1,8 @@
+prefix=/home/hiwonder/ros/install
+
+Name: jetmax_demos
+Description: Description of jetmax_demos
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

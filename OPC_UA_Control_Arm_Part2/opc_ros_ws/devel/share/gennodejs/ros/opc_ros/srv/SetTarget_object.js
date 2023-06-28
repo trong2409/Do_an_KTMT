@@ -155,6 +155,7 @@ class SetTarget_objectResponse {
     bool success
     string message
     
+    
     `;
   }
 

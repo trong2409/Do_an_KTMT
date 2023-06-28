@@ -1,0 +1,16 @@
+[Unit]
+Requires=roscore.service usb_cam.service 
+After=NetworkManager.service usb_cam.service 
+
+[Service]
+Type=simple
+User=hiwonder
+Restart=no
+RestartSec=5
+KillMode=mixed
+ExecStart=/home/hiwonder/ros/autostart/object_tracking.bash
+
+[Install]
+WantedBy=multi-user.target
+
+

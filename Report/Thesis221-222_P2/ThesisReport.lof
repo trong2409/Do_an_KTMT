@@ -35,22 +35,22 @@
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Cấu trúc thư mục của Server OPC\relax }}{61}{figure.caption.35}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Sơ đồ khối của Jetmax Control\relax }}{62}{figure.caption.36}%
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Sequence diagram của điều khiển theo servo\relax }}{64}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Sequence diagram của điều khiển theo tọa độ\relax }}{64}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Sequence diagram của điều khiển theo tọa độ\relax }}{65}{figure.caption.38}%
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Sequence diagram của thay đổi tốc độ xoay\relax }}{65}{figure.caption.39}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Sequence diagram của về vị trí ban đầu\relax }}{65}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Sequence diagram của về vị trí ban đầu\relax }}{66}{figure.caption.40}%
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Sequence diagram của bật tắt sucker\relax }}{66}{figure.caption.41}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Sequence diagram của đưa cánh tay tới tọa độ\relax }}{66}{figure.caption.42}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Sequence diagram của kích hoạt AI xếp gỗ\relax }}{67}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Sequence diagram của kích hoạt AI theo dõi màu\relax }}{68}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Sequence diagram của đưa cánh tay tới tọa độ\relax }}{67}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Sequence diagram của kích hoạt AI xếp gỗ\relax }}{68}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Sequence diagram của kích hoạt AI theo dõi màu\relax }}{69}{figure.caption.44}%
 \contentsline {figure}{\numberline {3.22}{\ignorespaces Sequence diagram của kích hoạt AI phân loại rác\relax }}{70}{figure.caption.45}%
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Sequence diagram của cập nhật trang thái cánh tay\relax }}{71}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Sequence diagram của cập nhật trang thái cánh tay\relax }}{72}{figure.caption.46}%
 \contentsline {figure}{\numberline {3.24}{\ignorespaces Use case diagram của phân loại rác bán tự động\relax }}{74}{figure.caption.47}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Sơ đồ máy trạng thái của chức năng\relax }}{75}{figure.caption.48}%
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Mô tả bài toán\relax }}{76}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Sơ đồ máy trạng thái của chức năng\relax }}{76}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Mô tả bài toán\relax }}{77}{figure.caption.49}%
 \contentsline {figure}{\numberline {3.27}{\ignorespaces Sau khi xoay cánh tay theo gốc alpha\relax }}{77}{figure.caption.50}%
 \contentsline {figure}{\numberline {3.28}{\ignorespaces Sequence diagram của chức năng\relax }}{78}{figure.caption.51}%
-\contentsline {figure}{\numberline {3.29}{\ignorespaces Sơ đồ use case của Datacenter\relax }}{81}{figure.caption.52}%
-\contentsline {figure}{\numberline {3.30}{\ignorespaces Sơ đồ khối của Datacenter\relax }}{82}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Sơ đồ use case của Datacenter\relax }}{82}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Sơ đồ khối của Datacenter\relax }}{83}{figure.caption.53}%
 \contentsline {figure}{\numberline {3.31}{\ignorespaces Sequence diagram của chức năng browse\relax }}{84}{figure.caption.54}%
 \contentsline {figure}{\numberline {3.32}{\ignorespaces Sơ đồ use case của VR app\relax }}{89}{figure.caption.55}%
 \contentsline {figure}{\numberline {3.33}{\ignorespaces Sơ đồ khối của VR app\relax }}{89}{figure.caption.56}%

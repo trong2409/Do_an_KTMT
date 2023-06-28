@@ -1,0 +1,8 @@
+prefix=/home/hiwonder/ros/devel
+
+Name: jetmax_control_custom
+Description: Description of jetmax_control_custom
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

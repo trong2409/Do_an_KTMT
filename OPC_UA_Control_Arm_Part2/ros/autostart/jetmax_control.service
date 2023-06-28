@@ -1,0 +1,15 @@
+[Unit]
+Requires=roscore.service rosbridge.service
+After=NetworkManager.service time-sync.target roscore.service rosbridge.service 
+
+[Service]
+Type=simple
+User=hiwonder
+Restart=always
+RestartSec=5
+KillMode=mixed
+ExecStart=/home/hiwonder/ros/autostart/jetmax_control.bash
+
+[Install]
+WantedBy=multi-user.target
+

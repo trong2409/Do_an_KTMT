@@ -1,0 +1,16 @@
+[Unit]
+Requires=roscore.service
+After=NetworkManager.service time-sync.target roscore.service
+
+[Service]
+Type=simple
+User=hiwonder
+Restart=always
+RestartSec=5
+KillMode=mixed
+ExecStart=/home/hiwonder/ros/autostart/usb_cam.bash
+
+[Install]
+WantedBy=multi-user.target
+
+

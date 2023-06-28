@@ -1,0 +1,2 @@
+set(remote_control_MESSAGE_FILES "/home/hiwonder/ros/src/jetmax_buildin_funcs/remote_control/msg/Status.msg")
+set(remote_control_SERVICE_FILES "/home/hiwonder/ros/src/jetmax_buildin_funcs/remote_control/srv/ChangePosition.srv;/home/hiwonder/ros/src/jetmax_buildin_funcs/remote_control/srv/SetChuck.srv;/home/hiwonder/ros/src/jetmax_buildin_funcs/remote_control/srv/SetPosition.srv;/home/hiwonder/ros/src/jetmax_buildin_funcs/remote_control/srv/SetPWMServo.srv;/home/hiwonder/ros/src/jetmax_buildin_funcs/remote_control/srv/SetServo.srv")

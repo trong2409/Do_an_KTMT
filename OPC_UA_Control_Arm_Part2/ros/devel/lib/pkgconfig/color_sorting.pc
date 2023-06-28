@@ -1,0 +1,8 @@
+prefix=/home/hiwonder/ros/devel
+
+Name: color_sorting
+Description: Description of color_sorting
+Version: 1.0.0
+Cflags: -I/home/hiwonder/ros/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

@@ -122,6 +122,7 @@
 ---
 bool success
 string message
+
 ")
 
 (setf (get opc_ros::SetTarget_objectResponse :md5sum-) "b043027b67620a7221fbfd7733360ab7")
@@ -131,6 +132,7 @@ string message
 ---
 bool success
 string message
+
 ")
 
 

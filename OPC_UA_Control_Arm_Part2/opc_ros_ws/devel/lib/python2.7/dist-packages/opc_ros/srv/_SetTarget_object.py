@@ -140,6 +140,7 @@ class SetTarget_objectResponse(genpy.Message):
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """bool success
 string message
+
 """
   __slots__ = ['success','message']
   _slot_types = ['bool','string']

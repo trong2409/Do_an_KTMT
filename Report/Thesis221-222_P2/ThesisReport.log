@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.14)  26 JUN 2023 21:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.14)  28 JUN 2023 21:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1044,163 +1044,196 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count387
 \@lastruleclass=\count388
 \@thisrulewidth=\dimen363
+) (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
+ (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count389
+\calc@Bcount=\count390
+\calc@Adimen=\dimen364
+\calc@Bdimen=\dimen365
+\calc@Askip=\skip79
+\calc@Bskip=\skip80
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count391
+\calc@Cskip=\skip81
+) (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen366
+\ESO@tempdimb=\dimen367
+)
+\AM@pagewidth=\dimen368
+\AM@pageheight=\dimen369
+\AM@fboxrule=\dimen370
+
+(C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
+File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count392
+\AM@pagebox=\box124
+\AM@global@opts=\toks79
+\AM@pagecnt=\count393
+\AM@toc@title=\toks80
+\AM@lof@heading=\toks81
+\c@AM@survey=\count394
+\AM@templatesizebox=\box125
 ) (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count389
+\lrq@indent=\count395
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count390
-\c@listtotal=\count391
-\c@listcount=\count392
-\c@liststart=\count393
-\c@liststop=\count394
-\c@citecount=\count395
-\c@citetotal=\count396
-\c@multicitecount=\count397
-\c@multicitetotal=\count398
-\c@instcount=\count399
-\c@maxnames=\count400
-\c@minnames=\count401
-\c@maxitems=\count402
-\c@minitems=\count403
-\c@citecounter=\count404
-\c@maxcitecounter=\count405
-\c@savedcitecounter=\count406
-\c@uniquelist=\count407
-\c@uniquename=\count408
-\c@refsection=\count409
-\c@refsegment=\count410
-\c@maxextratitle=\count411
-\c@maxextratitleyear=\count412
-\c@maxextraname=\count413
-\c@maxextradate=\count414
-\c@maxextraalpha=\count415
-\c@abbrvpenalty=\count416
-\c@highnamepenalty=\count417
-\c@lownamepenalty=\count418
-\c@maxparens=\count419
-\c@parenlevel=\count420
-\blx@tempcnta=\count421
-\blx@tempcntb=\count422
-\blx@tempcntc=\count423
-\c@blx@maxsection=\count424
-\blx@maxsegment@0=\count425
-\blx@notetype=\count426
-\blx@parenlevel@text=\count427
-\blx@parenlevel@foot=\count428
-\blx@sectionciteorder@0=\count429
-\blx@sectionciteorderinternal@0=\count430
-\blx@entrysetcounter=\count431
-\blx@biblioinstance=\count432
-\labelnumberwidth=\skip79
-\labelalphawidth=\skip80
-\biblabelsep=\skip81
-\bibitemsep=\skip82
-\bibnamesep=\skip83
-\bibinitsep=\skip84
-\bibparsep=\skip85
-\bibhang=\skip86
+\c@tabx@nest=\count396
+\c@listtotal=\count397
+\c@listcount=\count398
+\c@liststart=\count399
+\c@liststop=\count400
+\c@citecount=\count401
+\c@citetotal=\count402
+\c@multicitecount=\count403
+\c@multicitetotal=\count404
+\c@instcount=\count405
+\c@maxnames=\count406
+\c@minnames=\count407
+\c@maxitems=\count408
+\c@minitems=\count409
+\c@citecounter=\count410
+\c@maxcitecounter=\count411
+\c@savedcitecounter=\count412
+\c@uniquelist=\count413
+\c@uniquename=\count414
+\c@refsection=\count415
+\c@refsegment=\count416
+\c@maxextratitle=\count417
+\c@maxextratitleyear=\count418
+\c@maxextraname=\count419
+\c@maxextradate=\count420
+\c@maxextraalpha=\count421
+\c@abbrvpenalty=\count422
+\c@highnamepenalty=\count423
+\c@lownamepenalty=\count424
+\c@maxparens=\count425
+\c@parenlevel=\count426
+\blx@tempcnta=\count427
+\blx@tempcntb=\count428
+\blx@tempcntc=\count429
+\c@blx@maxsection=\count430
+\blx@maxsegment@0=\count431
+\blx@notetype=\count432
+\blx@parenlevel@text=\count433
+\blx@parenlevel@foot=\count434
+\blx@sectionciteorder@0=\count435
+\blx@sectionciteorderinternal@0=\count436
+\blx@entrysetcounter=\count437
+\blx@biblioinstance=\count438
+\labelnumberwidth=\skip82
+\labelalphawidth=\skip83
+\biblabelsep=\skip84
+\bibitemsep=\skip85
+\bibnamesep=\skip86
+\bibinitsep=\skip87
+\bibparsep=\skip88
+\bibhang=\skip89
 \blx@bcfin=\read5
 \blx@bcfout=\write6
 \blx@langwohyphens=\language79
-\c@mincomprange=\count433
-\c@maxcomprange=\count434
-\c@mincompwidth=\count435
+\c@mincomprange=\count439
+\c@maxcomprange=\count440
+\c@mincompwidth=\count441
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
-
-(C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+ (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count436
-\c@savedafterword=\count437
-\c@annotator=\count438
-\c@savedannotator=\count439
-\c@author=\count440
-\c@savedauthor=\count441
-\c@bookauthor=\count442
-\c@savedbookauthor=\count443
-\c@commentator=\count444
-\c@savedcommentator=\count445
-\c@editor=\count446
-\c@savededitor=\count447
-\c@editora=\count448
-\c@savededitora=\count449
-\c@editorb=\count450
-\c@savededitorb=\count451
-\c@editorc=\count452
-\c@savededitorc=\count453
-\c@foreword=\count454
-\c@savedforeword=\count455
-\c@holder=\count456
-\c@savedholder=\count457
-\c@introduction=\count458
-\c@savedintroduction=\count459
-\c@namea=\count460
-\c@savednamea=\count461
-\c@nameb=\count462
-\c@savednameb=\count463
-\c@namec=\count464
-\c@savednamec=\count465
-\c@translator=\count466
-\c@savedtranslator=\count467
-\c@shortauthor=\count468
-\c@savedshortauthor=\count469
-\c@shorteditor=\count470
-\c@savedshorteditor=\count471
-\c@labelname=\count472
-\c@savedlabelname=\count473
-\c@institution=\count474
-\c@savedinstitution=\count475
-\c@lista=\count476
-\c@savedlista=\count477
-\c@listb=\count478
-\c@savedlistb=\count479
-\c@listc=\count480
-\c@savedlistc=\count481
-\c@listd=\count482
-\c@savedlistd=\count483
-\c@liste=\count484
-\c@savedliste=\count485
-\c@listf=\count486
-\c@savedlistf=\count487
-\c@location=\count488
-\c@savedlocation=\count489
-\c@organization=\count490
-\c@savedorganization=\count491
-\c@origlocation=\count492
-\c@savedoriglocation=\count493
-\c@origpublisher=\count494
-\c@savedorigpublisher=\count495
-\c@publisher=\count496
-\c@savedpublisher=\count497
-\c@language=\count498
-\c@savedlanguage=\count499
-\c@origlanguage=\count500
-\c@savedoriglanguage=\count501
-\c@pageref=\count502
-\c@savedpageref=\count503
-\shorthandwidth=\skip87
-\shortjournalwidth=\skip88
-\shortserieswidth=\skip89
-\shorttitlewidth=\skip90
-\shortauthorwidth=\skip91
-\shorteditorwidth=\skip92
-\locallabelnumberwidth=\skip93
-\locallabelalphawidth=\skip94
-\localshorthandwidth=\skip95
-\localshortjournalwidth=\skip96
-\localshortserieswidth=\skip97
-\localshorttitlewidth=\skip98
-\localshortauthorwidth=\skip99
-\localshorteditorwidth=\skip100
+\c@afterword=\count442
+\c@savedafterword=\count443
+\c@annotator=\count444
+\c@savedannotator=\count445
+\c@author=\count446
+\c@savedauthor=\count447
+\c@bookauthor=\count448
+\c@savedbookauthor=\count449
+\c@commentator=\count450
+\c@savedcommentator=\count451
+\c@editor=\count452
+\c@savededitor=\count453
+\c@editora=\count454
+\c@savededitora=\count455
+\c@editorb=\count456
+\c@savededitorb=\count457
+\c@editorc=\count458
+\c@savededitorc=\count459
+\c@foreword=\count460
+\c@savedforeword=\count461
+\c@holder=\count462
+\c@savedholder=\count463
+\c@introduction=\count464
+\c@savedintroduction=\count465
+\c@namea=\count466
+\c@savednamea=\count467
+\c@nameb=\count468
+\c@savednameb=\count469
+\c@namec=\count470
+\c@savednamec=\count471
+\c@translator=\count472
+\c@savedtranslator=\count473
+\c@shortauthor=\count474
+\c@savedshortauthor=\count475
+\c@shorteditor=\count476
+\c@savedshorteditor=\count477
+\c@labelname=\count478
+\c@savedlabelname=\count479
+\c@institution=\count480
+\c@savedinstitution=\count481
+\c@lista=\count482
+\c@savedlista=\count483
+\c@listb=\count484
+\c@savedlistb=\count485
+\c@listc=\count486
+\c@savedlistc=\count487
+\c@listd=\count488
+\c@savedlistd=\count489
+\c@liste=\count490
+\c@savedliste=\count491
+\c@listf=\count492
+\c@savedlistf=\count493
+\c@location=\count494
+\c@savedlocation=\count495
+\c@organization=\count496
+\c@savedorganization=\count497
+\c@origlocation=\count498
+\c@savedoriglocation=\count499
+\c@origpublisher=\count500
+\c@savedorigpublisher=\count501
+\c@publisher=\count502
+\c@savedpublisher=\count503
+\c@language=\count504
+\c@savedlanguage=\count505
+\c@origlanguage=\count506
+\c@savedoriglanguage=\count507
+\c@pageref=\count508
+\c@savedpageref=\count509
+\shorthandwidth=\skip90
+\shortjournalwidth=\skip91
+\shortserieswidth=\skip92
+\shorttitlewidth=\skip93
+\shortauthorwidth=\skip94
+\shorteditorwidth=\skip95
+\locallabelnumberwidth=\skip96
+\locallabelalphawidth=\skip97
+\localshorthandwidth=\skip98
+\localshortjournalwidth=\skip99
+\localshortserieswidth=\skip100
+\localshorttitlewidth=\skip101
+\localshortauthorwidth=\skip102
+\localshorteditorwidth=\skip103
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
@@ -1210,19 +1243,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count504
-\c@textcitetotal=\count505
-\c@textcitemaxnames=\count506
-\c@biburlbigbreakpenalty=\count507
-\c@biburlbreakpenalty=\count508
-\c@biburlnumpenalty=\count509
-\c@biburlucpenalty=\count510
-\c@biburllcpenalty=\count511
+\c@textcitecount=\count510
+\c@textcitetotal=\count511
+\c@textcitemaxnames=\count512
+\c@biburlbigbreakpenalty=\count513
+\c@biburlbreakpenalty=\count514
+\c@biburlnumpenalty=\count515
+\c@biburlucpenalty=\count516
+\c@biburllcpenalty=\count517
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count512
+\c@smartand=\count518
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -1240,8 +1273,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count513
-\c@bbx:relatedtotal=\count514
+\c@bbx:relatedcount=\count519
+\c@bbx:relatedtotal=\count520
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -1251,10 +1284,10 @@ Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric-comp.cbx
 File: numeric-comp.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count515
-\c@cbx@tempcntb=\count516
-\c@cbx@tempcntc=\count517
-\c@cbx@tempcntd=\count518
+\c@cbx@tempcnta=\count521
+\c@cbx@tempcntb=\count522
+\c@cbx@tempcntc=\count523
+\c@cbx@tempcntd=\count524
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1288,58 +1321,58 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count519
-\l__lipsum_a_int=\count520
-\l__lipsum_b_int=\count521
+\g__lipsum_par_int=\count525
+\l__lipsum_a_int=\count526
+\l__lipsum_b_int=\count527
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
-\c@theorem=\count522
-\c@problem=\count523
-\c@main=\count524
+\c@theorem=\count528
+\c@problem=\count529
+\c@main=\count530
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/verbatimbox\verbatimbox.sty
 Package: verbatimbox 2014/03/12 v3.13 Routines for placing verbatim text into boxes, useful in places where the verbatim environment is inaccessible. Secondarily, for adding vertical buffer around an object.
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks79
-\verbatim@line=\toks80
+\every@verbatim=\toks82
+\verbatim@line=\toks83
 \verbatim@in@stream=\read6
 ) (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/readarray\readarray.sty
 Package: readarray 2021/09/17\ 3.1\ Routines for inputting 2D and 3D array data and recalling it on an element-by-element basis.
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/forloop\forloop.sty
 Package: forloop 2023/05/03 v3.0 For Loops for LaTeX
 ) (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/listofitems\listofitems.sty (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/generic/listofitems\listofitems.tex
-\loi_cnt_foreach_nest=\count525
-\loi_nestcnt=\count526
+\loi_cnt_foreach_nest=\count531
+\loi_nestcnt=\count532
 )
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified sep char (CT)
 )
-\c@@index=\count527
-\c@@plane=\count528
-\c@@row=\count529
-\c@@col=\count530
-\c@use@args=\count531
-\c@@record=\count532
-\c@index@count=\count533
-\Arg@toks=\toks81
-\@arrayident@toks=\toks82
+\c@@index=\count533
+\c@@plane=\count534
+\c@@row=\count535
+\c@@col=\count536
+\c@use@args=\count537
+\c@@record=\count538
+\c@index@count=\count539
+\Arg@toks=\toks84
+\@arrayident@toks=\toks85
 \rdar@file=\read7
-\readarrayendlinechar=\count534
+\readarrayendlinechar=\count540
 
 readarray: bounds checking OFF
 )
-\savedverbbox=\box124
-\c@VerbboxLineNo=\count535
-\boxtopsep=\dimen364
-\boxbottomsep=\dimen365
-\ps@tempdima=\dimen366
-\ps@tempboxa=\box125
-\boxtop@sep=\skip101
-\boxbottom@sep=\skip102
+\savedverbbox=\box126
+\c@VerbboxLineNo=\count541
+\boxtopsep=\dimen371
+\boxbottomsep=\dimen372
+\ps@tempdima=\dimen373
+\ps@tempboxa=\box127
+\boxtop@sep=\skip104
+\boxbottom@sep=\skip105
 ) (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty
 Package: titletoc 2021/07/05 v2.14 TOC entries
-\ttl@leftsep=\dimen367
+\ttl@leftsep=\dimen374
 )
-\@quotelevel=\count536
-\@quotereset=\count537
+\@quotelevel=\count542
+\@quotereset=\count543
  (ThesisReport.aux (Others/ThesisCover.aux) (Others/commitment.aux) (Others/acknowledgement.aux) (Others/abstract.aux) (ThesisChapters/Introduction.aux
 
 LaTeX Warning: Label `fig:comp_mqtt' multiply defined.
@@ -1380,27 +1413,27 @@ LaTeX Warning: Label `tblr:my-table' multiply defined.
 ) (ThesisChapters/future_plan.aux) (Others/information.aux))
 \openout1 = `ThesisReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-\c@lstlisting=\count538
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+\c@lstlisting=\count544
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1436,24 +1469,24 @@ LaTeX Font Info:    ... okay on input line 163.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 163.
+Package hyperref Info: Link coloring OFF on input line 164.
 (ThesisReport.out) (ThesisReport.out)
 \@outlinefile=\write7
 \openout7 = `ThesisReport.out'.
 
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count539
-\scratchdimen=\dimen368
-\scratchbox=\box126
-\nofMPsegments=\count540
-\nofMParguments=\count541
-\everyMPshowfont=\toks83
-\MPscratchCnt=\count542
-\MPscratchDim=\dimen369
-\MPnumerator=\count543
-\makeMPintoPDFobject=\count544
-\everyMPtoPDFconversion=\toks84
+\scratchcounter=\count545
+\scratchdimen=\dimen375
+\scratchbox=\box128
+\nofMPsegments=\count546
+\nofMParguments=\count547
+\everyMPshowfont=\toks86
+\MPscratchCnt=\count548
+\MPscratchDim=\dimen376
+\MPnumerator=\count549
+\makeMPintoPDFobject=\count550
+\everyMPtoPDFconversion=\toks87
 ) (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1465,7 +1498,15 @@ Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/ninecolors\ninecolors.sty
 Package: ninecolors 2022-02-13 vv2022D Select colors with proper color contrast
+) (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
@@ -1479,8 +1520,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'ThesisReport.bbl' found.
  (ThesisReport.bbl)
-Package biblatex Info: Reference section=0 on input line 163.
-Package biblatex Info: Reference segment=0 on input line 163.
+Package biblatex Info: Reference section=0 on input line 164.
+Package biblatex Info: Reference segment=0 on input line 164.
 \openout2 = `Others/ThesisCover.aux'.
 
  (Others/ThesisCover.tex
@@ -1488,7 +1529,7 @@ Package biblatex Info: Reference segment=0 on input line 163.
 File: Images/Logo BK.png Graphic file (type png)
 <use Images/Logo BK.png>
 Package pdftex.def Info: Images/Logo BK.png  used on input line 25.
-(pdftex.def)             Requested size: 71.12608pt x 71.13191pt.
+(pdftex.def)             Requested size: 113.80492pt x 113.81252pt.
 LaTeX Font Info:    Calculating math sizes for size <13> on input line 45.
 
 
@@ -1551,7 +1592,7 @@ LaTeX Font Warning: Font shape `U/lasy/m/n' in size <6.5> not available
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 )
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 28--309
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 28--314
 [][] 
  []
 
@@ -1886,7 +1927,7 @@ Overfull \hbox (0.88098pt too wide) detected at line 10
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.327 \include{ThesisChapters/Introduction}
+l.334 \include{ThesisChapters/Introduction}
                                             [1
 
 ]
@@ -2284,10 +2325,6 @@ File: Images/Comparing_experiment/mqtt_testing_model.jpg Graphic file (type jpg)
 Package pdftex.def Info: Images/Comparing_experiment/mqtt_testing_model.jpg  used on input line 334.
 (pdftex.def)             Requested size: 455.24411pt x 160.53633pt.
 
-Overfull \hbox (98.35336pt too wide) in paragraph at lines 339--340
-[]\T5/cmr/m/n/13 Tø Client_1, nhâm s³ pub-lish dú li»u vîi ^^_ë d i cho tr÷îc tîi topic \T5/cmr/bx/n/13 v1/devices/me/telemetry0\T5/cmr/m/n/13 .
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.2807pt, for example:
@@ -2569,6 +2606,10 @@ File: Images/architect_1.jpg Graphic file (type jpg)
 Package pdftex.def Info: Images/architect_1.jpg  used on input line 21.
 (pdftex.def)             Requested size: 455.24411pt x 112.57416pt.
 
+Overfull \hbox (2.02797pt too wide) in paragraph at lines 26--27
+[]\T5/cmr/m/n/13 Link github cõa dü ¡n câ thº ^^_÷ñc t¼m th§y ð ^^_¥y: []https://github.com/trong2409 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.2807pt, for example:
@@ -2577,10 +2618,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [49 <./Images/architect_1.jpg>]
-<Images/Implementation/VRapp/Oculus.jpg, id=841, 475.7775pt x 266.9975pt>
+<Images/Implementation/VRapp/Oculus.jpg, id=843, 475.7775pt x 266.9975pt>
 File: Images/Implementation/VRapp/Oculus.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/Oculus.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/Oculus.jpg  used on input line 37.
+Package pdftex.def Info: Images/Implementation/VRapp/Oculus.jpg  used on input line 40.
 (pdftex.def)             Requested size: 273.14923pt x 153.2942pt.
 
 
@@ -2591,10 +2632,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [50 <./Images/Implementation/VRapp/Oculus.jpg>]
-<Images/Implementation/Datacenter/Ras.jpg, id=848, 474.77374pt x 320.19624pt>
+<Images/Implementation/Datacenter/Ras.jpg, id=850, 474.77374pt x 320.19624pt>
 File: Images/Implementation/Datacenter/Ras.jpg Graphic file (type jpg)
 <use Images/Implementation/Datacenter/Ras.jpg>
-Package pdftex.def Info: Images/Implementation/Datacenter/Ras.jpg  used on input line 53.
+Package pdftex.def Info: Images/Implementation/Datacenter/Ras.jpg  used on input line 56.
 (pdftex.def)             Requested size: 273.14923pt x 184.22377pt.
 
 
@@ -2605,10 +2646,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [51 <./Images/Implementation/Datacenter/Ras.jpg>]
-<Images/Implementation/Control/JesonNano.jpg, id=854, 602.25pt x 452.892pt>
+<Images/Implementation/Control/JesonNano.jpg, id=856, 602.25pt x 452.892pt>
 File: Images/Implementation/Control/JesonNano.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/JesonNano.jpg>
-Package pdftex.def Info: Images/Implementation/Control/JesonNano.jpg  used on input line 68.
+Package pdftex.def Info: Images/Implementation/Control/JesonNano.jpg  used on input line 71.
 (pdftex.def)             Requested size: 273.14923pt x 205.41658pt.
 
 
@@ -2619,23 +2660,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [52 <./Images/Implementation/Control/JesonNano.jpg>]
-<Images/Implementation/Control/Jetmax.jpg, id=860, 605.8635pt x 452.892pt>
+<Images/Implementation/Control/Jetmax.jpg, id=862, 605.8635pt x 452.892pt>
 File: Images/Implementation/Control/Jetmax.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/Jetmax.jpg>
-Package pdftex.def Info: Images/Implementation/Control/Jetmax.jpg  used on input line 82.
+Package pdftex.def Info: Images/Implementation/Control/Jetmax.jpg  used on input line 85.
 (pdftex.def)             Requested size: 273.14923pt x 204.1865pt.
-<Images/Implementation/Control/Jetmax-1.jpg, id=861, 875.27pt x 689.57625pt>
+<Images/Implementation/Control/Jetmax-1.jpg, id=863, 875.27pt x 689.57625pt>
 File: Images/Implementation/Control/Jetmax-1.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/Jetmax-1.jpg>
-Package pdftex.def Info: Images/Implementation/Control/Jetmax-1.jpg  used on input line 88.
+Package pdftex.def Info: Images/Implementation/Control/Jetmax-1.jpg  used on input line 91.
 (pdftex.def)             Requested size: 204.84708pt x 170.7101pt.
-<Images/Implementation/Control/Jetmax-2.jpg, id=862, 688.5725pt x 589.20125pt>
+<Images/Implementation/Control/Jetmax-2.jpg, id=864, 688.5725pt x 589.20125pt>
 File: Images/Implementation/Control/Jetmax-2.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/Jetmax-2.jpg>
-Package pdftex.def Info: Images/Implementation/Control/Jetmax-2.jpg  used on input line 92.
+Package pdftex.def Info: Images/Implementation/Control/Jetmax-2.jpg  used on input line 95.
 (pdftex.def)             Requested size: 204.86073pt x 170.71114pt.
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 87--95
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 90--98
 [][] [] 
  []
 
@@ -2647,10 +2688,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [53 <./Images/Implementation/Control/Jetmax.jpg> <./Images/Implementation/Control/Jetmax-1.jpg> <./Images/Implementation/Control/Jetmax-2.jpg>]
-<Images/Implementation/Control/Ros.jpg, id=868, 272.217pt x 148.75575pt>
+<Images/Implementation/Control/Ros.jpg, id=870, 272.217pt x 148.75575pt>
 File: Images/Implementation/Control/Ros.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/Ros.jpg>
-Package pdftex.def Info: Images/Implementation/Control/Ros.jpg  used on input line 112.
+Package pdftex.def Info: Images/Implementation/Control/Ros.jpg  used on input line 115.
 (pdftex.def)             Requested size: 273.14923pt x 149.2797pt.
 
 
@@ -2661,10 +2702,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [54 <./Images/Implementation/Control/Ros.jpg>]
-<Images/Implementation/Control/opencv.jpg, id=874, 483.0045pt x 357.13425pt>
+<Images/Implementation/Control/opencv.jpg, id=876, 483.0045pt x 357.13425pt>
 File: Images/Implementation/Control/opencv.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/opencv.jpg>
-Package pdftex.def Info: Images/Implementation/Control/opencv.jpg  used on input line 129.
+Package pdftex.def Info: Images/Implementation/Control/opencv.jpg  used on input line 132.
 (pdftex.def)             Requested size: 273.14923pt x 201.9665pt.
 
 
@@ -2675,12 +2716,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [55 <./Images/Implementation/Control/opencv.jpg>]
-<Images/Implementation/Control/unity.jpg, id=880, 460.72125pt x 266.9975pt>
-File: Images/Implementation/Control/unity.jpg Graphic file (type jpg)
-<use Images/Implementation/Control/unity.jpg>
-Package pdftex.def Info: Images/Implementation/Control/unity.jpg  used on input line 156.
-(pdftex.def)             Requested size: 273.14923pt x 158.29306pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.2807pt, for example:
@@ -2689,6 +2724,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [56]
+<Images/Implementation/Control/unity.jpg, id=887, 460.72125pt x 266.9975pt>
+File: Images/Implementation/Control/unity.jpg Graphic file (type jpg)
+<use Images/Implementation/Control/unity.jpg>
+Package pdftex.def Info: Images/Implementation/Control/unity.jpg  used on input line 159.
+(pdftex.def)             Requested size: 273.14923pt x 158.29306pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2705,10 +2746,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [58]
-<Images/Implementation/Control/Control-usecase.jpg, id=902, 359.84438pt x 344.03531pt>
+<Images/Implementation/Control/Control-usecase.jpg, id=904, 359.84438pt x 344.03531pt>
 File: Images/Implementation/Control/Control-usecase.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/Control-usecase.jpg>
-Package pdftex.def Info: Images/Implementation/Control/Control-usecase.jpg  used on input line 191.
+Package pdftex.def Info: Images/Implementation/Control/Control-usecase.jpg  used on input line 194.
 (pdftex.def)             Requested size: 273.14923pt x 261.17032pt.
 
 
@@ -2719,10 +2760,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [59 <./Images/Implementation/Control/Control-usecase.jpg>]
-<Images/Implementation/Control/Server_block.jpg, id=907, 507.39563pt x 344.03531pt>
+<Images/Implementation/Control/Server_block.jpg, id=909, 507.39563pt x 344.03531pt>
 File: Images/Implementation/Control/Server_block.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/Server_block.jpg>
-Package pdftex.def Info: Images/Implementation/Control/Server_block.jpg  used on input line 200.
+Package pdftex.def Info: Images/Implementation/Control/Server_block.jpg  used on input line 203.
 (pdftex.def)             Requested size: 318.66948pt x 216.07669pt.
 
 
@@ -2733,10 +2774,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [60 <./Images/Implementation/Control/Server_block.jpg>]
-<Images/Implementation/Control/opc_structure.jpg, id=913, 534.49687pt x 344.03531pt>
+<Images/Implementation/Control/opc_structure.jpg, id=915, 534.49687pt x 344.03531pt>
 File: Images/Implementation/Control/opc_structure.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/opc_structure.jpg>
-Package pdftex.def Info: Images/Implementation/Control/opc_structure.jpg  used on input line 218.
+Package pdftex.def Info: Images/Implementation/Control/opc_structure.jpg  used on input line 221.
 (pdftex.def)             Requested size: 455.24411pt x 293.0351pt.
 
 
@@ -2747,10 +2788,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [61 <./Images/Implementation/Control/opc_structure.jpg>]
-<Images/Implementation/Control/Jetmax_control_block.jpg, id=918, 745.28438pt x 344.03531pt>
+<Images/Implementation/Control/Jetmax_control_block.jpg, id=920, 745.28438pt x 344.03531pt>
 File: Images/Implementation/Control/Jetmax_control_block.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/Jetmax_control_block.jpg>
-Package pdftex.def Info: Images/Implementation/Control/Jetmax_control_block.jpg  used on input line 237.
+Package pdftex.def Info: Images/Implementation/Control/Jetmax_control_block.jpg  used on input line 240.
 (pdftex.def)             Requested size: 364.19667pt x 168.1168pt.
 
 
@@ -2761,22 +2802,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [62 <./Images/Implementation/Control/Jetmax_control_block.jpg>]
-<Images/Implementation/Control/dieukhientheo_servo.jpg, id=923, 1521.43407pt x 1242.89343pt>
+<Images/Implementation/Control/dieukhientheo_servo.jpg, id=925, 1521.43407pt x 1242.89343pt>
 File: Images/Implementation/Control/dieukhientheo_servo.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/dieukhientheo_servo.jpg>
-Package pdftex.def Info: Images/Implementation/Control/dieukhientheo_servo.jpg  used on input line 256.
+Package pdftex.def Info: Images/Implementation/Control/dieukhientheo_servo.jpg  used on input line 259.
 (pdftex.def)             Requested size: 364.19667pt x 297.52295pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Images/Implementation/Control/dieukhientheo_toado.jpg, id=924, 1521.43407pt x 1169.87062pt>
-File: Images/Implementation/Control/dieukhientheo_toado.jpg Graphic file (type jpg)
-<use Images/Implementation/Control/dieukhientheo_toado.jpg>
-Package pdftex.def Info: Images/Implementation/Control/dieukhientheo_toado.jpg  used on input line 265.
-(pdftex.def)             Requested size: 364.19667pt x 280.0428pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2786,89 +2816,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [63]
-<Images/Implementation/Control/changespeed.jpg, id=930, 941.76843pt x 696.35156pt>
-File: Images/Implementation/Control/changespeed.jpg Graphic file (type jpg)
-<use Images/Implementation/Control/changespeed.jpg>
-Package pdftex.def Info: Images/Implementation/Control/changespeed.jpg  used on input line 274.
-(pdftex.def)             Requested size: 273.14923pt x 201.96866pt.
+<Images/Implementation/Control/dieukhientheo_toado.jpg, id=931, 1521.43407pt x 1169.87062pt>
+File: Images/Implementation/Control/dieukhientheo_toado.jpg Graphic file (type jpg)
+<use Images/Implementation/Control/dieukhientheo_toado.jpg>
+Package pdftex.def Info: Images/Implementation/Control/dieukhientheo_toado.jpg  used on input line 268.
+(pdftex.def)             Requested size: 364.19667pt x 280.0428pt.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[64 <./Images/Implementation/Control/dieukhientheo_servo.jpg> <./Images/Implementation/Control/dieukhientheo_toado.jpg>]
-<Images/Implementation/Control/goHome.jpg, id=936, 1521.43407pt x 702.37407pt>
-File: Images/Implementation/Control/goHome.jpg Graphic file (type jpg)
-<use Images/Implementation/Control/goHome.jpg>
-Package pdftex.def Info: Images/Implementation/Control/goHome.jpg  used on input line 281.
-(pdftex.def)             Requested size: 364.19667pt x 168.1338pt.
-<Images/Implementation/Control/sucker.jpg, id=937, 1521.43407pt x 797.22844pt>
-File: Images/Implementation/Control/sucker.jpg Graphic file (type jpg)
-<use Images/Implementation/Control/sucker.jpg>
-Package pdftex.def Info: Images/Implementation/Control/sucker.jpg  used on input line 288.
-(pdftex.def)             Requested size: 364.19667pt x 190.83998pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[65 <./Images/Implementation/Control/changespeed.jpg> <./Images/Implementation/Control/goHome.jpg>]
-<Images/Implementation/Control/setCordinate.jpg, id=942, 503.8825pt x 212.795pt>
-File: Images/Implementation/Control/setCordinate.jpg Graphic file (type jpg)
-<use Images/Implementation/Control/setCordinate.jpg>
-Package pdftex.def Info: Images/Implementation/Control/setCordinate.jpg  used on input line 295.
-(pdftex.def)             Requested size: 364.19667pt x 153.80322pt.
-<Images/Implementation/Control/palletizing.jpg, id=943, 583.17876pt x 609.27625pt>
-File: Images/Implementation/Control/palletizing.jpg Graphic file (type jpg)
-<use Images/Implementation/Control/palletizing.jpg>
-Package pdftex.def Info: Images/Implementation/Control/palletizing.jpg  used on input line 302.
-(pdftex.def)             Requested size: 364.19667pt x 380.4992pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[66 <./Images/Implementation/Control/sucker.jpg> <./Images/Implementation/Control/setCordinate.jpg>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[67 <./Images/Implementation/Control/palletizing.jpg>]
-<Images/Implementation/Control/object-tracking.jpg, id=952, 584.1825pt x 624.3325pt>
-File: Images/Implementation/Control/object-tracking.jpg Graphic file (type jpg)
-<use Images/Implementation/Control/object-tracking.jpg>
-Package pdftex.def Info: Images/Implementation/Control/object-tracking.jpg  used on input line 317.
-(pdftex.def)             Requested size: 364.19667pt x 389.23515pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[68 <./Images/Implementation/Control/object-tracking.jpg>]
-Overfull \hbox (26.17194pt too wide) in paragraph at lines 325--326
-[]\T5/cmr/bx/n/13 AIservice: \T5/cmr/m/n/13 Gåi tîi method n y vîi gi¡ trà truy·n v o l  "waste_classification"
- []
-
-<Images/Implementation/Control/waste-classification.jpg, id=957, 583.17876pt x 653.44125pt>
-File: Images/Implementation/Control/waste-classification.jpg Graphic file (type jpg)
-<use Images/Implementation/Control/waste-classification.jpg>
-Package pdftex.def Info: Images/Implementation/Control/waste-classification.jpg  used on input line 335.
-(pdftex.def)             Requested size: 364.19667pt x 408.08072pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2879,11 +2832,96 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[69]
-Overfull \hbox (8.49998pt too wide) in paragraph at lines 344--345
-[]\T5/cmr/bx/n/13 /jetmax/AIEnterCurrent, /jet-max/AIRun-Cur-rent, /jet-max/AI-
+[64 <./Images/Implementation/Control/dieukhientheo_servo.jpg>]
+<Images/Implementation/Control/changespeed.jpg, id=937, 941.76843pt x 696.35156pt>
+File: Images/Implementation/Control/changespeed.jpg Graphic file (type jpg)
+<use Images/Implementation/Control/changespeed.jpg>
+Package pdftex.def Info: Images/Implementation/Control/changespeed.jpg  used on input line 277.
+(pdftex.def)             Requested size: 273.14923pt x 201.96866pt.
+<Images/Implementation/Control/goHome.jpg, id=938, 1521.43407pt x 702.37407pt>
+File: Images/Implementation/Control/goHome.jpg Graphic file (type jpg)
+<use Images/Implementation/Control/goHome.jpg>
+Package pdftex.def Info: Images/Implementation/Control/goHome.jpg  used on input line 284.
+(pdftex.def)             Requested size: 364.19667pt x 168.1338pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[65 <./Images/Implementation/Control/dieukhientheo_toado.jpg> <./Images/Implementation/Control/changespeed.jpg>]
+<Images/Implementation/Control/sucker.jpg, id=943, 1521.43407pt x 797.22844pt>
+File: Images/Implementation/Control/sucker.jpg Graphic file (type jpg)
+<use Images/Implementation/Control/sucker.jpg>
+Package pdftex.def Info: Images/Implementation/Control/sucker.jpg  used on input line 291.
+(pdftex.def)             Requested size: 364.19667pt x 190.83998pt.
+<Images/Implementation/Control/setCordinate.jpg, id=944, 503.8825pt x 212.795pt>
+File: Images/Implementation/Control/setCordinate.jpg Graphic file (type jpg)
+<use Images/Implementation/Control/setCordinate.jpg>
+Package pdftex.def Info: Images/Implementation/Control/setCordinate.jpg  used on input line 298.
+(pdftex.def)             Requested size: 364.19667pt x 153.80322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[66 <./Images/Implementation/Control/goHome.jpg> <./Images/Implementation/Control/sucker.jpg>]
+<Images/Implementation/Control/palletizing.jpg, id=949, 583.17876pt x 609.27625pt>
+File: Images/Implementation/Control/palletizing.jpg Graphic file (type jpg)
+<use Images/Implementation/Control/palletizing.jpg>
+Package pdftex.def Info: Images/Implementation/Control/palletizing.jpg  used on input line 305.
+(pdftex.def)             Requested size: 364.19667pt x 380.4992pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[67 <./Images/Implementation/Control/setCordinate.jpg>]
+<Images/Implementation/Control/object-tracking.jpg, id=954, 584.1825pt x 624.3325pt>
+File: Images/Implementation/Control/object-tracking.jpg Graphic file (type jpg)
+<use Images/Implementation/Control/object-tracking.jpg>
+Package pdftex.def Info: Images/Implementation/Control/object-tracking.jpg  used on input line 320.
+(pdftex.def)             Requested size: 364.19667pt x 389.23515pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[68 <./Images/Implementation/Control/palletizing.jpg>]
+Overfull \hbox (26.17194pt too wide) in paragraph at lines 328--329
+[]\T5/cmr/bx/n/13 AIservice: \T5/cmr/m/n/13 Gåi tîi method n y vîi gi¡ trà truy·n v o l  "waste_classification"
  []
 
+<Images/Implementation/Control/waste-classification.jpg, id=959, 583.17876pt x 653.44125pt>
+File: Images/Implementation/Control/waste-classification.jpg Graphic file (type jpg)
+<use Images/Implementation/Control/waste-classification.jpg>
+Package pdftex.def Info: Images/Implementation/Control/waste-classification.jpg  used on input line 338.
+(pdftex.def)             Requested size: 364.19667pt x 408.08072pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[69 <./Images/Implementation/Control/object-tracking.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2892,11 +2930,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [70 <./Images/Implementation/Control/waste-classification.jpg>]
-<Images/Implementation/Control/update-state.jpg, id=967, 604.2575pt x 293.095pt>
+Overfull \hbox (8.49998pt too wide) in paragraph at lines 347--348
+[]\T5/cmr/bx/n/13 /jetmax/AIEnterCurrent, /jet-max/AIRun-Cur-rent, /jet-max/AI-
+ []
+
+<Images/Implementation/Control/update-state.jpg, id=969, 604.2575pt x 293.095pt>
 File: Images/Implementation/Control/update-state.jpg Graphic file (type jpg)
 <use Images/Implementation/Control/update-state.jpg>
-Package pdftex.def Info: Images/Implementation/Control/update-state.jpg  used on input line 353.
+Package pdftex.def Info: Images/Implementation/Control/update-state.jpg  used on input line 356.
 (pdftex.def)             Requested size: 364.19667pt x 176.6544pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2905,7 +2949,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[71 <./Images/Implementation/Control/update-state.jpg>]
+[71]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.2807pt, for example:
@@ -2913,7 +2957,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
-[72]
+[72 <./Images/Implementation/Control/update-state.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.2807pt, for example:
@@ -2922,10 +2966,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [73]
-<Images/Implementation/AI/waste_usecase.jpg, id=988, 466.74374pt x 344.03531pt>
+<Images/Implementation/AI/waste_usecase.jpg, id=990, 466.74374pt x 344.03531pt>
 File: Images/Implementation/AI/waste_usecase.jpg Graphic file (type jpg)
 <use Images/Implementation/AI/waste_usecase.jpg>
-Package pdftex.def Info: Images/Implementation/AI/waste_usecase.jpg  used on input line 398.
+Package pdftex.def Info: Images/Implementation/AI/waste_usecase.jpg  used on input line 401.
 (pdftex.def)             Requested size: 364.19667pt x 268.4567pt.
 
 
@@ -2936,44 +2980,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [74 <./Images/Implementation/AI/waste_usecase.jpg>]
-<Images/Implementation/AI/state-machine_1.jpg, id=993, 489.32813pt x 344.03531pt>
+<Images/Implementation/AI/state-machine_1.jpg, id=995, 489.32813pt x 344.03531pt>
 File: Images/Implementation/AI/state-machine_1.jpg Graphic file (type jpg)
 <use Images/Implementation/AI/state-machine_1.jpg>
-Package pdftex.def Info: Images/Implementation/AI/state-machine_1.jpg  used on input line 418.
+Package pdftex.def Info: Images/Implementation/AI/state-machine_1.jpg  used on input line 419.
 (pdftex.def)             Requested size: 364.19667pt x 256.06252pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.2807pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.2807pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
-
-[75 <./Images/Implementation/AI/state-machine_1.jpg>]
-<Images/Implementation/AI/AI_math_1.jpg, id=998, 469.755pt x 399.4925pt>
-File: Images/Implementation/AI/AI_math_1.jpg Graphic file (type jpg)
-<use Images/Implementation/AI/AI_math_1.jpg>
-Package pdftex.def Info: Images/Implementation/AI/AI_math_1.jpg  used on input line 431.
-(pdftex.def)             Requested size: 273.14923pt x 232.291pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.2807pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.2807pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
-
-[76 <./Images/Implementation/AI/AI_math_1.jpg>]
-<Images/Implementation/AI/AI_math_2.jpg, id=1005, 504.88625pt x 330.23375pt>
-File: Images/Implementation/AI/AI_math_2.jpg Graphic file (type jpg)
-<use Images/Implementation/AI/AI_math_2.jpg>
-Package pdftex.def Info: Images/Implementation/AI/AI_math_2.jpg  used on input line 441.
-(pdftex.def)             Requested size: 273.14923pt x 178.66116pt.
-<Images/Implementation/AI/AI-sequence.png, id=1006, 541.02126pt x 723.70375pt>
-File: Images/Implementation/AI/AI-sequence.png Graphic file (type png)
-<use Images/Implementation/AI/AI-sequence.png>
-Package pdftex.def Info: Images/Implementation/AI/AI-sequence.png  used on input line 458.
-(pdftex.def)             Requested size: 409.71692pt x 548.07703pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2985,7 +2996,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
-[77 <./Images/Implementation/AI/AI_math_2.jpg>]
+[75]
+<Images/Implementation/AI/AI_math_1.jpg, id=1000, 469.755pt x 399.4925pt>
+File: Images/Implementation/AI/AI_math_1.jpg Graphic file (type jpg)
+<use Images/Implementation/AI/AI_math_1.jpg>
+Package pdftex.def Info: Images/Implementation/AI/AI_math_1.jpg  used on input line 432.
+(pdftex.def)             Requested size: 273.14923pt x 232.291pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Images/Implementation/AI/AI_math_2.jpg, id=1001, 504.88625pt x 330.23375pt>
+File: Images/Implementation/AI/AI_math_2.jpg Graphic file (type jpg)
+<use Images/Implementation/AI/AI_math_2.jpg>
+Package pdftex.def Info: Images/Implementation/AI/AI_math_2.jpg  used on input line 442.
+(pdftex.def)             Requested size: 273.14923pt x 178.66116pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.2807pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.2807pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
+
+[76 <./Images/Implementation/AI/state-machine_1.jpg>]
+<Images/Implementation/AI/AI-sequence.png, id=1008, 541.02126pt x 723.70375pt>
+File: Images/Implementation/AI/AI-sequence.png Graphic file (type png)
+<use Images/Implementation/AI/AI-sequence.png>
+Package pdftex.def Info: Images/Implementation/AI/AI-sequence.png  used on input line 459.
+(pdftex.def)             Requested size: 409.71692pt x 548.07703pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.2807pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.2807pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
+
+[77 <./Images/Implementation/AI/AI_math_1.jpg> <./Images/Implementation/AI/AI_math_2.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.2807pt, for example:
@@ -3010,10 +3060,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [80]
-<Images/Implementation/Datacenter/Datacenter_usecase.jpg, id=1033, 447.17062pt x 344.03531pt>
+<Images/Implementation/Datacenter/Datacenter_usecase.jpg, id=1035, 447.17062pt x 344.03531pt>
 File: Images/Implementation/Datacenter/Datacenter_usecase.jpg Graphic file (type jpg)
 <use Images/Implementation/Datacenter/Datacenter_usecase.jpg>
-Package pdftex.def Info: Images/Implementation/Datacenter/Datacenter_usecase.jpg  used on input line 522.
+Package pdftex.def Info: Images/Implementation/Datacenter/Datacenter_usecase.jpg  used on input line 523.
 (pdftex.def)             Requested size: 318.66948pt x 245.17494pt.
 
 
@@ -3023,11 +3073,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[81 <./Images/Implementation/Datacenter/Datacenter_usecase.jpg>]
-<Images/Implementation/Datacenter/Datacenter_block.jpg, id=1041, 686.565pt x 344.03531pt>
+[81]
+<Images/Implementation/Datacenter/Datacenter_block.jpg, id=1043, 686.565pt x 344.03531pt>
 File: Images/Implementation/Datacenter/Datacenter_block.jpg Graphic file (type jpg)
 <use Images/Implementation/Datacenter/Datacenter_block.jpg>
-Package pdftex.def Info: Images/Implementation/Datacenter/Datacenter_block.jpg  used on input line 539.
+Package pdftex.def Info: Images/Implementation/Datacenter/Datacenter_block.jpg  used on input line 540.
 (pdftex.def)             Requested size: 318.66948pt x 159.68079pt.
 
 
@@ -3037,11 +3087,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[82 <./Images/Implementation/Datacenter/Datacenter_block.jpg>]
-<Images/Implementation/Datacenter/Datacenter_browseNode.jpg, id=1048, 328.22626pt x 408.02437pt>
+[82 <./Images/Implementation/Datacenter/Datacenter_usecase.jpg>]
+<Images/Implementation/Datacenter/Datacenter_browseNode.jpg, id=1050, 328.22626pt x 408.02437pt>
 File: Images/Implementation/Datacenter/Datacenter_browseNode.jpg Graphic file (type jpg)
 <use Images/Implementation/Datacenter/Datacenter_browseNode.jpg>
-Package pdftex.def Info: Images/Implementation/Datacenter/Datacenter_browseNode.jpg  used on input line 564.
+Package pdftex.def Info: Images/Implementation/Datacenter/Datacenter_browseNode.jpg  used on input line 565.
 (pdftex.def)             Requested size: 328.22545pt x 408.02338pt.
 
 
@@ -3051,7 +3101,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[83]
+[83 <./Images/Implementation/Datacenter/Datacenter_block.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3060,7 +3110,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [84 <./Images/Implementation/Datacenter/Datacenter_browseNode.jpg>]
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 578.
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 579.
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
@@ -3088,10 +3138,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [87]
-<Images/Implementation/VRapp/VR_usecase.jpg, id=1078, 457.71pt x 344.03531pt>
+<Images/Implementation/VRapp/VR_usecase.jpg, id=1080, 457.71pt x 344.03531pt>
 File: Images/Implementation/VRapp/VR_usecase.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_usecase.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_usecase.jpg  used on input line 645.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_usecase.jpg  used on input line 646.
 (pdftex.def)             Requested size: 318.66948pt x 239.53693pt.
 
 
@@ -3102,10 +3152,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [88]
-<Images/Implementation/VRapp/VR_block.jpg, id=1086, 632.3625pt x 344.03531pt>
+<Images/Implementation/VRapp/VR_block.jpg, id=1088, 632.3625pt x 344.03531pt>
 File: Images/Implementation/VRapp/VR_block.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_block.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_block.jpg  used on input line 656.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_block.jpg  used on input line 657.
 (pdftex.def)             Requested size: 318.66948pt x 173.37161pt.
 
 
@@ -3124,10 +3174,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [90]
-<Images/Implementation/VRapp/VR_button_controller.jpg, id=1096, 938.5464pt x 542.025pt>
+<Images/Implementation/VRapp/VR_button_controller.jpg, id=1098, 938.5464pt x 542.025pt>
 File: Images/Implementation/VRapp/VR_button_controller.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_button_controller.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_button_controller.jpg  used on input line 690.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_button_controller.jpg  used on input line 691.
 (pdftex.def)             Requested size: 318.66948pt x 184.03793pt.
 
 
@@ -3146,13 +3196,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [92 <./Images/Implementation/VRapp/VR_button_controller.jpg>]
-<Images/Implementation/VRapp/VR_connect_toggle.jpg, id=1106, 437.38406pt x 377.15906pt>
+<Images/Implementation/VRapp/VR_connect_toggle.jpg, id=1108, 437.38406pt x 377.15906pt>
 File: Images/Implementation/VRapp/VR_connect_toggle.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_connect_toggle.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_connect_toggle.jpg  used on input line 723.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_connect_toggle.jpg  used on input line 724.
 (pdftex.def)             Requested size: 455.24411pt x 392.56421pt.
 
-Overfull \hbox (8.18259pt too wide) in paragraph at lines 728--729
+Overfull \hbox (8.18259pt too wide) in paragraph at lines 729--730
 \T5/cmr/m/n/13 my-opc. Khi ng÷íi dòng nh§n nót "Con-nect" tr¶n giao di»n, h m UI_toggleConnect()
  []
 
@@ -3164,10 +3214,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [93 <./Images/Implementation/VRapp/VR_connect_toggle.jpg>]
-<Images/Implementation/VRapp/VR_connect_func.jpg, id=1111, 316.93407pt x 460.72125pt>
+<Images/Implementation/VRapp/VR_connect_func.jpg, id=1113, 316.93407pt x 460.72125pt>
 File: Images/Implementation/VRapp/VR_connect_func.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_connect_func.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_connect_func.jpg  used on input line 744.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_connect_func.jpg  used on input line 745.
 (pdftex.def)             Requested size: 318.66948pt x 463.27905pt.
 
 
@@ -3186,10 +3236,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [95 <./Images/Implementation/VRapp/VR_connect_func.jpg>]
-<Images/Implementation/VRapp/VR_browse_func.jpg, id=1121, 356.0803pt x 505.89pt>
+<Images/Implementation/VRapp/VR_browse_func.jpg, id=1123, 356.0803pt x 505.89pt>
 File: Images/Implementation/VRapp/VR_browse_func.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_browse_func.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_browse_func.jpg  used on input line 763.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_browse_func.jpg  used on input line 764.
 (pdftex.def)             Requested size: 318.66948pt x 452.75714pt.
 
 
@@ -3208,10 +3258,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [97 <./Images/Implementation/VRapp/VR_browse_func.jpg>]
-<Images/Implementation/VRapp/VR_disconnect_func.jpg, id=1130, 129.48375pt x 347.79938pt>
+<Images/Implementation/VRapp/VR_disconnect_func.jpg, id=1132, 129.48375pt x 347.79938pt>
 File: Images/Implementation/VRapp/VR_disconnect_func.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_disconnect_func.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_disconnect_func.jpg  used on input line 786.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_disconnect_func.jpg  used on input line 787.
 (pdftex.def)             Requested size: 136.57462pt x 366.88243pt.
 
 
@@ -3222,10 +3272,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [98]
-<Images/Implementation/VRapp/VR_update.jpg, id=1135, 468.24937pt x 339.51843pt>
+<Images/Implementation/VRapp/VR_update.jpg, id=1137, 468.24937pt x 339.51843pt>
 File: Images/Implementation/VRapp/VR_update.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_update.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_update.jpg  used on input line 799.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_update.jpg  used on input line 800.
 (pdftex.def)             Requested size: 455.24411pt x 330.10439pt.
 
 
@@ -3236,7 +3286,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [99 <./Images/Implementation/VRapp/VR_disconnect_func.jpg>]
-Overfull \hbox (25.6118pt too wide) in paragraph at lines 804--806
+Overfull \hbox (25.6118pt too wide) in paragraph at lines 805--807
 []\T5/cmr/m/n/13 Chùc n«ng n y câ sü tham gia cõa 4 khèi: Giao di»n ng÷íi dòng, Tog-gle_Update_AI,
  []
 
@@ -3248,10 +3298,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [100 <./Images/Implementation/VRapp/VR_update.jpg>]
-<Images/Implementation/VRapp/Vr_controller.jpg, id=1145, 355.3275pt x 331.99031pt>
+<Images/Implementation/VRapp/Vr_controller.jpg, id=1147, 355.3275pt x 331.99031pt>
 File: Images/Implementation/VRapp/Vr_controller.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/Vr_controller.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/Vr_controller.jpg  used on input line 819.
+Package pdftex.def Info: Images/Implementation/VRapp/Vr_controller.jpg  used on input line 820.
 (pdftex.def)             Requested size: 318.66948pt x 297.75003pt.
 
 
@@ -3262,15 +3312,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [101 <./Images/Implementation/VRapp/Vr_controller.jpg>]
-<Images/Implementation/VRapp/VR_changemode.jpg, id=1150, 347.79938pt x 152.06813pt>
+<Images/Implementation/VRapp/VR_changemode.jpg, id=1152, 347.79938pt x 152.06813pt>
 File: Images/Implementation/VRapp/VR_changemode.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_changemode.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_changemode.jpg  used on input line 834.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_changemode.jpg  used on input line 835.
 (pdftex.def)             Requested size: 318.66948pt x 139.3382pt.
-<Images/Implementation/VRapp/VR_suckcup.jpg, id=1151, 347.79938pt x 152.06813pt>
+<Images/Implementation/VRapp/VR_suckcup.jpg, id=1153, 347.79938pt x 152.06813pt>
 File: Images/Implementation/VRapp/VR_suckcup.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_suckcup.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_suckcup.jpg  used on input line 845.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_suckcup.jpg  used on input line 846.
 (pdftex.def)             Requested size: 318.66948pt x 139.3382pt.
 
 
@@ -3281,15 +3331,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [102 <./Images/Implementation/VRapp/VR_changemode.jpg> <./Images/Implementation/VRapp/VR_suckcup.jpg>]
-<Images/Implementation/VRapp/VR_gohome.jpg, id=1156, 347.79938pt x 143.78719pt>
+<Images/Implementation/VRapp/VR_gohome.jpg, id=1158, 347.79938pt x 143.78719pt>
 File: Images/Implementation/VRapp/VR_gohome.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_gohome.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_gohome.jpg  used on input line 856.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_gohome.jpg  used on input line 857.
 (pdftex.def)             Requested size: 318.66948pt x 131.75047pt.
-<Images/Implementation/VRapp/VR_changespeed.jpg, id=1157, 475.7775pt x 347.04657pt>
+<Images/Implementation/VRapp/VR_changespeed.jpg, id=1159, 475.7775pt x 347.04657pt>
 File: Images/Implementation/VRapp/VR_changespeed.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_changespeed.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_changespeed.jpg  used on input line 869.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_changespeed.jpg  used on input line 870.
 (pdftex.def)             Requested size: 318.66948pt x 232.45644pt.
 
 
@@ -3300,15 +3350,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [103 <./Images/Implementation/VRapp/VR_gohome.jpg> <./Images/Implementation/VRapp/VR_changespeed.jpg>]
-<Images/Implementation/VRapp/VR_AIenter.jpg, id=1162, 359.09157pt x 143.78719pt>
+<Images/Implementation/VRapp/VR_AIenter.jpg, id=1164, 359.09157pt x 143.78719pt>
 File: Images/Implementation/VRapp/VR_AIenter.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_AIenter.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_AIenter.jpg  used on input line 889.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_AIenter.jpg  used on input line 890.
 (pdftex.def)             Requested size: 318.66948pt x 127.61037pt.
-<Images/Implementation/VRapp/VR_AIrun.jpg, id=1163, 359.09157pt x 144.54pt>
+<Images/Implementation/VRapp/VR_AIrun.jpg, id=1165, 359.09157pt x 144.54pt>
 File: Images/Implementation/VRapp/VR_AIrun.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/VR_AIrun.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/VR_AIrun.jpg  used on input line 900.
+Package pdftex.def Info: Images/Implementation/VRapp/VR_AIrun.jpg  used on input line 901.
 (pdftex.def)             Requested size: 318.66948pt x 128.27847pt.
 
 
@@ -3319,10 +3369,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [104 <./Images/Implementation/VRapp/VR_AIenter.jpg> <./Images/Implementation/VRapp/VR_AIrun.jpg>]
-<Images/Implementation/VRapp/model3d.jpg, id=1170, 304.7385pt x 193.9245pt>
+<Images/Implementation/VRapp/model3d.jpg, id=1172, 304.7385pt x 193.9245pt>
 File: Images/Implementation/VRapp/model3d.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/model3d.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/model3d.jpg  used on input line 917.
+Package pdftex.def Info: Images/Implementation/VRapp/model3d.jpg  used on input line 918.
 (pdftex.def)             Requested size: 318.66948pt x 202.80115pt.
  (C:\Users\ngocc\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
@@ -3337,10 +3387,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [105 <./Images/Implementation/VRapp/model3d.jpg>]
-<Images/Implementation/VRapp/model3d_2.jpg, id=1187, 816.651pt x 460.72125pt>
+<Images/Implementation/VRapp/model3d_2.jpg, id=1189, 816.651pt x 460.72125pt>
 File: Images/Implementation/VRapp/model3d_2.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/model3d_2.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/model3d_2.jpg  used on input line 952.
+Package pdftex.def Info: Images/Implementation/VRapp/model3d_2.jpg  used on input line 953.
 (pdftex.def)             Requested size: 455.24411pt x 256.83514pt.
 
 
@@ -3351,10 +3401,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [106 <./Images/Implementation/VRapp/model3d_2.jpg>]
-<Images/Implementation/VRapp/model3d_3.jpg, id=1201, 781.11826pt x 359.54324pt>
+<Images/Implementation/VRapp/model3d_3.jpg, id=1203, 781.11826pt x 359.54324pt>
 File: Images/Implementation/VRapp/model3d_3.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/model3d_3.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/model3d_3.jpg  used on input line 977.
+Package pdftex.def Info: Images/Implementation/VRapp/model3d_3.jpg  used on input line 978.
 (pdftex.def)             Requested size: 455.24411pt x 209.55016pt.
 
 
@@ -3365,10 +3415,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [107 <./Images/Implementation/VRapp/model3d_3.jpg>]
-<Images/Implementation/VRapp/unityrp_0.jpg, id=1209, 757.02824pt x 484.81125pt>
+<Images/Implementation/VRapp/unityrp_0.jpg, id=1211, 757.02824pt x 484.81125pt>
 File: Images/Implementation/VRapp/unityrp_0.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/unityrp_0.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/unityrp_0.jpg  used on input line 1012.
+Package pdftex.def Info: Images/Implementation/VRapp/unityrp_0.jpg  used on input line 1013.
 (pdftex.def)             Requested size: 455.24411pt x 291.54738pt.
 
 
@@ -3379,10 +3429,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [108]
-<Images/Implementation/VRapp/unityrp_1.jpg, id=1214, 814.242pt x 434.8245pt>
+<Images/Implementation/VRapp/unityrp_1.jpg, id=1216, 814.242pt x 434.8245pt>
 File: Images/Implementation/VRapp/unityrp_1.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/unityrp_1.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/unityrp_1.jpg  used on input line 1019.
+Package pdftex.def Info: Images/Implementation/VRapp/unityrp_1.jpg  used on input line 1020.
 (pdftex.def)             Requested size: 455.24411pt x 243.11522pt.
 
 
@@ -3393,20 +3443,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [109 <./Images/Implementation/VRapp/unityrp_0.jpg>]
-<Images/Implementation/VRapp/unityrp_2.jpg, id=1219, 754.017pt x 482.40225pt>
+<Images/Implementation/VRapp/unityrp_2.jpg, id=1221, 754.017pt x 482.40225pt>
 File: Images/Implementation/VRapp/unityrp_2.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/unityrp_2.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/unityrp_2.jpg  used on input line 1026.
+Package pdftex.def Info: Images/Implementation/VRapp/unityrp_2.jpg  used on input line 1027.
 (pdftex.def)             Requested size: 455.24411pt x 291.25435pt.
 
-Overfull \hbox (6.83578pt too wide) in paragraph at lines 1023--1029
+Overfull \hbox (6.83578pt too wide) in paragraph at lines 1024--1030
 \T5/cmr/m/n/13 d¤ng an-droid ^^_ang l  Medium, n¶n ta s³ quan t¥m tîi Medium_Pipeline_Asset
  []
 
-<Images/Implementation/VRapp/unityrp_3.jpg, id=1220, 814.242pt x 394.47375pt>
+<Images/Implementation/VRapp/unityrp_3.jpg, id=1222, 814.242pt x 394.47375pt>
 File: Images/Implementation/VRapp/unityrp_3.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/unityrp_3.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/unityrp_3.jpg  used on input line 1033.
+Package pdftex.def Info: Images/Implementation/VRapp/unityrp_3.jpg  used on input line 1034.
 (pdftex.def)             Requested size: 455.24411pt x 220.55467pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3416,10 +3466,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [110 <./Images/Implementation/VRapp/unityrp_1.jpg> <./Images/Implementation/VRapp/unityrp_2.jpg>]
-<Images/Implementation/VRapp/unityrp_4.jpg, id=1225, 1156.32pt x 615.4995pt>
+<Images/Implementation/VRapp/unityrp_4.jpg, id=1227, 1156.32pt x 615.4995pt>
 File: Images/Implementation/VRapp/unityrp_4.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/unityrp_4.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/unityrp_4.jpg  used on input line 1040.
+Package pdftex.def Info: Images/Implementation/VRapp/unityrp_4.jpg  used on input line 1041.
 (pdftex.def)             Requested size: 455.24411pt x 242.31664pt.
 
 
@@ -3430,10 +3480,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18pt}.
 
 [111 <./Images/Implementation/VRapp/unityrp_3.jpg>]
-<Images/Implementation/VRapp/unityasset_0.jpg, id=1232, 814.242pt x 431.81325pt>
+<Images/Implementation/VRapp/unityasset_0.jpg, id=1234, 814.242pt x 431.81325pt>
 File: Images/Implementation/VRapp/unityasset_0.jpg Graphic file (type jpg)
 <use Images/Implementation/VRapp/unityasset_0.jpg>
-Package pdftex.def Info: Images/Implementation/VRapp/unityasset_0.jpg  used on input line 1060.
+Package pdftex.def Info: Images/Implementation/VRapp/unityasset_0.jpg  used on input line 1061.
 (pdftex.def)             Requested size: 455.24411pt x 241.4316pt.
 
 
@@ -3456,7 +3506,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  (ThesisChapters/evaluation.tex
 Ch\uhorn \ohorn ng 4.
-<Images/Result/datastructure_server.jpg, id=1242, 1927.2pt x 1084.05pt>
+<Images/Result/datastructure_server.jpg, id=1244, 1927.2pt x 1084.05pt>
 File: Images/Result/datastructure_server.jpg Graphic file (type jpg)
 <use Images/Result/datastructure_server.jpg>
 Package pdftex.def Info: Images/Result/datastructure_server.jpg  used on input line 11.
@@ -3467,7 +3517,7 @@ Package pdftex.def Info: Images/Result/datastructure_server.jpg  used on input l
 
 
 ]
-<Images/Result/wireshark.png, id=1247, 1927.2pt x 1084.05pt>
+<Images/Result/wireshark.png, id=1249, 1927.2pt x 1084.05pt>
 File: Images/Result/wireshark.png Graphic file (type png)
 <use Images/Result/wireshark.png>
 Package pdftex.def Info: Images/Result/wireshark.png  used on input line 17.
@@ -3481,12 +3531,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [115 <./Images/Result/datastructure_server.jpg> <./Images/Result/wireshark.png>]
-<Images/Result/ai-result-1.jpg, id=1253, 963.6pt x 488.57532pt>
+<Images/Result/ai-result-1.jpg, id=1255, 963.6pt x 488.57532pt>
 File: Images/Result/ai-result-1.jpg Graphic file (type jpg)
 <use Images/Result/ai-result-1.jpg>
 Package pdftex.def Info: Images/Result/ai-result-1.jpg  used on input line 25.
 (pdftex.def)             Requested size: 409.71692pt x 207.73495pt.
-<Images/Result/ai-result-2.jpg, id=1254, 963.6pt x 489.32813pt>
+<Images/Result/ai-result-2.jpg, id=1256, 963.6pt x 489.32813pt>
 File: Images/Result/ai-result-2.jpg Graphic file (type jpg)
 <use Images/Result/ai-result-2.jpg>
 Package pdftex.def Info: Images/Result/ai-result-2.jpg  used on input line 31.
@@ -3500,7 +3550,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [116 <./Images/Result/ai-result-1.jpg> <./Images/Result/ai-result-2.jpg>]
-<Images/Result/opc-structure_data.png, id=1259, 1927.2pt x 1084.05pt>
+<Images/Result/opc-structure_data.png, id=1261, 1927.2pt x 1084.05pt>
 File: Images/Result/opc-structure_data.png Graphic file (type png)
 <use Images/Result/opc-structure_data.png>
 Package pdftex.def Info: Images/Result/opc-structure_data.png  used on input line 46.
@@ -3514,12 +3564,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [117 <./Images/Result/opc-structure_data.png>]
-<Images/Result/vr_foreground.jpg, id=1265, 814.242pt x 453.49425pt>
+<Images/Result/vr_foreground.jpg, id=1267, 814.242pt x 453.49425pt>
 File: Images/Result/vr_foreground.jpg Graphic file (type jpg)
 <use Images/Result/vr_foreground.jpg>
 Package pdftex.def Info: Images/Result/vr_foreground.jpg  used on input line 57.
 (pdftex.def)             Requested size: 409.71692pt x 228.1928pt.
-<Images/Result/vr_success.jpg, id=1266, 814.242pt x 458.31226pt>
+<Images/Result/vr_success.jpg, id=1268, 814.242pt x 458.31226pt>
 File: Images/Result/vr_success.jpg Graphic file (type jpg)
 <use Images/Result/vr_success.jpg>
 Package pdftex.def Info: Images/Result/vr_success.jpg  used on input line 66.
@@ -3533,12 +3583,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [118 <./Images/Result/vr_foreground.jpg>]
-<Images/Result/vr_menu.jpg, id=1272, 811.23074pt x 455.90324pt>
+<Images/Result/vr_menu.jpg, id=1274, 811.23074pt x 455.90324pt>
 File: Images/Result/vr_menu.jpg Graphic file (type jpg)
 <use Images/Result/vr_menu.jpg>
 Package pdftex.def Info: Images/Result/vr_menu.jpg  used on input line 73.
 (pdftex.def)             Requested size: 409.71692pt x 230.25366pt.
-<Images/Result/vr_waste.jpg, id=1273, 814.242pt x 461.3235pt>
+<Images/Result/vr_waste.jpg, id=1275, 814.242pt x 461.3235pt>
 File: Images/Result/vr_waste.jpg Graphic file (type jpg)
 <use Images/Result/vr_waste.jpg>
 Package pdftex.def Info: Images/Result/vr_waste.jpg  used on input line 82.
@@ -3552,7 +3602,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [119 <./Images/Result/vr_success.jpg> <./Images/Result/vr_menu.jpg>]
-<Images/Result/vr_blocks.jpg, id=1278, 810.6285pt x 457.71pt>
+<Images/Result/vr_blocks.jpg, id=1280, 810.6285pt x 457.71pt>
 File: Images/Result/vr_blocks.jpg Graphic file (type jpg)
 <use Images/Result/vr_blocks.jpg>
 Package pdftex.def Info: Images/Result/vr_blocks.jpg  used on input line 91.
@@ -3566,7 +3616,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [120 <./Images/Result/vr_waste.jpg>]
-<Images/Result/vr_color_tracking.jpg, id=1283, 814.242pt x 457.71pt>
+<Images/Result/vr_color_tracking.jpg, id=1285, 814.242pt x 457.71pt>
 File: Images/Result/vr_color_tracking.jpg Graphic file (type jpg)
 <use Images/Result/vr_color_tracking.jpg>
 Package pdftex.def Info: Images/Result/vr_color_tracking.jpg  used on input line 100.
@@ -3588,7 +3638,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [122]
-<Images/Result/server_cpu_2.jpg, id=1294, 829.29825pt x 483.0045pt>
+<Images/Result/server_cpu_2.jpg, id=1296, 829.29825pt x 483.0045pt>
 File: Images/Result/server_cpu_2.jpg Graphic file (type jpg)
 <use Images/Result/server_cpu_2.jpg>
 Package pdftex.def Info: Images/Result/server_cpu_2.jpg  used on input line 162.
@@ -3602,7 +3652,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [123]
-<Images/Result/Datacenter_cpu_2.jpg, id=1300, 789.54974pt x 476.982pt>
+<Images/Result/Datacenter_cpu_2.jpg, id=1302, 789.54974pt x 476.982pt>
 File: Images/Result/Datacenter_cpu_2.jpg Graphic file (type jpg)
 <use Images/Result/Datacenter_cpu_2.jpg>
 Package pdftex.def Info: Images/Result/Datacenter_cpu_2.jpg  used on input line 177.
@@ -3624,7 +3674,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [125 <./Images/Result/Datacenter_cpu_2.jpg>]
-<Images/Result/VRapp_metrics.jpg, id=1311, 666.69075pt x 476.982pt>
+<Images/Result/VRapp_metrics.jpg, id=1313, 666.69075pt x 476.982pt>
 File: Images/Result/VRapp_metrics.jpg Graphic file (type jpg)
 <use Images/Result/VRapp_metrics.jpg>
 Package pdftex.def Info: Images/Result/VRapp_metrics.jpg  used on input line 207.
@@ -3654,7 +3704,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
-<Images/Result/rtt_exp.jpg, id=1322, 595.023pt x 363.15675pt>
+<Images/Result/rtt_exp.jpg, id=1324, 595.023pt x 363.15675pt>
 File: Images/Result/rtt_exp.jpg Graphic file (type jpg)
 <use Images/Result/rtt_exp.jpg>
 Package pdftex.def Info: Images/Result/rtt_exp.jpg  used on input line 242.
@@ -3717,7 +3767,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
-<Images/Result/hut_tha.png, id=1349, 499.8675pt x 322.20375pt>
+<Images/Result/hut_tha.png, id=1351, 499.8675pt x 322.20375pt>
 File: Images/Result/hut_tha.png Graphic file (type png)
 <use Images/Result/hut_tha.png>
 Package pdftex.def Info: Images/Result/hut_tha.png  used on input line 356.
@@ -3761,7 +3811,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-Overfull \hbox (26.03358pt too wide) in paragraph at lines 343--343
+Overfull \hbox (26.03358pt too wide) in paragraph at lines 350--350
 \T5/cmtt/m/n/12 online . com / iot -[] basics -[] what -[] is -[] opc -[] ua -[] a -[] 9be2f057ce7843b17843b2870298b591/$[]\T5/cmr/m/n/12 . 
  []
 
@@ -3773,7 +3823,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.2807pt}.
 
 [138]
-Overfull \hbox (2.30626pt too wide) in paragraph at lines 343--343
+Overfull \hbox (2.30626pt too wide) in paragraph at lines 350--350
 []\T5/cmr/m/n/12 R. N. TU-TO-RI-ALS. ``Mqtt (mq teleme-try trans-port).'' (), [On-line]. Avail-able: []$\T5/cmtt/m/n/12 https :
  []
 
@@ -3820,17 +3870,17 @@ Package logreq Info: Writing requests to 'ThesisReport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49601 strings out of 476361
- 1085116 string characters out of 5788046
- 1969851 words of memory out of 5000000
- 68737 multiletter control sequences out of 15000+600000
+ 50422 strings out of 476361
+ 1100438 string characters out of 5788046
+ 1982463 words of memory out of 5000000
+ 69533 multiletter control sequences out of 15000+600000
  557369 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,116p,2981b,2090s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,116p,2981b,2092s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\ngocc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmb10.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr6.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Users/ngocc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on ThesisReport.pdf (150 pages, 8350367 bytes).
+Output written on ThesisReport.pdf (150 pages, 8352863 bytes).
 PDF statistics:
- 1603 PDF objects out of 1728 (max. 8388607)
+ 1605 PDF objects out of 1728 (max. 8388607)
  410 named destinations out of 1000 (max. 500000)
  926 words of extra memory for PDF output out of 10000 (max. 10000000)
 

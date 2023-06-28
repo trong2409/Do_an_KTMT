@@ -1,0 +1,8 @@
+prefix=/home/hiwonder/ros/install
+
+Name: dataset_capture
+Description: Description of dataset_capture
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/hiwonder/ros/install
+
+Name: waste_classification
+Description: Description of waste_classification
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

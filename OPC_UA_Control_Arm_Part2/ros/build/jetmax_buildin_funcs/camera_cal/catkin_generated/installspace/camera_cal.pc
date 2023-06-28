@@ -1,0 +1,8 @@
+prefix=/home/hiwonder/ros/install
+
+Name: camera_cal
+Description: Description of camera_cal
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

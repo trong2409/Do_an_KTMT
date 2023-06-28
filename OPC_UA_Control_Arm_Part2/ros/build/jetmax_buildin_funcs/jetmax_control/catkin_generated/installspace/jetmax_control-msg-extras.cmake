@@ -1,0 +1,2 @@
+set(jetmax_control_MESSAGE_FILES "msg/Mecanum.msg;msg/JetMax.msg;msg/SetServo.msg;msg/SetJoint.msg;msg/SetJetMax.msg;msg/ActionSetRawAction.msg;msg/ActionSetRawActionGoal.msg;msg/ActionSetRawActionResult.msg;msg/ActionSetRawActionFeedback.msg;msg/ActionSetRawGoal.msg;msg/ActionSetRawResult.msg;msg/ActionSetRawFeedback.msg")
+set(jetmax_control_SERVICE_FILES "srv/ActionSetList.srv;srv/ActionSetFileOp.srv")

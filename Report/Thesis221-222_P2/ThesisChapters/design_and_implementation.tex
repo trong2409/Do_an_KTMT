@@ -22,6 +22,9 @@ Dưới đây là sơ đồ kiến trúc của hệ thống:
     \caption{Kiến trúc hệ thống}
     \label{fig:comp_mqtt}
 \end{figure}
+
+Link github của dự án có thể được tìm thấy ở đây: \href{https://github.com/trong2409/Do_an_KTMT/tree/master}{https://github.com/trong2409\\/Do\_an\_KTMT/tree/master}
+
 \subsection{Giới thiệu thiết bị và công nghệ}
 Để thực hiện đồ án này, nhóm đã sử dụng kính thực tế ảo Oculus Quest 2 để phát triển ứng dụng VR trên Unity3D cho người dùng tương tác với cánh tay, một máy tính nhúng Rasberry Pi để chạy Datacenter, một máy tính nhúng khác có tên là Jetson Nano để chạy Server OPC và điều khiển cánh tay Jetmax thông qua các dòng lệnh ROS ( Robot Operating System ) đã được tích hợp sẵn vào Jetson Nano. Phần tiếp theo dưới đây sẽ trình bày rõ hơn về các thiết bị cũng như công nghệ được sử dụng trong đề tài.
 \subsubsection{Oculus Quest 2}
@@ -71,7 +74,7 @@ Jetson Nano là một lựa chọn tuyệt vời cho các nhà phát triển, si
 
 Trong đồ án này, Jeson Nano được sử dụng để chạy 1 Server OPC và dựa vào dữ liệu nhận được tại Server để điều khiển cánh tay robot Jetmax
 
-Jetmax là một robot tay cầm được phát triển bởi Hiwonder, được tích hợp với bo mạch Jetson Nano của NVIDIA và được điều khiển bởi ROS (Robot Operating System). Robot này cung cấp khả năng nhận dạng hình ảnh, xử lý dữ liệu và điều khiển chính xác, cho phép người dùng thực hiện nhiều tác vụ khác nhau.
+Jetmax là một cánh tay robot được phát triển bởi Hiwonder, được tích hợp với bo mạch Jetson Nano của NVIDIA và được điều khiển bởi ROS (Robot Operating System). Robot này cung cấp khả năng nhận dạng hình ảnh, xử lý dữ liệu và điều khiển chính xác, cho phép người dùng thực hiện nhiều tác vụ khác nhau.
 
 Jetmax có thiết kế linh hoạt, với khung thép không gỉ và bốn bộ phận cơ khí được điều khiển bởi các động cơ servo. Tay cầm này cung cấp nhiều khả năng chuyển động, cho phép người dùng di chuyển và xoay cánh tay cầm để đạt được các vị trí khác nhau. Jetmax cũng được trang bị một camera có độ phân giải cao và khả năng xử lý hình ảnh, cho phép người dùng thực hiện các tác vụ nhận dạng đối tượng, phân loại, giám sát và điều khiển. Jetmax được tích hợp với các chương trình và phần mềm ROS mã nguồn mở, cho phép người dùng tùy chỉnh và phát triển các ứng dụng trí tuệ nhân tạo.
 
@@ -404,8 +407,6 @@ Dựa vào những yêu cầu phi chức năng và chức năng mà nhóm xem x�
 Người dùng sẽ tương tác với chức năng phân loại rác bán tự động này bằng VR app được nhóm phát triển trên Unity3D và chạy trên Oculus, ứng dụng gửi nhận dữ liệu từ cánh tay thông qua module trung gian Datacenter, sẽ được giới thiệu ở phần tiếp theo. Cánh tay và chức năng AI sẽ được quản lý bởi máy tính nhúng Jetson Nano chứa một server OPC trên đó.
 \subsection{Hiện thực chức năng phân loại rác bán tự động}
 Chức năng được nhóm hiện thực dựa trên hai thư viện nổi tiếng là OpenCV và YOLOv5, trong chức năng này nhóm chia ra làm hai chức năng nhỏ cần hiện thực.
-
-\newpage
 
 \begin{itemize}
     \item Thứ nhất, nhóm sử dụng kỹ thuật học có giám sát ( supervise learning ) để train cho mô hình AI nhận diện các loại rác. Ở chức năng này nhóm sử dụng thư viện YOLOv5 trên python để train data cho mô hình. Khi camera dò được thẻ rác nào đó, mô hình sẽ trả về các thông tin như tên rác, loại rác và vị trí của vật thể so với đầu hút. Từ những thông tin đó, AI sẽ tính toán và đưa ra vị trị tương ứng để đưa đầu hút của cánh tay tới vị trí của mảnh rác và hút nó.

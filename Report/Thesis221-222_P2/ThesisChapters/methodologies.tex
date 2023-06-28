@@ -336,7 +336,7 @@ Như đã trình bày ở phần trên, OPC-UA và MQTT là 2 giao thức phổ 
     \label{fig:comp_mqtt}
 \end{figure}
 
-Từ Client\_1, nhóm sẽ publish dữ liệu với độ dài cho trước tới topic \textbf{v1/devices/me/telemetry0}. Topic này sẽ được lắng nghe (subscribe) bởi Client\_2. Khi Client\_2 nhận được dữ liệu, nó sẽ phản hồi một ack data về \textbf{v1/devices/me/telemtry1}, sau đó được broker gửi ngược về Client\_1. Nhóm sẽ tiến hành lưu thời gian trước khi Client\_1 gửi data (T1) cho tới khi Client\_1 nhận được ack data (T2). RTT sẽ được tính theo công thức sau:
+Từ Client\_1, nhóm sẽ publish dữ liệu với độ dài cho trước tới topic \textbf{v1/devices\\/me/telemetry0}. Topic này sẽ được lắng nghe (subscribe) bởi Client\_2. Khi Client\_2 nhận được dữ liệu, nó sẽ phản hồi một ack data về \textbf{v1/devices\\/me/telemtry1}, sau đó được broker gửi ngược về Client\_1. Nhóm sẽ tiến hành lưu thời gian trước khi Client\_1 gửi data (T1) cho tới khi Client\_1 nhận được ack data (T2). RTT sẽ được tính theo công thức sau:
 
 \begin{equation}
     RTT_{MQTT} = T2 - T1

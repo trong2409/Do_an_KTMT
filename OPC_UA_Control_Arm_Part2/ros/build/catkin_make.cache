@@ -1,0 +1,2 @@
+Ai_JetMax:Sensor:jetmax_buildin_funcs/alphabetically:jetmax_buildin_funcs/camera_cal:jetmax_buildin_funcs/color_sorting:jetmax_buildin_funcs/dataset_capture:jetmax_buildin_funcs/jetmax_control:jetmax_buildin_funcs/jetmax_control_custom:jetmax_buildin_funcs/lab_config:jetmax_buildin_funcs/object_tracking:jetmax_buildin_funcs/palletizing:jetmax_buildin_funcs/remote_control:jetmax_buildin_funcs/waste_classification:jetmax_demos
+-DCATKIN_DEVEL_PREFIX=/home/hiwonder/ros/devel -DCMAKE_INSTALL_PREFIX=/home/hiwonder/ros/install -G Unix Makefiles

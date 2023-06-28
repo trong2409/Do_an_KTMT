@@ -1,0 +1,14 @@
+[Unit]
+Requires=roscore.service usb_cam.service jetmax_control.service lab_config.service  camera_cal.service
+After=NetworkManager.service usb_cam.service jetmax_control.service 
+
+[Service]
+Type=simple
+User=hiwonder
+Restart=no
+RestartSec=5
+ExecStart=/home/hiwonder/ros/autostart/color_sorting.bash
+
+[Install]
+WantedBy=multi-user.target
+

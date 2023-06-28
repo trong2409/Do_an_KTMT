@@ -1,0 +1,8 @@
+prefix=/home/hiwonder/ros/devel
+
+Name: remote_control
+Description: Description of remote_control
+Version: 0.0.0
+Cflags: -I/home/hiwonder/ros/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,15 @@
+[Unit]
+Requires=roscore.service usb_cam.service jetmax_control.service
+After=NetworkManager.service time-sync.target usb_cam.service jetmax_control.service
+
+[Service]
+Type=simple
+User=hiwonder
+Restart=always
+RestartSec=5
+ExecStart=/home/hiwonder/ros/autostart/camera_cal.bash
+
+[Install]
+WantedBy=multi-user.target
+
+

@@ -154,6 +154,7 @@ struct Definition< ::opc_ros::SetTarget_objectResponse_<ContainerAllocator> >
   {
     return "bool success\n"
 "string message\n"
+"\n"
 ;
   }
 

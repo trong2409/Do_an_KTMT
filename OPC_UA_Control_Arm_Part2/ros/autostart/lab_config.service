@@ -1,0 +1,15 @@
+[Unit]
+Requires=roscore.service usb_cam.service
+After=NetworkManager.service usb_cam.service
+
+[Service]
+Type=simple
+User=hiwonder
+Restart=always
+RestartSec=5
+ExecStart=/home/hiwonder/ros/autostart/lab_config.bash
+
+[Install]
+WantedBy=multi-user.target
+
+

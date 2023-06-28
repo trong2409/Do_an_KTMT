@@ -1,0 +1,15 @@
+[Unit]
+Requires=roscore.service
+After=NetworkManager.service time-sync.target roscore.service
+
+[Service]
+Type=simple
+User=hiwonder
+Restart=always
+RestartSec=5
+ExecStart=/home/hiwonder/ros/autostart/rosbridge.bash
+
+[Install]
+WantedBy=multi-user.target
+
+

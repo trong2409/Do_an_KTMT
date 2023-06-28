@@ -1,0 +1,24 @@
+<launch>
+<arg name="camera_info_topic_name" default="/usb_cam/camera_info"/>
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" respawn="true" respawn_delay="2">
+    <param name="video_device" value="/dev/usb_cam0" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+
+  <node name="image_proc" pkg="image_proc" type="image_proc" ns="usb_cam"/>
+
+  <node name="web_video_server" pkg="web_video_server" type="web_video_server" output="screen">
+    <param name="port" type="int" value="8080" />
+    <param name="address" type="string" value="0.0.0.0" />
+    <param name="server_threads" type="int" value="2" />
+    <param name="ros_threads" type="int" value="2" />
+    <param name="width" type="int" value="640" />
+    <param name="height" type="int" value="480" />
+    <param name="quality" type="int" value="90" />
+    <param name="type" type="string" value="h264" />
+  </node>
+</launch>

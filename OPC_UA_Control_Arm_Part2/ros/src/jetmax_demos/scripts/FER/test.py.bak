@@ -1,0 +1,52 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import os
+from torch.autograd import Variable
+import FER.transforms as transforms
+import cv2
+from FER.models import *
+
+cut_size = 44
+
+transform_test = transforms.Compose([
+    transforms.TenCrop(cut_size),
+    transforms.Lambda(lambda crops: torch.stack([transforms.ToTensor()(crop) for crop in crops])),
+])
+
+raw_img = cv2.imread('FER/images/2.jpg')
+gray = cv2.cvtColor(raw_img, cv2.COLOR_RGB2GRAY)
+gray = cv2.resize(gray, (48, 48))
+
+img = gray[:, :, np.newaxis]
+
+img = np.concatenate((img, img, img), axis=2)
+img = Image.fromarray(img)
+inputs = transform_test(img)
+
+class_names = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
+
+net = VGG('VGG19')
+checkpoint = torch.load(os.path.join(os.path.split(os.path.realpath(__file__))[0], 'FER2013_VGG19/PrivateTest_model.t7'))
+net.load_state_dict(checkpoint['net'])
+net.cuda()
+net.eval()
+
+ncrops, c, h, w = np.shape(inputs)
+
+inputs = inputs.view(-1, c, h, w)
+inputs = inputs.cuda()
+inputs = Variable(inputs, volatile=True)
+outputs = net(inputs)
+
+outputs_avg = outputs.view(ncrops, -1).mean(0)  # avg over crops
+
+score = F.softmax(outputs_avg)
+_, predicted = torch.max(outputs_avg.data, 0)
+
+print("The Expression is %s" %str(class_names[int(predicted.cpu().numpy())]))
+
+

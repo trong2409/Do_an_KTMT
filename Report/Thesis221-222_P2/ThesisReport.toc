@@ -39,30 +39,30 @@
 \contentsline {chapter}{\numberline {3}THIẾT KẾ VÀ HIỆN THỰC HỆ THỐNG}{48}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Tổng quan hệ thống}{48}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Kiến trúc hệ thống}{48}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Giới thiệu thiết bị và công nghệ}{49}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}Giới thiệu thiết bị và công nghệ}{50}{subsection.3.1.2}%
 \contentsline {subsubsection}{\numberline {3.1.2.1}Oculus Quest 2}{50}{subsubsection.3.1.2.1}%
-\contentsline {subsubsection}{\numberline {3.1.2.2}Rasberry Pi}{50}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}Rasberry Pi}{51}{subsubsection.3.1.2.2}%
 \contentsline {subsubsection}{\numberline {3.1.2.3}Jetson Nano và Jetmax Arm}{51}{subsubsection.3.1.2.3}%
-\contentsline {subsubsection}{\numberline {3.1.2.4}ROS - Robot Operating System}{53}{subsubsection.3.1.2.4}%
-\contentsline {subsubsection}{\numberline {3.1.2.5}OpenCV}{54}{subsubsection.3.1.2.5}%
-\contentsline {subsubsection}{\numberline {3.1.2.6}YOLOv5}{55}{subsubsection.3.1.2.6}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}ROS - Robot Operating System}{54}{subsubsection.3.1.2.4}%
+\contentsline {subsubsection}{\numberline {3.1.2.5}OpenCV}{55}{subsubsection.3.1.2.5}%
+\contentsline {subsubsection}{\numberline {3.1.2.6}YOLOv5}{56}{subsubsection.3.1.2.6}%
 \contentsline {subsubsection}{\numberline {3.1.2.7}Unity3D}{56}{subsubsection.3.1.2.7}%
 \contentsline {section}{\numberline {3.2}Module Control}{57}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Yêu cầu hệ thống}{58}{subsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.1.1}Yêu cầu phi chức năng}{58}{subsubsection.3.2.1.1}%
 \contentsline {subsubsection}{\numberline {3.2.1.2}Yêu cầu chức năng}{58}{subsubsection.3.2.1.2}%
 \contentsline {subsection}{\numberline {3.2.2}Sơ đồ use case}{59}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Hiện thực module Control}{59}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}Hiện thực module Control}{60}{subsection.3.2.3}%
 \contentsline {subsubsection}{\numberline {3.2.3.1}Sơ đồ khối của module Control}{60}{subsubsection.3.2.3.1}%
 \contentsline {subsubsection}{\numberline {3.2.3.2}Chi tiết các tính năng trong Module Control}{63}{subsubsection.3.2.3.2}%
 \contentsline {section}{\numberline {3.3}Tính năng AI: Phân loại rác thải bán tự động}{72}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Yêu cầu hệ thống}{73}{subsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.1.1}Yêu cầu phi chức năng}{73}{subsubsection.3.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.2}Yêu cầu chức năng}{73}{subsubsection.3.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}Yêu cầu chức năng}{74}{subsubsection.3.3.1.2}%
 \contentsline {subsection}{\numberline {3.3.2}Sơ đồ use case diagram}{74}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Hiện thực chức năng phân loại rác bán tự động}{74}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.3}Hiện thực chức năng phân loại rác bán tự động}{75}{subsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.3.1}Xác định vị trí của vật thể so với cánh tay}{76}{subsubsection.3.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.3.2}Sequence diagram của chức năng}{77}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}Sequence diagram của chức năng}{78}{subsubsection.3.3.3.2}%
 \contentsline {section}{\numberline {3.4}Module Datacenter}{79}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Yêu cầu hệ thống}{80}{subsection.3.4.1}%
 \contentsline {subsubsection}{\numberline {3.4.1.1}Yêu cầu phi chức năng}{80}{subsubsection.3.4.1.1}%
